@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap');
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-[#F8F7FC] text-[#0D0D14] antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .section      { @apply py-24 px-6; }
+  .container    { @apply max-w-7xl mx-auto; }
+  .container-sm { @apply max-w-5xl mx-auto; }
+
+  /* Display headline */
+  .display {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply font-black leading-[1.05] tracking-tight;
+  }
+
+  /* Buttons */
+  .btn-brand {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold
+           text-white transition-all hover:shadow-xl hover:-translate-y-0.5;
+    background-color: #6D28D9;
+    box-shadow: 0 4px 20px rgba(109,40,217,0.25);
+  }
+  .btn-brand:hover { background-color: #4C1D95; }
+
+  .btn-dark {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold
+           text-white transition-all hover:shadow-xl hover:-translate-y-0.5;
+    background-color: #0D0D14;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.20);
+  }
+  .btn-dark:hover { background-color: #1A1729; }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold
+           transition-all hover:-translate-y-0.5;
+    color: #6D28D9;
+    border: 2px solid rgba(109,40,217,0.30);
+  }
+  .btn-outline:hover {
+    background-color: #6D28D9;
+    color: #ffffff;
+    border-color: #6D28D9;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold
+           text-white transition-all hover:-translate-y-0.5;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .btn-outline-white:hover { background-color: rgba(255,255,255,0.10); }
+
+  .btn-gold {
+    @apply inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold
+           transition-all hover:-translate-y-0.5;
+    background-color: #F5A623;
+    color: #0D0D14;
+    box-shadow: 0 4px 20px rgba(245,166,35,0.25);
+  }
+  .btn-gold:hover { background-color: #e8961a; }
+
+  /* Cards */
+  .card-premium {
+    @apply bg-white rounded-3xl border border-black/5
+           hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5;
+  }
+  .card-dark {
+    @apply rounded-3xl text-white;
+    background-color: #1A1729;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+  .card-brand {
+    @apply rounded-3xl text-white;
+    background-color: #6D28D9;
+  }
+  .card-mist {
+    @apply rounded-3xl;
+    background-color: #EDE9F8;
+    border: 1px solid rgba(109,40,217,0.10);
+  }
+
+  /* Eyebrow label */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold tracking-[0.2em] uppercase mb-5;
+    color: #6D28D9;
+  }
+
+  /* Pill tag */
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold
+           tracking-wide border;
+  }
+
+  /* Rule dividers */
+  .rule-brand {
+    @apply w-12 h-1 rounded-full mb-8;
+    background-color: #6D28D9;
+  }
+  .rule-gold {
+    @apply w-12 h-1 rounded-full mb-8;
+    background-color: #F5A623;
+  }
+
+  /* Stat number */
+  .stat-number {
+    font-family: 'Playfair Display', serif;
+    @apply text-5xl font-black;
+    color: #0D0D14;
+  }
+}
+
+/* Gradient text */
+.gradient-brand {
+  background: linear-gradient(135deg, #6D28D9 0%, #A855F7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-brand-light {
+  background: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-gold {
+  background: linear-gradient(135deg, #F5A623 0%, #FF8C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Dot grid */
+.dot-bg {
+  background-image: radial-gradient(circle, rgba(109,40,217,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
