@@ -77,7 +77,7 @@ export default function ContactPage() {
                     <h2 className="display text-3xl text-[#0D0D14] mb-8">Send a message</h2>
                     <form onSubmit={handleSubmit} className="space-y-6">
                       {/* Web3Forms access key — replace YOUR_ACCESS_KEY with key from web3forms.com */}
-                      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+                      <input type="hidden" name="access_key" value="206302e1-fa36-4003-ba8f-049108c29dba" />
                       <input type="hidden" name="subject" value="New enquiry from kaskatech.com" />
                       <input type="checkbox" name="botcheck" className="hidden" />
 
