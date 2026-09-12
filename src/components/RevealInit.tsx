@@ -7,14 +7,22 @@ export default function RevealInit() {
     const els = Array.from(document.querySelectorAll<HTMLElement>('.rev'))
     if (!els.length) return
 
+    const revealAll = () => els.forEach((e) => e.classList.add('in'))
+
     const reduced =
       typeof window.matchMedia === 'function' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
     if (!('IntersectionObserver' in window) || reduced) {
-      els.forEach((e) => e.classList.add('in'))
+      revealAll()
       return
     }
+
+    const vh = window.innerHeight || 800
+    els.forEach((e) => {
+      const r = e.getBoundingClientRect()
+      if (r.top < vh * 0.95 && r.bottom > 0) e.classList.add('in')
+    })
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -25,10 +33,18 @@ export default function RevealInit() {
           }
         })
       },
-      { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+      { threshold: 0, rootMargin: '0px 0px -6% 0px' }
     )
-    els.forEach((e) => io.observe(e))
-    return () => io.disconnect()
+    els.forEach((e) => {
+      if (!e.classList.contains('in')) io.observe(e)
+    })
+
+    const t = window.setTimeout(revealAll, 2500)
+
+    return () => {
+      io.disconnect()
+      window.clearTimeout(t)
+    }
   }, [])
 
   return null
