@@ -14,10 +14,7 @@ export default function Page() {
       <section className="wrap contact">
         <div className="cgrid">
           {/* FORM */}
-          <div className="form-card rev">
-            <span className="fk">Tell us about you</span>
-            <ContactForm />
-          </div>
+          <ContactForm />
 
           {/* INFO */}
           <div className="info-card rev">
