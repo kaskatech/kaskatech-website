@@ -13,7 +13,7 @@ const services = [
 ]
 
 const products = [
-  { label: 'SafeCyber',    href: 'https://safecyber.io',     desc: 'Autonomous Cyber Resilience Platform™' },
+  { label: 'Kaska',    href: 'https://kaskatech.com',     desc: 'Autonomous Cyber Resilience Platform™' },
   { label: 'CyberSecHire', href: 'https://cybersechire.com', desc: 'Cybersecurity talent marketplace' },
 ]
 
@@ -125,9 +125,9 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
+          <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer"
             className="flex items-center gap-1.5 px-4 py-2 text-[13px] font-semibold text-brand rounded-xl hover:bg-brand/5 transition-colors">
-            <Shield className="w-3.5 h-3.5" /> SafeCyber ↗
+            <Shield className="w-3.5 h-3.5" /> Kaska ↗
           </a>
           <Link href="/contact" className="btn-brand text-[13px] px-5 py-2.5 rounded-xl">
             Get in Touch <ArrowRight className="w-3.5 h-3.5" />
@@ -160,8 +160,8 @@ export default function Navbar() {
             </Link>
           ))}
           <div className="pt-3 flex gap-2">
-            <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
-              className="flex-1 text-center py-3 text-sm font-semibold text-brand border border-brand/30 rounded-xl hover:bg-brand/5 transition-colors">SafeCyber ↗</a>
+            <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer"
+              className="flex-1 text-center py-3 text-sm font-semibold text-brand border border-brand/30 rounded-xl hover:bg-brand/5 transition-colors">Kaska ↗</a>
             <Link href="/contact" onClick={() => setOpen(false)}
               className="flex-1 text-center py-3 text-sm font-semibold text-white bg-brand rounded-xl">Get in Touch</Link>
           </div>

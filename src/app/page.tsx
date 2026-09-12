@@ -310,14 +310,14 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-5 max-w-4xl mx-auto">
             <div className="card-dark p-8">
               <div className="pill text-brand-light border-brand-light/30 bg-brand-light/10 mb-5">Platform</div>
-              <h3 className="display text-3xl text-white mb-3">SafeCyber</h3>
+              <h3 className="display text-3xl text-white mb-3">Kaska</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 The Autonomous Cyber Resilience Platform™ — an AI layer above your entire
                 security stack, giving CxOs pre-breach and post-breach intelligence.
               </p>
-              <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
+              <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-brand-light hover:text-white transition-colors">
-                safecyber.io <ArrowUpRight className="w-4 h-4" />
+                kaskatech.com <ArrowUpRight className="w-4 h-4" />
               </a>
             </div>
             <div className="card-premium border border-black/5 p-8">

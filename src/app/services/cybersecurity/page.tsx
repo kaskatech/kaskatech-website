@@ -240,7 +240,7 @@ export default function CybersecurityServicesPage() {
         </div>
       </section>
 
-      {/* Powered by SafeCyber */}
+      {/* Powered by Kaska */}
       <section className="section bg-cream">
         <div className="container">
           <div className="max-w-4xl mx-auto">
@@ -248,9 +248,9 @@ export default function CybersecurityServicesPage() {
               <div className="grid lg:grid-cols-2 gap-10 items-center">
                 <div>
                   <Shield className="w-10 h-10 text-blue mb-5" />
-                  <h3 className="display text-4xl text-white mb-4">Services Powered by SafeCyber</h3>
+                  <h3 className="display text-4xl text-white mb-4">Services Powered by Kaska</h3>
                   <p className="text-slate-400 leading-relaxed text-sm">
-                    Our GRC and managed security services are backed by SafeCyber — the
+                    Our GRC and managed security services are backed by Kaska — the
                     Autonomous Cyber Resilience Platform. AI-assisted investigation, automated
                     evidence collection, and board-ready financial risk numbers at every stage.
                   </p>
@@ -267,9 +267,9 @@ export default function CybersecurityServicesPage() {
                       <span className="text-sm text-slate-300">{pt}</span>
                     </div>
                   ))}
-                  <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
+                  <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 mt-4 btn-gold">
-                    Learn about SafeCyber <ArrowRight className="w-4 h-4" />
+                    Learn about Kaska <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
               </div>

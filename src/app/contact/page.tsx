@@ -3,10 +3,10 @@ import { useState } from 'react'
 import { Mail, MapPin, Clock, Shield, Users, Briefcase, TrendingUp, CheckCircle } from 'lucide-react'
 
 const enquiryTypes = [
-  { icon: Shield,     label: 'SafeCyber Demo / POC',    desc: 'See the platform in action' },
+  { icon: Shield,     label: 'Kaska Demo / POC',    desc: 'See the platform in action' },
   { icon: Briefcase,  label: 'Cybersecurity Services',  desc: 'GRC, VAPT, SOC, vCISO' },
   { icon: Users,      label: 'Talent Requirement',       desc: 'Cybersecurity hiring' },
-  { icon: TrendingUp, label: 'Investor Enquiry',         desc: 'SafeCyber seed round' },
+  { icon: TrendingUp, label: 'Investor Enquiry',         desc: 'Kaska seed round' },
 ]
 
 export default function ContactPage() {
@@ -154,7 +154,7 @@ export default function ContactPage() {
                 <div className="space-y-4">
                   {[
                     { icon: Mail,   label: 'General',  value: 'contact@kaskatech.com', href: 'mailto:contact@kaskatech.com' },
-                    { icon: Shield, label: 'SafeCyber', value: 'hello@safecyber.io',   href: 'mailto:hello@safecyber.io' },
+                    { icon: Shield, label: 'Kaska', value: 'hello@kaskatech.com',   href: 'mailto:hello@kaskatech.com' },
                     { icon: MapPin, label: 'Offices',   value: 'Global' },
                     { icon: Clock,  label: 'Response',  value: 'Within 24 hours' },
                   ].map(c => {
@@ -180,18 +180,18 @@ export default function ContactPage() {
               <div className="card-premium border border-black/5 p-7 bg-[#0D0D14]">
                 <div className="text-[10px] font-bold tracking-widest uppercase text-brand-light mb-3">Investor Enquiries</div>
                 <p className="text-slate-300 text-sm leading-relaxed mb-4">
-                  SafeCyber is raising a Seed Round. For investor conversations, reach out directly.
+                  Kaska is raising a Seed Round. For investor conversations, reach out directly.
                 </p>
-                <a href="mailto:invest@safecyber.io" className="text-brand-light font-bold text-sm hover:text-white transition-colors">
-                  invest@safecyber.io →
+                <a href="mailto:invest@kaskatech.com" className="text-brand-light font-bold text-sm hover:text-white transition-colors">
+                  invest@kaskatech.com →
                 </a>
               </div>
 
               <div className="card-premium border border-black/5 p-7">
                 <div className="text-[10px] font-bold tracking-widest uppercase text-slate-400 mb-4">Quick Links</div>
                 {[
-                  { label: 'SafeCyber Platform', href: 'https://safecyber.io' },
-                  { label: 'Request a Demo',     href: 'https://safecyber.io/contact' },
+                  { label: 'Kaska Platform', href: 'https://kaskatech.com' },
+                  { label: 'Request a Demo',     href: 'https://kaskatech.com/contact' },
                   { label: 'CyberSecHire',        href: 'https://cybersechire.com' },
                 ].map(l => (
                   <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"

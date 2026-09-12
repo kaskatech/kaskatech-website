@@ -68,7 +68,7 @@ export default function Footer() {
             <h4 className="text-[10px] font-bold tracking-widest uppercase text-slate-500 mb-5">Products</h4>
             <div className="space-y-4">
               {[
-                { name: 'SafeCyber',    sub: 'Cyber Resilience Platform', href: 'https://safecyber.io',     dot: 'bg-brand-light' },
+                { name: 'Kaska',    sub: 'Cyber Resilience Platform', href: 'https://kaskatech.com',     dot: 'bg-brand-light' },
                 { name: 'CyberSecHire', sub: 'Talent Marketplace',        href: 'https://cybersechire.com', dot: 'bg-gold' },
               ].map(p => (
                 <a key={p.name} href={p.href} target="_blank" rel="noopener noreferrer"
@@ -100,9 +100,9 @@ export default function Footer() {
               ))}
             </ul>
             <div className="mt-8 p-4 rounded-2xl bg-white/4 border border-white/8">
-              <div className="text-[10px] font-bold tracking-widest uppercase text-brand-light mb-1">SafeCyber</div>
+              <div className="text-[10px] font-bold tracking-widest uppercase text-brand-light mb-1">Kaska</div>
               <p className="text-xs text-slate-500 mb-2">AI-powered cyber resilience platform — now open for enterprise pilots.</p>
-              <a href="mailto:hello@safecyber.io" className="text-xs font-semibold text-brand-light hover:text-white transition-colors">hello@safecyber.io →</a>
+              <a href="mailto:hello@kaskatech.com" className="text-xs font-semibold text-brand-light hover:text-white transition-colors">hello@kaskatech.com →</a>
             </div>
           </div>
         </div>
@@ -111,9 +111,9 @@ export default function Footer() {
           <p className="text-xs text-slate-600">© 2026 Kaska Technologies and Services Pvt Ltd. All rights reserved.</p>
           <div className="flex items-center gap-1.5">
             <span className="text-xs text-slate-600">Flagship product:</span>
-            <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
+            <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-1 text-xs font-semibold text-brand-light hover:text-white transition-colors">
-              <Shield className="w-3 h-3" /> safecyber.io ↗
+              <Shield className="w-3 h-3" /> kaskatech.com ↗
             </a>
           </div>
         </div>

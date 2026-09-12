@@ -17,7 +17,7 @@ export default function PrivacyPage() {
           <h2 className="text-lg font-bold text-navy">How We Use It</h2>
           <p>To respond to your enquiry, schedule demos, and send relevant product and service communications. You can opt out at any time by emailing info@kaskatech.com.</p>
           <h2 className="text-lg font-bold text-navy">Data Storage</h2>
-          <p>Data is stored on servers located within India. For SafeCyber platform data, please refer to the SafeCyber Data Privacy Policy at safecyber.io/privacy.</p>
+          <p>Data is stored on servers located within India. For Kaska platform data, please refer to the Kaska Data Privacy Policy at kaskatech.com/privacy.</p>
           <h2 className="text-lg font-bold text-navy">Contact</h2>
           <p>For privacy-related requests, email: <a href="mailto:privacy@kaskatech.com" className="text-blue hover:underline">privacy@kaskatech.com</a></p>
         </div>

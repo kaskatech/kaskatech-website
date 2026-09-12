@@ -5,11 +5,11 @@ import Footer from '@/components/layout/Footer'
 
 export const metadata: Metadata = {
   title: 'Kaska Technologies & Services — Cybersecurity Products & Services',
-  description: 'Kaska Technologies and Services — cybersecurity products, GRC consulting, VAPT, managed security, and cybersecurity manpower. Home of SafeCyber and CyberSecHire.',
-  keywords: 'cybersecurity, GRC, VAPT, penetration testing, SOC, manpower, staffing, SafeCyber, CyberSecHire, compliance, cloud security',
+  description: 'Kaska Technologies and Services — cybersecurity products, GRC consulting, VAPT, managed security, and cybersecurity manpower. Home of Kaska and CyberSecHire.',
+  keywords: 'cybersecurity, GRC, VAPT, penetration testing, SOC, manpower, staffing, Kaska, CyberSecHire, compliance, cloud security',
   openGraph: {
     title: 'Kaska Technologies & Services',
-    description: 'Cybersecurity products and services for enterprises. Home of SafeCyber — Autonomous Cyber Resilience Platform.',
+    description: 'Cybersecurity products and services for enterprises. Home of Kaska — Autonomous Cyber Resilience Platform.',
     type: 'website',
     url: 'https://kaskatech.com',
   },

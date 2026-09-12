@@ -133,14 +133,14 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="card-dark p-10">
               <div className="pill text-brand-light border-brand-light/30 bg-brand-light/10 mb-6">Platform</div>
-              <h3 className="display text-4xl text-white mb-4">SafeCyber</h3>
+              <h3 className="display text-4xl text-white mb-4">Kaska</h3>
               <p className="text-slate-400 mb-8 leading-relaxed text-[15px]">
                 The AI layer above your entire security stack. Pre-breach and post-breach
                 intelligence for CxOs.
               </p>
-              <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
+              <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-brand-light hover:text-white transition-colors">
-                safecyber.io ↗
+                kaskatech.com ↗
               </a>
             </div>
             <div className="card-premium border border-black/5 p-10">

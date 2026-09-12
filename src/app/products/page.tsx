@@ -4,7 +4,7 @@ import { ArrowRight, ArrowUpRight, Shield, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Products — Kaska Technologies & Services',
-  description: 'SafeCyber — Autonomous Cyber Resilience Platform™ and CyberSecHire — Cybersecurity talent marketplace. Built by Kaska Technologies.',
+  description: 'Kaska — Autonomous Cyber Resilience Platform™ and CyberSecHire — Cybersecurity talent marketplace. Built by Kaska Technologies.',
 }
 
 const pillars = [
@@ -25,7 +25,7 @@ const pillars = [
   },
 ]
 
-const safecyberFeatures = [
+const kaskaFeatures = [
   'Pre-Breach: Surface root causes before the attack fires',
   'Real-Time: Correlate signals across every tool simultaneously',
   'Post-Breach: Quantify financial impact as the breach unfolds',
@@ -56,13 +56,13 @@ export default function ProductsPage() {
             <span className="gradient-gold">One mission.</span>
           </h1>
           <p className="text-lg text-slate-300 max-w-xl mx-auto">
-            SafeCyber gives enterprises genuine cyber resilience.
+            Kaska gives enterprises genuine cyber resilience.
             CyberSecHire gives them the talent to sustain it.
           </p>
         </div>
       </section>
 
-      {/* SafeCyber */}
+      {/* Kaska */}
       <section className="section bg-stone">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
@@ -70,10 +70,10 @@ export default function ProductsPage() {
               <div className="pill text-blue border-blue/20 bg-blue/5 mb-6">
                 <Shield className="w-3 h-3" /> Flagship Product
               </div>
-              <h2 className="display text-5xl text-navy mb-3">SafeCyber</h2>
+              <h2 className="display text-5xl text-navy mb-3">Kaska</h2>
               <p className="text-blue font-bold text-lg mb-6">Autonomous Cyber Resilience Platform™</p>
               <p className="text-slate-500 leading-relaxed mb-5">
-                SafeCyber is the AI intelligence layer above your entire security stack.
+                Kaska is the AI intelligence layer above your entire security stack.
                 It connects signals from every tool your organisation already uses,
                 finds the gaps each individual tool misses, and tells your CISO
                 exactly what to fix — with a financial risk number attached to each gap.
@@ -83,7 +83,7 @@ export default function ProductsPage() {
               </p>
 
               <div className="space-y-3 mb-10">
-                {safecyberFeatures.map(pt => (
+                {kaskaFeatures.map(pt => (
                   <div key={pt} className="flex items-start gap-3">
                     <CheckCircle className="w-4 h-4 text-blue flex-shrink-0 mt-0.5" />
                     <span className="text-navy text-sm font-medium">{pt}</span>
@@ -92,8 +92,8 @@ export default function ProductsPage() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer" className="btn-dark">
-                  safecyber.io <ArrowUpRight className="w-4 h-4" />
+                <a href="https://kaskatech.com" target="_blank" rel="noopener noreferrer" className="btn-dark">
+                  kaskatech.com <ArrowUpRight className="w-4 h-4" />
                 </a>
                 <Link href="/contact" className="btn-outline">Request a Demo</Link>
               </div>
@@ -179,7 +179,7 @@ export default function ProductsPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue/10 rounded-full blur-[100px]" />
         <div className="relative container-sm text-center">
           <h2 className="display text-5xl text-white mb-6">
-            Want to see SafeCyber<br />
+            Want to see Kaska<br />
             <span className="gradient-gold">in action?</span>
           </h2>
           <p className="text-slate-300 text-lg mb-10">
