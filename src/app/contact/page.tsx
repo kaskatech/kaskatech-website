@@ -6,7 +6,7 @@ export default function Page() {
       {/* HERO */}
       <header className="hero wrap">
         <span className="kicker rev">CONTACT</span>
-        <h1 className="rev">See your risk — <span className="em">in rupees</span>.</h1>
+        <h1 className="rev">See your risk — <span className="em">in financial terms</span>.</h1>
         <p className="sub rev">Request early access to the Kaska platform, a briefing, or Technology Solutions for your stack.</p>
       </header>
 
@@ -22,7 +22,7 @@ export default function Page() {
           {/* INFO */}
           <div className="info-card rev">
             <h3>For early access, a briefing, or Technology Solutions</h3>
-            <p className="isub">Whether you want to prove your controls, price your risk in rupees, or have Kaska run the tools for you — start here.</p>
+            <p className="isub">Whether you want to prove your controls, price your risk in financial terms, or have Kaska run the tools for you — start here.</p>
 
             <div className="contact-line">
               <span className="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M4 7l8 6 8-6" /></svg></span>

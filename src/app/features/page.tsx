@@ -5,7 +5,7 @@ export default function Page() {
       <header className="hero wrap">
         <span className="kicker rev">THE PLATFORM · KASKA EM</span>
         <h1 className="rev">Everything the platform does — and <span className="em">why</span> it matters.</h1>
-        <p className="sub rev">Kaska sits above the security tools you already own — proving your controls work, pricing your risk in rupees, and containing what fires, all on one asset-centric spine.</p>
+        <p className="sub rev">Kaska sits above the security tools you already own — proving your controls work, pricing your risk in financial terms, and containing what fires, all on one asset-centric spine.</p>
         <div className="ctas rev">
           <a className="act" href="https://app.kaskatech.com/register">Request early access
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -25,7 +25,7 @@ export default function Page() {
               <div className="sf-tier">
                 <div className="sf-lbl"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V4M4 20h16" /><path d="M8 16v-3M12 16V8M16 16v-6" /></svg></span>Board &amp; executive view</div>
                 <div className="sf-row">
-                  <div className="sf-chip">Risk in rupees</div>
+                  <div className="sf-chip">Risk in financial terms</div>
                   <div className="sf-chip">Resilience score</div>
                   <div className="sf-chip">Compliance standing</div>
                 </div>
@@ -101,7 +101,7 @@ export default function Page() {
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V4M4 20h16" /><path d="M8 16v-4M12 16V8M16 16v-7" /><circle cx="16" cy="9" r="1.4" fill="currentColor" stroke="none" /></svg></span><span className="grp pre">Pre-breach</span></div>
             <h3>Cyber Risk Quantification</h3>
-            <p>Every gap priced in ₹ and $, FAIR-style, for the board.</p>
+            <p>Every gap priced in financial terms, FAIR-style, for the board.</p>
           </div>
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="5" cy="6" r="2.2" /><circle cx="19" cy="6" r="2.2" /><circle cx="12" cy="18" r="2.4" /><path d="M7 6.6 10.5 16M17 6.6 13.5 16M7.2 6H16.8" /></svg></span><span className="grp pre">Pre-breach</span></div>
@@ -165,7 +165,7 @@ export default function Page() {
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="14" rx="1.6" /><path d="M7 14l3-3 2 2 4-5" /><path d="M9 21h6" /></svg></span><span className="grp post">Post-breach</span></div>
             <h3>Board &amp; Executive Reporting</h3>
-            <p>The risk-in-rupees story your board and regulator accept.</p>
+            <p>The board-risk story your board and regulator accept.</p>
           </div>
 
           {/* PLATFORM */}
@@ -198,7 +198,7 @@ export default function Page() {
             <div className="arow abox a-board">
               <div className="albl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="14" rx="1.5" /><path d="M7 14l3-3 2 2 4-5" /><path d="M9 21h6" /></svg>Board &amp; executive view</div>
               <div className="achips">
-                <span className="achip">Risk in rupees</span>
+                <span className="achip">Risk in financial terms</span>
                 <span className="achip">Resilience score</span>
                 <span className="achip">Compliance standing</span>
               </div>
@@ -270,11 +270,11 @@ export default function Page() {
           <div className="ben-list rev">
             <div className="upoint">
               <span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span>
-              <div><b>Cut real risk, not noise</b><span className="d">Fix the few gaps that carry the exposure — ranked by the rupees behind them, not alert volume.</span></div>
+              <div><b>Cut real risk, not noise</b><span className="d">Fix the few gaps that carry the exposure — ranked by the financial impact behind them, not alert volume.</span></div>
             </div>
             <div className="upoint">
               <span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span>
-              <div><b>A number your board can act on</b><span className="d">Risk in rupees, quarter on quarter — a trend line, not a colour that never changes.</span></div>
+              <div><b>A number your board can act on</b><span className="d">Risk in financial terms, quarter on quarter — a trend line, not a colour that never changes.</span></div>
             </div>
             <div className="upoint">
               <span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span>
@@ -307,7 +307,7 @@ export default function Page() {
           </a>
           <a className="res rev" href="#">
             <div className="meta"><span className="dt">2026</span>EXPLAINER</div>
-            <h3>Cyber Risk, Quantified in Rupees</h3>
+            <h3>Cyber Risk, Quantified</h3>
             <span className="read">Read <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
           </a>
         </div>

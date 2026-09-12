@@ -5,7 +5,7 @@ export default function Page() {
       <header className="hero wrap">
         <span className="kicker rev">COMPANY</span>
         <h1 className="rev">Built in India, to prove security <span className="em">works</span>.</h1>
-        <p className="sub rev">Kaska is an Autonomous Cyber Risk &amp; Resilience company. We sit above the security stack you already own — proving controls are enforced, quantifying risk in rupees, and carrying you from prevention through response to recovery.</p>
+        <p className="sub rev">Kaska is an Autonomous Cyber Risk &amp; Resilience company. We sit above the security stack you already own — proving controls are enforced, quantifying risk in financial terms, and carrying you from prevention through response to recovery.</p>
         <div className="ctas rev">
           <a className="act" href="/contact">Get in touch
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -24,7 +24,7 @@ export default function Page() {
           <div className="body">
             <p className="rev">Security teams have never owned more tools — and never had less certainty. Every product promises protection, yet almost no one can say, with evidence, that a control is actually enforced or what a breach would cost. Kaska was built to answer exactly that. We sit <b>above the security stack you already run</b> — vendor-agnostic, reading what you own rather than replacing it.</p>
             <div className="pull rev">We hold ourselves to one rule: <span className="em">no claim without code.</span> If the platform says a control is enforced, it is because we checked — not because a vendor said so.</div>
-            <p className="rev">That honesty shapes everything. We would rather show a gap than paper over it, and we would rather quantify risk plainly — <b>in rupees</b> — than hand a board another red-amber-green chart. The goal is a picture leaders can act on, and a clear, evidenced path to reduce the risk.</p>
+            <p className="rev">That honesty shapes everything. We would rather show a gap than paper over it, and we would rather quantify risk plainly — <b>in financial terms</b> — than hand a board another red-amber-green chart. The goal is a picture leaders can act on, and a clear, evidenced path to reduce the risk.</p>
             <p className="rev">And we are <b>India-first by design</b>. Data residency, RBI, SEBI, CERT-In and DPDP are built into the product, not bolted on for a tender — including air-gapped and on-premise deployment for the most sensitive environments. Kaska is led by senior security practitioners who have spent careers on the buying and defending side of this industry, and who know the difference between a demo and a control that holds.</p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function Page() {
           </div>
           <div className="card rev">
             <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V4M4 20h16" /><path d="M8 16v-4M12 16V8M16 16v-7" /></svg></div>
-            <h3>Risk belongs in rupees.</h3>
+            <h3>Risk belongs in financial terms.</h3>
             <p>A board can't act on a colour. We put a money number on exposure so leaders can decide and prioritise.</p>
           </div>
           <div className="card rev">

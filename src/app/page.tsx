@@ -42,7 +42,7 @@ export default function Home() {
             <AssetGraph3D />
             <div className="spine-foot">
               <div className="metric">
-                <div className="v crit">₹43 Cr</div>
+                <div className="v crit">$8.7M</div>
                 <div className="k">Exposure at risk</div>
               </div>
               <div className="metric">
@@ -54,7 +54,7 @@ export default function Home() {
                 <div className="k">Controls enforced</div>
               </div>
               <div className="metric">
-                <div className="v">₹12L</div>
+                <div className="v">$24K</div>
                 <div className="k">Cost to close</div>
               </div>
             </div>
@@ -84,7 +84,7 @@ export default function Home() {
                   <span className="dt"></span>Unified visibility
                 </span>
                 <span className="step">
-                  <span className="dt"></span>Risk in rupees
+                  <span className="dt"></span>Risk in financial terms
                 </span>
                 <span className="step">
                   <span className="dt"></span>Control validation
@@ -231,7 +231,7 @@ export default function Home() {
                 </svg>
               </span>
               <span>
-                <b>One risk number — in rupees</b> the board understands and can decide on.
+                <b>One risk number — in financial terms</b> the board understands and can decide on.
               </span>
             </div>
             <div className="upoint">
@@ -373,26 +373,26 @@ export default function Home() {
           <div className="cap-text">
             <span className="num">03 / 05</span>
             <span className="fname">Cyber Risk Quantification</span>
-            <h3>Put a rupee number on your risk.</h3>
-            <p>Annual loss and value-at-risk in ₹ and $, FAIR-style — the number your board understands.</p>
+            <h3>Put a financial number on your risk.</h3>
+            <p>Annual loss and value-at-risk in financial terms, FAIR-style — the number your board understands.</p>
           </div>
           <div className="cap-vis">
             <div className="vis-k">Board risk view · FAIR model</div>
             <div className="crq">
-              <div className="big">₹43 Cr</div>
+              <div className="big">$8.7M</div>
               <div className="biglbl">Value at risk (annual)</div>
               <div className="rows">
                 <div className="cr">
                   <span>Annual loss expectancy</span>
-                  <b className="money">₹17.4 Cr</b>
+                  <b className="money">$3.5M</b>
                 </div>
                 <div className="cr">
                   <span>Inherent exposure</span>
-                  <b>₹58 Cr</b>
+                  <b>$11.6M</b>
                 </div>
                 <div className="cr">
                   <span>Reduction if gaps closed</span>
-                  <b className="money">−₹31 Cr</b>
+                  <b className="money">−$6.2M</b>
                 </div>
               </div>
             </div>
@@ -632,7 +632,7 @@ export default function Home() {
             <div className="meta">
               <span className="dt">2026</span>EXPLAINER
             </div>
-            <h3>Cyber Risk, Quantified in Rupees</h3>
+            <h3>Cyber Risk, Quantified</h3>
             <span className="read">
               Read{' '}
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -648,7 +648,7 @@ export default function Home() {
         <div className="rev">
           <span className="kicker">GET STARTED</span>
           <h2 style={{ marginTop: 18 }}>
-            See your risk — <span className="em">in rupees.</span>
+            See your risk — <span className="em">in financial terms.</span>
           </h2>
           <div className="ctas">
             <a className="act" href={REGISTER}>
