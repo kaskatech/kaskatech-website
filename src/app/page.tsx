@@ -1,389 +1,668 @@
 import Link from 'next/link'
-import { ArrowRight, ArrowUpRight, Shield, CheckCircle, Activity, FileCheck, Search } from 'lucide-react'
+import AssetGraph3D from '@/components/AssetGraph3D'
 
-const buckets = [
-  {
-    icon: Search,
-    label: 'Continuous Assessment',
-    href: '/services/assessment',
-    theme: 'Pre-Breach',
-    color: 'brand',
-    desc: 'Ongoing vulnerability management, penetration testing, and attack surface monitoring — so you know your exposure before attackers do.',
-    oems: ['Tenable', 'Qualys', 'Rapid7'],
-  },
-  {
-    icon: Activity,
-    label: 'Continuous Monitoring',
-    href: '/services/monitoring',
-    theme: 'Pre & Post-Breach',
-    color: 'brand-light',
-    desc: '24×7 SOC operations, SIEM management, and threat intelligence — expert analysts and leading platforms working as one.',
-    oems: ['Google SecOps', 'Microsoft Sentinel', 'Splunk'],
-  },
-  {
-    icon: FileCheck,
-    label: 'Continuous Compliance',
-    href: '/services/compliance',
-    theme: 'Pre-Breach',
-    color: 'gold',
-    desc: 'Perpetual audit readiness across regulatory frameworks — GRC platforms and expert consultants maintaining your compliance posture.',
-    oems: ['RSA Archer', 'ServiceNow GRC', 'OneTrust'],
-  },
-]
+const REGISTER = 'https://app.kaskatech.com/register'
 
-const model = [
-  {
-    title: 'Expert Practitioners',
-    desc: 'Every engagement is led by a certified practitioner — not a project manager. Domain specialists with hands-on enterprise experience.',
-  },
-  {
-    title: 'Leading OEM Platforms',
-    desc: 'We deploy and manage the industry\'s top-tier security platforms. You get the tool AND the expertise to extract full value from it.',
-  },
-  {
-    title: 'Continuous Delivery',
-    desc: 'Security is not a project — it\'s an ongoing service. Our model is built around continuous operation, not point-in-time assessments.',
-  },
-  {
-    title: 'Risk-Proof Outcomes',
-    desc: 'Every service maps to a measurable risk reduction. We report on posture improvement, not just activity.',
-  },
-]
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <div className="bg-smoke">
-
-      {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#0D0D14] dot-bg">
-        <div className="absolute top-1/4 left-1/4 w-[700px] h-[700px] bg-brand/15 rounded-full blur-[140px] pointer-events-none" />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-brand-glow/8 rounded-full blur-[100px] pointer-events-none" />
-
-        <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-24">
-          <div className="max-w-4xl">
-            <div className="eyebrow text-brand-light">
-              <div className="w-1.5 h-1.5 rounded-full bg-brand-light animate-pulse" />
-              Managed Cybersecurity Services
-            </div>
-
-            <h1 className="display text-white text-6xl lg:text-[82px] mb-8 leading-[1.0]">
-              Risk-Proof.<br />
-              <span className="gradient-brand-light">Continuous.</span><br />
-              Expert-Led.
-            </h1>
-
-            <p className="text-xl text-slate-300 leading-relaxed mb-6 max-w-2xl font-light">
-              Kaska delivers managed cybersecurity as a continuous service —
-              combining certified practitioners with the world's leading security platforms
-              to protect enterprises before and after a breach.
-            </p>
-
-            <div className="flex items-center gap-6 mb-12">
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-green-400" />
-                <span className="text-sm text-slate-400 font-medium">Pre-Breach Intelligence</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-brand-light" />
-                <span className="text-sm text-slate-400 font-medium">Post-Breach Response</span>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-brand">
-                Speak to an Expert <ArrowRight className="w-4 h-4" />
-              </Link>
-              <Link href="/about" className="btn-outline-white">
-                How We Work
-              </Link>
-            </div>
-          </div>
+    <>
+      {/* HERO */}
+      <header className="hero wrap">
+        <span className="kicker rev">BUILT FROM THE ASHES OF REAL-WORLD BREACHES</span>
+        <h1 className="rev">
+          Know your risk before attackers do. Own your real-time <em className="em">resilience</em>.
+        </h1>
+        <p className="sub rev">
+          <b>Intelligence Spine at work.</b> One live picture of your risk — exposure in financial
+          terms, a Cyber Resilience Score, validated controls, and compliance you can prove to your
+          regulators, board and insurers. Kaska responds and recovers at machine speed under human
+          approval — prepared before, during and after a breach.
+        </p>
+        <div className="ctas rev">
+          <a className="act" href={REGISTER}>
+            Request early access
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <Link className="ghost" href="/features">
+            See how it works
+          </Link>
         </div>
-      </section>
 
-      {/* ── THREE PILLARS ─────────────────────────────────────────────── */}
-      <section className="section bg-smoke">
-        <div className="container">
-          <div className="text-center mb-16">
-            <div className="eyebrow justify-center">Our Service Model</div>
-            <h2 className="display text-5xl text-[#0D0D14] mb-5">
-              Three pillars.<br />
-              <span className="gradient-brand">One continuous shield.</span>
-            </h2>
-            <p className="text-slate-500 text-lg max-w-2xl mx-auto leading-relaxed">
-              Every Kaska engagement operates continuously — assessment, monitoring, and compliance
-              running in parallel, not sequentially.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-3 gap-6">
-            {buckets.map((b) => {
-              const Icon = b.icon
-              return (
-                <div key={b.label} className="card-premium border border-black/5 overflow-hidden group">
-                  <div className={`h-1 ${b.color === 'brand' ? 'bg-brand' : b.color === 'brand-light' ? 'bg-brand-light' : 'bg-gold'}`} />
-                  <div className="p-8">
-                    <div className="flex items-center justify-between mb-6">
-                      <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${
-                        b.color === 'brand' ? 'bg-brand/10' : b.color === 'brand-light' ? 'bg-brand-light/10' : 'bg-gold/10'
-                      }`}>
-                        <Icon className={`w-5 h-5 ${
-                          b.color === 'brand' ? 'text-brand' : b.color === 'brand-light' ? 'text-brand-light' : 'text-gold'
-                        }`} />
-                      </div>
-                      <span className={`text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full ${
-                        b.color === 'gold' ? 'text-gold bg-gold/10 border border-gold/20' : 'text-brand bg-brand/8 border border-brand/15'
-                      }`}>{b.theme}</span>
-                    </div>
-
-                    <h3 className="font-black text-[#0D0D14] text-xl mb-3 group-hover:text-brand transition-colors">{b.label}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed mb-6">{b.desc}</p>
-
-                    <div className="border-t border-black/5 pt-5">
-                      <div className="text-[10px] font-bold tracking-widest uppercase text-slate-400 mb-3">OEM Partners</div>
-                      <div className="flex flex-wrap gap-2 mb-5">
-                        {b.oems.map(o => (
-                          <span key={o} className="px-3 py-1 rounded-full bg-mist text-xs font-semibold text-slate-600 border border-brand/10">{o}</span>
-                        ))}
-                      </div>
-                      <Link href={b.href}
-                        className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-colors ${
-                          b.color === 'gold' ? 'text-gold hover:text-yellow-600' : 'text-brand hover:text-brand-dark'
-                        }`}>
-                        Explore service <ArrowRight className="w-3.5 h-3.5" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRE / POST BREACH ─────────────────────────────────────────── */}
-      <section className="section bg-[#0D0D14] relative overflow-hidden">
-        <div className="absolute inset-0 dot-bg opacity-40" />
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/10 rounded-full blur-[120px]" />
-        <div className="relative container">
-          <div className="grid lg:grid-cols-2 gap-5">
-
-            {/* Pre-Breach */}
-            <div className="rounded-3xl border border-white/8 bg-white/4 p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 rounded-full bg-green-400" />
-                <span className="text-xs font-bold tracking-widest uppercase text-green-400">Pre-Breach</span>
-              </div>
-              <h3 className="display text-4xl text-white mb-4">Stop threats before they materialise.</h3>
-              <p className="text-slate-400 leading-relaxed mb-6 text-sm">
-                Our continuous assessment and compliance services identify exploitable gaps
-                before attackers reach them. Ongoing vulnerability management, compliance monitoring,
-                and attack surface assessment — closing the window of exposure.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  'Continuous vulnerability discovery and prioritisation',
-                  'Attack surface management and external exposure monitoring',
-                  'Control gap identification against major frameworks',
-                  'Regular penetration testing and red team exercises',
-                ].map(pt => (
-                  <li key={pt} className="flex items-start gap-3 text-sm text-slate-300">
-                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0 mt-0.5" />
-                    {pt}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Post-Breach */}
-            <div className="rounded-3xl border border-brand/25 bg-brand/8 p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-3 h-3 rounded-full bg-brand-light" />
-                <span className="text-xs font-bold tracking-widest uppercase text-brand-light">Post-Breach</span>
-              </div>
-              <h3 className="display text-4xl text-white mb-4">Detect, contain, and recover — fast.</h3>
-              <p className="text-slate-400 leading-relaxed mb-6 text-sm">
-                When a breach occurs, our 24×7 SOC team is already watching. Continuous monitoring
-                means detection happens in minutes — not days. Expert-led response limits damage
-                and restores operations with minimal disruption.
-              </p>
-              <ul className="space-y-3">
-                {[
-                  '24×7 SOC with dedicated analyst coverage',
-                  'Real-time SIEM correlation across all threat signals',
-                  'Rapid incident containment and forensic investigation',
-                  'Executive-ready incident reporting and recovery planning',
-                ].map(pt => (
-                  <li key={pt} className="flex items-start gap-3 text-sm text-slate-300">
-                    <CheckCircle className="w-4 h-4 text-brand-light flex-shrink-0 mt-0.5" />
-                    {pt}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── EXPERT + OEM MODEL ────────────────────────────────────────── */}
-      <section className="section bg-mist">
-        <div className="container">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="eyebrow">How We Deliver</div>
-              <h2 className="display text-5xl text-[#0D0D14] mb-6 leading-tight">
-                Expert practitioners.<br />
-                <span className="gradient-brand">Leading platforms.</span><br />
-                Combined.
-              </h2>
-              <p className="text-slate-500 leading-relaxed mb-8">
-                Most organisations deploy enterprise security tools and then struggle to
-                extract value from them. Kaska resolves this — we bring both the platform
-                and the people who know how to run it at enterprise scale.
-              </p>
-              <div className="space-y-4">
-                {model.map(m => (
-                  <div key={m.title} className="flex items-start gap-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand flex-shrink-0 mt-2" />
-                    <div>
-                      <div className="font-bold text-[#0D0D14] text-sm mb-1">{m.title}</div>
-                      <div className="text-slate-500 text-sm leading-relaxed">{m.desc}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              {[
-                {
-                  service: 'SOC & Threat Monitoring',
-                  label: 'Continuous Monitoring',
-                  platforms: ['Google SecOps', 'Microsoft Sentinel', 'Splunk', 'IBM QRadar'],
-                  experts: 'SOC Analysts · Threat Hunters · Incident Responders',
-                  color: 'brand',
-                },
-                {
-                  service: 'GRC & Compliance Management',
-                  label: 'Continuous Compliance',
-                  platforms: ['RSA Archer', 'ServiceNow GRC', 'OneTrust', 'Vanta'],
-                  experts: 'GRC Consultants · Auditors · Compliance Specialists',
-                  color: 'gold',
-                },
-                {
-                  service: 'Vulnerability & Attack Surface',
-                  label: 'Continuous Assessment',
-                  platforms: ['Tenable', 'Qualys', 'Rapid7', 'CrowdStrike'],
-                  experts: 'Security Engineers · Pen Testers · Red Team',
-                  color: 'brand-light',
-                },
-              ].map(s => (
-                <div key={s.service} className="card-premium border border-black/5 p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <div className={`text-[10px] font-bold tracking-widest uppercase mb-1 ${
-                        s.color === 'brand' ? 'text-brand' : s.color === 'gold' ? 'text-gold' : 'text-brand-light'
-                      }`}>{s.label}</div>
-                      <div className="font-bold text-[#0D0D14] text-sm">{s.service}</div>
-                    </div>
-                  </div>
-                  <div className="flex flex-wrap gap-1.5 mb-3">
-                    {s.platforms.map(p => (
-                      <span key={p} className="px-2.5 py-1 rounded-full bg-mist text-[11px] font-semibold text-slate-600 border border-brand/8">{p}</span>
-                    ))}
-                  </div>
-                  <div className="text-xs text-slate-400 font-medium">+ {s.experts}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── PRODUCTS (secondary) ─────────────────────────────────────── */}
-      <section className="section bg-smoke border-t border-black/5">
-        <div className="container">
-          <div className="text-center mb-12">
-            <div className="eyebrow justify-center">Beyond Services</div>
-            <h2 className="display text-4xl text-[#0D0D14]">We also build products.</h2>
-          </div>
-          <div className="grid lg:grid-cols-2 gap-5 max-w-4xl mx-auto">
-            <div className="card-dark p-8">
-              <div className="pill text-brand-light border-brand-light/30 bg-brand-light/10 mb-5">Platform</div>
-              <h3 className="display text-3xl text-white mb-3">SafeCyber</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                The Autonomous Cyber Resilience Platform™ — an AI layer above your entire
-                security stack, giving CxOs pre-breach and post-breach intelligence.
-              </p>
-              <a href="https://safecyber.io" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-light hover:text-white transition-colors">
-                safecyber.io <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-            <div className="card-premium border border-black/5 p-8">
-              <div className="pill text-gold border-gold/30 bg-gold/8 mb-5">Marketplace</div>
-              <h3 className="display text-3xl text-[#0D0D14] mb-3">CyberSecHire</h3>
-              <p className="text-slate-500 text-sm leading-relaxed mb-6">
-                A dedicated platform for cybersecurity talent acquisition — connecting enterprises
-                with vetted cybersecurity professionals across all disciplines.
-              </p>
-              <a href="https://cybersechire.com" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-brand hover:text-brand-dark transition-colors">
-                cybersechire.com <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── INDUSTRIES ────────────────────────────────────────────────── */}
-      <section className="section bg-mist border-t border-brand/8">
-        <div className="container">
-          <div className="text-center mb-12">
-            <div className="eyebrow justify-center">Who We Serve</div>
-            <h2 className="display text-4xl text-[#0D0D14]">Sector-agnostic. Security-focused.</h2>
-          </div>
-          <div className="flex flex-wrap justify-center gap-3">
-            {[
-              'Financial Services', 'Banking & Capital Markets', 'Insurance',
-              'Government & Public Sector', 'Defence & Intelligence',
-              'Healthcare & Life Sciences', 'Manufacturing & OT',
-              'Retail & E-Commerce', 'Technology & SaaS', 'Energy & Utilities',
-              'Legal & Professional Services', 'Education',
-            ].map(c => (
-              <span key={c}
-                className="px-5 py-2.5 rounded-full bg-white border border-brand/10 text-sm font-medium text-slate-600
-                           hover:border-brand hover:text-brand hover:bg-brand/5 transition-all cursor-default shadow-sm">
-                {c}
+        {/* CENTERPIECE: Resilience Spine */}
+        <div className="spine rev">
+          <div className="spine-card">
+            <div className="spine-head">
+              <span className="lbl">Board Resilience Spine · Acme Corporation</span>
+              <span className="live">
+                <span className="dot"></span>LIVE POSTURE
               </span>
-            ))}
+            </div>
+            <AssetGraph3D />
+            <div className="spine-foot">
+              <div className="metric">
+                <div className="v crit">₹43 Cr</div>
+                <div className="k">Exposure at risk</div>
+              </div>
+              <div className="metric">
+                <div className="v brass">4</div>
+                <div className="k">Open control gaps</div>
+              </div>
+              <div className="metric">
+                <div className="v money">94%</div>
+                <div className="k">Controls enforced</div>
+              </div>
+              <div className="metric">
+                <div className="v">₹12L</div>
+                <div className="k">Cost to close</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* LIFECYCLE RIBBON */}
+      <section className="ribbon">
+        <div className="wrap rev">
+          <span className="kicker rib-k">THE INTELLIGENCE LIFECYCLE</span>
+          <div className="rib-flow">
+            <div className="phase p1">
+              <div className="marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
+                  <circle cx="12" cy="12" r="2.6" />
+                </svg>
+              </div>
+              <div className="ph-k">
+                Pre-Breach
+                <br />
+                Intelligence
+              </div>
+              <div className="steps">
+                <span className="step">
+                  <span className="dt"></span>Unified visibility
+                </span>
+                <span className="step">
+                  <span className="dt"></span>Risk in rupees
+                </span>
+                <span className="step">
+                  <span className="dt"></span>Control validation
+                </span>
+              </div>
+            </div>
+
+            <div className="rib-conn">
+              <svg viewBox="0 0 56 16" fill="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="rc1" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stopColor="#C89B45" />
+                    <stop offset="1" stopColor="#4FC9A3" />
+                  </linearGradient>
+                </defs>
+                <path d="M2 8h46M42 3l6 5-6 5" stroke="url(#rc1)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+
+            <div className="phase p2">
+              <div className="marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2 3 14h8l-1 8 10-12h-8z" />
+                </svg>
+              </div>
+              <div className="ph-k">
+                Real-Time Breach
+                <br />
+                Intelligence
+              </div>
+              <div className="steps">
+                <span className="step">
+                  <span className="dt"></span>Detection
+                </span>
+                <span className="step">
+                  <span className="dt"></span>Governed response
+                </span>
+              </div>
+            </div>
+
+            <div className="rib-conn">
+              <svg viewBox="0 0 56 16" fill="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="rc2" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stopColor="#C89B45" />
+                    <stop offset="1" stopColor="#4FC9A3" />
+                  </linearGradient>
+                </defs>
+                <path d="M2 8h46M42 3l6 5-6 5" stroke="url(#rc2)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+
+            <div className="phase p3">
+              <div className="marker">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <div className="ph-k">
+                Post-Breach
+                <br />
+                Resilience
+              </div>
+              <div className="steps">
+                <span className="step">
+                  <span className="dt"></span>Compliance &amp; evidence
+                </span>
+                <span className="step">
+                  <span className="dt"></span>Recovery
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── CTA ───────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[#0D0D14] py-28 px-6">
-        <div className="absolute inset-0 dot-bg opacity-40" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-brand/15 rounded-full blur-[120px]" />
-        <div className="relative container-sm text-center">
-          <h2 className="display text-5xl lg:text-6xl text-white mb-6">
-            Ready to make your
-            <span className="block gradient-brand-light">security risk-proof?</span>
+      {/* PROBLEM -> UNIFICATION */}
+      <section className="wrap tint">
+        <div className="sec-head center rev">
+          <span className="kicker">THE PROBLEM</span>
+          <h2 style={{ marginTop: 18 }}>
+            Your tools are many. Your risk is <span className="em">invisible</span>.
           </h2>
-          <p className="text-slate-300 text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Talk to a Kaska expert — we'll assess your current posture and outline
-            where continuous coverage will have the most immediate impact.
+          <p className="lead">
+            You have bought the stack. But no one can tell you what is actually protected, whether it
+            truly works, or what a breach would cost.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="btn-brand text-base px-8 py-4">
-              Speak to an Expert <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/about" className="btn-outline-white">
-              About Kaska
+        </div>
+        <div className="prob-grid">
+          <div className="card rev">
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7a10.6 10.6 0 0 1-5-1.2" />
+                <path d="M4 4l16 16" />
+              </svg>
+            </div>
+            <h3>Blind spots you can&apos;t see</h3>
+            <p>Fragmented tools, each with its own console. No single picture of where you are exposed.</p>
+          </div>
+          <div className="card rev">
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" />
+                <path d="M9.5 12l2 2 3.5-4" />
+                <path d="M15 6l-6 12" opacity=".55" />
+              </svg>
+            </div>
+            <h3>No proof your controls work</h3>
+            <p>Your EDR, firewall and MFA are assumed to be enforced — never actually verified against a standard.</p>
+          </div>
+          <div className="card rev">
+            <div className="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 20V4M4 20h16" />
+                <path d="M8 16v-4M12 16V8M16 16v-7" />
+              </svg>
+            </div>
+            <h3>No number for the board</h3>
+            <p>Risk arrives as red-amber-green — not as money. The board can&apos;t act on a colour.</p>
+          </div>
+        </div>
+
+        <div className="resolve rev">
+          <div>
+            <span className="kicker">THE RESOLVE</span>
+            <h3 style={{ marginTop: 16 }}>One platform, above your whole stack.</h3>
+          </div>
+          <div className="rp">
+            <div className="upoint">
+              <span className="chk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 12l5 5L20 6" />
+                </svg>
+              </span>
+              <span>
+                <b>Proves every control is actually enforced</b> — evidence, not assumption.
+              </span>
+            </div>
+            <div className="upoint">
+              <span className="chk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 12l5 5L20 6" />
+                </svg>
+              </span>
+              <span>
+                <b>One risk number — in rupees</b> the board understands and can decide on.
+              </span>
+            </div>
+            <div className="upoint">
+              <span className="chk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 12l5 5L20 6" />
+                </svg>
+              </span>
+              <span>
+                <b>Governed, reversible response</b> — one approved move to contain, fully evidenced.
+              </span>
+            </div>
+            <div className="upoint">
+              <span className="chk">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 12l5 5L20 6" />
+                </svg>
+              </span>
+              <span>
+                <b>Vendor-agnostic</b> — nothing ripped out; Kaska reads the stack you already run.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CAPABILITIES */}
+      <section className="wrap" style={{ paddingBottom: 0 }}>
+        <div className="sec-head center rev" style={{ marginBottom: 12 }}>
+          <span className="kicker">THE PLATFORM</span>
+          <h2 style={{ marginTop: 18 }}>
+            Five things Kaska does — <span className="em">end to end</span>.
+          </h2>
+        </div>
+
+        {/* CAPABILITY 1 */}
+        <div className="cap rev">
+          <div className="cap-text">
+            <span className="num">01 / 05</span>
+            <span className="fname">Pre-Breach Risk Intelligence</span>
+            <h3>See the gap before an attacker does.</h3>
+            <p>Find the exploitable, reachable gaps across your estate and price each one — before it&apos;s used.</p>
+          </div>
+          <div className="cap-vis">
+            <div className="vis-k">Reachable exposure map</div>
+            <div className="gapmap">
+              <svg viewBox="0 0 400 240" preserveAspectRatio="none">
+                <line x1="70" y1="70" x2="200" y2="130" stroke="#232C3B" strokeWidth="1.5" />
+                <line x1="200" y1="130" x2="320" y2="70" stroke="#232C3B" strokeWidth="1.5" />
+                <line x1="200" y1="130" x2="130" y2="200" stroke="#E0554E" strokeWidth="1.5" strokeDasharray="4 4" opacity=".7" />
+                <line x1="130" y1="200" x2="300" y2="190" stroke="#232C3B" strokeWidth="1.5" />
+              </svg>
+              <div className="pin ok" style={{ left: '17.5%', top: '29%' }}>
+                <div className="b"></div>
+                <div className="t">Edge FW</div>
+              </div>
+              <div className="pin warn" style={{ left: '50%', top: '54%' }}>
+                <div className="b"></div>
+                <div className="t">DMZ host</div>
+              </div>
+              <div className="pin ok" style={{ left: '80%', top: '29%' }}>
+                <div className="b"></div>
+                <div className="t">Identity</div>
+              </div>
+              <div className="pin crit" style={{ left: '32.5%', top: '83%' }}>
+                <div className="b"></div>
+                <div className="t">Finance VLAN</div>
+              </div>
+              <div className="pin warn" style={{ left: '75%', top: '79%' }}>
+                <div className="b"></div>
+                <div className="t">Backup</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CAPABILITY 2 */}
+        <div className="cap flip rev">
+          <div className="cap-text">
+            <span className="num">02 / 05</span>
+            <span className="fname">Control Validation</span>
+            <h3>Prove every control is actually enforced.</h3>
+            <p>~1,400 checks across 31 domains, mapped to CIS, RBI, ISO and NIST — proof, not assumption.</p>
+          </div>
+          <div className="cap-vis">
+            <div className="vis-k">Control checks · EDR domain</div>
+            <div className="checks">
+              <div className="chk-row">
+                <span className="st pass">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 12l5 5L20 6" />
+                  </svg>
+                </span>
+                <span className="nm">Real-time protection enabled</span>
+                <span className="fw">CIS 10.1</span>
+              </div>
+              <div className="chk-row">
+                <span className="st fail">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                  </svg>
+                </span>
+                <span className="nm">EDR in detection-only mode</span>
+                <span className="fw">RBI 6.4</span>
+              </div>
+              <div className="chk-row">
+                <span className="st pass">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 12l5 5L20 6" />
+                  </svg>
+                </span>
+                <span className="nm">Tamper protection on</span>
+                <span className="fw">ISO A.8.7</span>
+              </div>
+              <div className="chk-row">
+                <span className="st pass">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 12l5 5L20 6" />
+                  </svg>
+                </span>
+                <span className="nm">Signatures &lt; 24h old</span>
+                <span className="fw">NIST DE.CM</span>
+              </div>
+              <div className="barwrap">
+                <div className="bar">
+                  <i></i>
+                </div>
+                <div className="barlbl">
+                  <span>Coverage across 31 domains</span>
+                  <span>1,314 / 1,399 enforced</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CAPABILITY 3 */}
+        <div className="cap rev">
+          <div className="cap-text">
+            <span className="num">03 / 05</span>
+            <span className="fname">Cyber Risk Quantification</span>
+            <h3>Put a rupee number on your risk.</h3>
+            <p>Annual loss and value-at-risk in ₹ and $, FAIR-style — the number your board understands.</p>
+          </div>
+          <div className="cap-vis">
+            <div className="vis-k">Board risk view · FAIR model</div>
+            <div className="crq">
+              <div className="big">₹43 Cr</div>
+              <div className="biglbl">Value at risk (annual)</div>
+              <div className="rows">
+                <div className="cr">
+                  <span>Annual loss expectancy</span>
+                  <b className="money">₹17.4 Cr</b>
+                </div>
+                <div className="cr">
+                  <span>Inherent exposure</span>
+                  <b>₹58 Cr</b>
+                </div>
+                <div className="cr">
+                  <span>Reduction if gaps closed</span>
+                  <b className="money">−₹31 Cr</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CAPABILITY 4 */}
+        <div className="cap flip rev">
+          <div className="cap-text">
+            <span className="num">04 / 05</span>
+            <span className="fname">Real-Time Response</span>
+            <h3>Stop it the moment it strikes — one governed move.</h3>
+            <p>When something fires, one governed, reversible, human-approved action to contain it — fully evidenced.</p>
+          </div>
+          <div className="cap-vis">
+            <div className="vis-k">Governed response · ransomware execution</div>
+            <div className="resp">
+              <div className="rstep done">
+                <div className="rn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 12l5 5L20 6" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="rt">Threat detected on host FIN-04</div>
+                  <div className="rd">Correlated across EDR + identity signals</div>
+                </div>
+              </div>
+              <div className="rstep done">
+                <div className="rn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 12l5 5L20 6" />
+                  </svg>
+                </div>
+                <div>
+                  <div className="rt">Isolate host — one action proposed</div>
+                  <div className="rd">Reversible; blast radius scoped</div>
+                </div>
+              </div>
+              <div className="rstep">
+                <div className="rn">3</div>
+                <div>
+                  <div className="rt">Human approval</div>
+                  <div className="rd">Analyst approves the single move</div>
+                  <span className="rtag">AWAITING · 1 CLICK</span>
+                </div>
+              </div>
+              <div className="rstep">
+                <div className="rn">4</div>
+                <div>
+                  <div className="rt">Contained &amp; evidenced</div>
+                  <div className="rd">Tamper-proof record written automatically</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* STRIKE-MOMENT STORY */}
+        <div className="strike rev">
+          <div className="strike-in">
+            <span className="kicker">THE DECISIVE MOMENT</span>
+            <h3>
+              The moment it strikes, Kaska makes <em className="em">one</em> move.
+            </h3>
+            <p>
+              Kaska watches the picture form in real time. The instant something fires, it doesn&apos;t
+              drown you in alerts — it takes ONE governed, reversible move to contain it: the action a
+              human has pre-approved for that situation, executed at machine speed, every step
+              evidenced. Autonomous intelligence, governed response — machine speed on the routine, a
+              human gate on anything consequential.
+            </p>
+          </div>
+          <div className="strike-pts">
+            <div className="spt">
+              <span className="si">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2 3 14h8l-1 8 10-12h-8z" />
+                </svg>
+              </span>
+              <span>One decisive action, not an alert storm.</span>
+            </div>
+            <div className="spt">
+              <span className="si">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M3 12a9 9 0 1 1 3 6.7" />
+                  <path d="M3 20v-5h5" />
+                </svg>
+              </span>
+              <span>Reversible and human-approved — never a black box.</span>
+            </div>
+            <div className="spt">
+              <span className="si">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V5z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </span>
+              <span>Every move sealed to a tamper-proof evidence trail.</span>
+            </div>
+          </div>
+        </div>
+
+        {/* CAPABILITY 5 */}
+        <div className="cap rev">
+          <div className="cap-text">
+            <span className="num">05 / 05</span>
+            <span className="fname">Compliance & Evidence</span>
+            <h3>Prove it to the board and the regulator.</h3>
+            <p>17 frameworks incl. RBI, SEBI, CERT-In and DPDP; tamper-proof evidence and a CERT-In six-hour filing.</p>
+          </div>
+          <div className="cap-vis">
+            <div className="vis-k">Framework coverage</div>
+            <div className="frm">
+              <div className="frm-grid">
+                <div className="fchip lit">RBI</div>
+                <div className="fchip lit">SEBI</div>
+                <div className="fchip lit">CERT-In</div>
+                <div className="fchip lit">DPDP</div>
+                <div className="fchip">ISO 27001</div>
+                <div className="fchip">NIST CSF</div>
+                <div className="fchip">CIS v8</div>
+                <div className="fchip">PCI-DSS</div>
+                <div className="fchip">SOC 2</div>
+                <div className="fchip">IRDAI</div>
+                <div className="fchip">NCIIPC</div>
+                <div className="fchip">MeitY</div>
+              </div>
+              <div className="frm-foot">
+                <div className="seal">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V5z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                </div>
+                <div className="ft">
+                  <b>Tamper-proof evidence chain</b> — CERT-In six-hour report generated on demand.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ESTATE */}
+      <section className="estate">
+        <div className="wrap">
+          <div className="sec-head center rev">
+            <span className="kicker">COVERAGE</span>
+            <h2 style={{ marginTop: 18 }}>
+              Across your <span className="em">whole estate</span>.
+            </h2>
+            <p className="lead">One picture spanning every environment you run — not a silo per tool.</p>
+          </div>
+          <div className="est-grid">
+            <div className="est rev">
+              <div className="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6.5 18a4.5 4.5 0 0 1-.5-8.97A6 6 0 0 1 17.7 8.2 4 4 0 0 1 18 16H7z" />
+                </svg>
+              </div>
+              <h3>Cloud</h3>
+              <p>AWS, Azure and GCP posture read continuously through native security APIs.</p>
+            </div>
+            <div className="est rev">
+              <div className="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="6" rx="1.5" />
+                  <rect x="3" y="14" width="18" height="6" rx="1.5" />
+                  <path d="M7 7h.01M7 17h.01" />
+                </svg>
+              </div>
+              <h3>On-premise</h3>
+              <p>Firewalls, EDR, servers and identity behind your perimeter, via a light collector.</p>
+            </div>
+            <div className="est rev">
+              <div className="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+                </svg>
+              </div>
+              <h3>OT / Industrial</h3>
+              <p>Plant and control networks mapped to IEC 62443 and CEA 2025 for critical infrastructure.</p>
+            </div>
+            <div className="est rev">
+              <div className="ic">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" />
+                </svg>
+              </div>
+              <h3>Identity</h3>
+              <p>Active Directory, Entra ID and Okta — privilege, MFA and access enforcement.</p>
+            </div>
+          </div>
+          <p className="est-foot rev">
+            Vendor-agnostic — <span className="em">Kaska reads the stack you already run.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* RESOURCES */}
+      <section className="wrap">
+        <div className="sec-head rev">
+          <span className="kicker">RESOURCES</span>
+          <h2 style={{ marginTop: 18 }}>
+            Go <span className="em">deeper</span>.
+          </h2>
+        </div>
+        <div className="res-grid">
+          <a className="res rev" href="#">
+            <div className="meta">
+              <span className="dt">2026</span>WHITEPAPER
+            </div>
+            <h3>Kaska Technical Whitepaper</h3>
+            <span className="read">
+              Read{' '}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </a>
+          <a className="res rev" href="#">
+            <div className="meta">
+              <span className="dt">2026</span>ONE-PAGER
+            </div>
+            <h3>Data Governance & Trust</h3>
+            <span className="read">
+              Read{' '}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </a>
+          <a className="res rev" href="#">
+            <div className="meta">
+              <span className="dt">2026</span>EXPLAINER
+            </div>
+            <h3>Cyber Risk, Quantified in Rupees</h3>
+            <span className="read">
+              Read{' '}
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
+      <section className="wrap final tint">
+        <div className="rev">
+          <span className="kicker">GET STARTED</span>
+          <h2 style={{ marginTop: 18 }}>
+            See your risk — <span className="em">in rupees.</span>
+          </h2>
+          <div className="ctas">
+            <a className="act" href={REGISTER}>
+              Request early access
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <Link className="ghost" href="/contact">
+              Book a walkthrough
             </Link>
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
