@@ -6,7 +6,7 @@ const ACCESS_KEY = '206302e1-fa36-4003-ba8f-049108c29dba'
 
 export default function ContactForm() {
   const [result, setResult] = useState(
-    "We reply within one business day. Your details are never shared."
+    "We reply within two business days. Your details are never shared."
   )
   const [submitting, setSubmitting] = useState(false)
 
@@ -25,13 +25,13 @@ export default function ContactForm() {
       const j = await r.json()
       if (j && j.success) {
         form.reset()
-        setResult('Thank you — we’ll reply within one business day.')
+        setResult('Thank you — we’ll reply within two business days.')
       } else {
-        setResult('Sorry, something went wrong. Please email hello@kaskatech.com.')
+        setResult('Sorry, something went wrong. Please email contact@kaskatech.com.')
         setSubmitting(false)
       }
     } catch {
-      setResult('Sorry, something went wrong. Please email hello@kaskatech.com.')
+      setResult('Sorry, something went wrong. Please email contact@kaskatech.com.')
       setSubmitting(false)
     }
   }

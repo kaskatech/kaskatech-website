@@ -2,7 +2,9 @@
 
 import Link from 'next/link'
 
-const REGISTER = 'https://app.kaskatech.com/register'
+// Early-access funnel: route to the contact form until app.kaskatech.com is live.
+// When the self-serve app goes live, set this back to 'https://app.kaskatech.com/register'.
+const REGISTER = '/contact'
 
 export default function Footer() {
   return (

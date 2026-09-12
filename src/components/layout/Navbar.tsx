@@ -13,7 +13,9 @@ const LINKS = [
   { href: '/contact', label: 'Contact' },
 ]
 
-const REGISTER = 'https://app.kaskatech.com/register'
+// Early-access funnel: route to the contact form until app.kaskatech.com is live.
+// When the self-serve app goes live, set this back to 'https://app.kaskatech.com/register'.
+const REGISTER = '/contact'
 const LOGIN = 'https://app.kaskatech.com/login'
 
 export default function Navbar() {

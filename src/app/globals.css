@@ -413,6 +413,8 @@ section{padding:110px 0}
 .rpoint .chk svg{width:15px; height:15px}
 .rpoint b{font-weight:600; color:var(--ink); font-size:14.5px}
 .rpoint span{color:var(--muted); font-size:13.5px; display:block; margin-top:1px}
+.deploy{display:grid; gap:12px}
+.dk{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--brass)}
 
 /* FOOTER */
 footer{border-top:1px solid var(--hair); background:var(--panel); padding:72px 0 40px}

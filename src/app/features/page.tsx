@@ -7,7 +7,7 @@ export default function Page() {
         <h1 className="rev">Everything the platform does — and <span className="em">why</span> it matters.</h1>
         <p className="sub rev">Kaska sits above the security tools you already own — proving your controls work, pricing your risk in financial terms, and containing what fires, all on one asset-centric spine.</p>
         <div className="ctas rev">
-          <a className="act" href="https://app.kaskatech.com/register">Request early access
+          <a className="act" href="/contact">Request early access
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
           <a className="ghost" href="/contact">Book a walkthrough</a>
@@ -319,7 +319,7 @@ export default function Page() {
           <span className="kicker">SEE KASKA IN ACTION</span>
           <h2 style={{ marginTop: '18px' }}>See it on your <span className="em">own stack.</span></h2>
           <div className="ctas">
-            <a className="act" href="https://app.kaskatech.com/register">Request early access
+            <a className="act" href="/contact">Request early access
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
             <a className="ghost" href="/contact">Talk to us</a>
