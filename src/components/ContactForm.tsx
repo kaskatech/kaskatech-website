@@ -123,8 +123,8 @@ export default function ContactForm() {
           <select id="interest" name="interest" defaultValue="" required>
             <option value="">Select an option</option>
             <option>Kaska Platform</option>
-            <option>Technology Solutions</option>
-            <option>Both — Platform and Technology Solutions</option>
+            <option>Kaska Platform Led Managed Services</option>
+            <option>3rd Party Solutions</option>
             <option>Not sure yet — a briefing</option>
           </select>
         </div>
