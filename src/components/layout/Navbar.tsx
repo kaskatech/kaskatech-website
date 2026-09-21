@@ -44,7 +44,7 @@ export default function Navbar() {
       <nav className="nav">
         <div className="wrap">
           <Link className="brand" href="/">
-            <svg className="shield" width="34" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.85" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="shield" width="41" height="43" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.85" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 3v18M7 12l9-9M8.5 11l8.5 10" />
             </svg>
             <span className="brandtext">
