@@ -44,12 +44,13 @@ export default function Navbar() {
       <nav className="nav">
         <div className="wrap">
           <Link className="brand" href="/">
-            <svg className="shield" width="24" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
+            <svg className="shield" width="27" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round">
               <path d="M7 3v18M7 12l9-9M8.5 11l8.5 10" />
             </svg>
-            <span className="name">Kaska</span>
-            <span className="div"></span>
-            <span className="tag">AUTONOMOUS CYBER RISK &amp; RESILIENCE</span>
+            <span className="brandtext">
+              <span className="bt-main"><span className="name">Kaska</span><span className="div"></span><span className="tag">Exposure Management</span></span>
+              <span className="bt-sub">Autonomous Cyber Risk &amp; Resilience</span>
+            </span>
           </Link>
           <div className="navbar">
             <a className="act" href={REGISTER}>
