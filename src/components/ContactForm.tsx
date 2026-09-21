@@ -4,15 +4,43 @@ import { useState } from 'react'
 
 const ACCESS_KEY = '206302e1-fa36-4003-ba8f-049108c29dba'
 
+// Public / free mailbox providers — we ask for an official work email.
+const PUBLIC_EMAIL_DOMAINS = new Set([
+  'gmail.com', 'googlemail.com', 'yahoo.com', 'yahoo.co.in', 'yahoo.co.uk',
+  'ymail.com', 'rocketmail.com', 'hotmail.com', 'hotmail.co.uk', 'outlook.com',
+  'live.com', 'msn.com', 'aol.com', 'icloud.com', 'me.com', 'mac.com',
+  'proton.me', 'protonmail.com', 'gmx.com', 'mail.com', 'zoho.com',
+  'yandex.com', 'rediffmail.com', 'rediff.com', 'qq.com', '163.com', '126.com',
+])
+
+function isPublicEmail(email: string): boolean {
+  const at = email.lastIndexOf('@')
+  if (at < 0) return false
+  const domain = email.slice(at + 1).trim().toLowerCase()
+  return PUBLIC_EMAIL_DOMAINS.has(domain)
+}
+
+const NOTE_DEFAULT = 'We reply within two business days. Your details are never shared.'
+
 export default function ContactForm() {
-  const [result, setResult] = useState(
-    "We reply within one business day. Your details are never shared."
-  )
+  const [result, setResult] = useState(NOTE_DEFAULT)
+  const [emailError, setEmailError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     const form = e.currentTarget
+
+    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value || ''
+    if (isPublicEmail(email)) {
+      setEmailError(
+        'Please use your official work email — public addresses (Gmail, Yahoo, Outlook and the like) aren’t accepted.'
+      )
+      ;(form.elements.namedItem('email') as HTMLInputElement)?.focus()
+      return
+    }
+    setEmailError('')
+
     setSubmitting(true)
     setResult('Sending…')
     const data = Object.fromEntries(new FormData(form).entries())
@@ -25,13 +53,13 @@ export default function ContactForm() {
       const j = await r.json()
       if (j && j.success) {
         form.reset()
-        setResult('Thank you — we’ll reply within one business day.')
+        setResult('Thank you — we’ll reply within two business days.')
       } else {
-        setResult('Sorry, something went wrong. Please email hello@kaskatech.com.')
+        setResult('Sorry, something went wrong. Please email contact@kaskatech.com.')
         setSubmitting(false)
       }
     } catch {
-      setResult('Sorry, something went wrong. Please email hello@kaskatech.com.')
+      setResult('Sorry, something went wrong. Please email contact@kaskatech.com.')
       setSubmitting(false)
     }
   }
@@ -55,7 +83,17 @@ export default function ContactForm() {
             <label htmlFor="email">
               Work email <span className="req">*</span>
             </label>
-            <input id="email" name="email" type="email" placeholder="you@company.com" autoComplete="email" required />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@company.com"
+              autoComplete="email"
+              required
+              aria-invalid={emailError ? true : undefined}
+              onInput={() => emailError && setEmailError('')}
+            />
+            {emailError && <span className="field-err">{emailError}</span>}
           </div>
         </div>
         <div className="row2">
@@ -77,6 +115,18 @@ export default function ContactForm() {
               <option>Other</option>
             </select>
           </div>
+        </div>
+        <div className="field">
+          <label htmlFor="interest">
+            I’m interested in <span className="req">*</span>
+          </label>
+          <select id="interest" name="interest" defaultValue="" required>
+            <option value="">Select an option</option>
+            <option>Kaska Platform</option>
+            <option>Kaska Platform Led Managed Services</option>
+            <option>3rd Party Solutions</option>
+            <option>Not sure yet — a briefing</option>
+          </select>
         </div>
         <div className="field">
           <label htmlFor="msg">How can we help?</label>
