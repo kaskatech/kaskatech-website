@@ -263,10 +263,11 @@ export default function Home() {
       {/* CAPABILITIES */}
       <section className="wrap" style={{ paddingBottom: 0 }}>
         <div className="sec-head center rev" style={{ marginBottom: 12 }}>
-          <span className="kicker">THE PLATFORM</span>
+          <span className="kicker">KASKA EM · EXPOSURE MANAGEMENT</span>
           <h2 style={{ marginTop: 18 }}>
             Five things Kaska does — <span className="em">end to end</span>.
           </h2>
+          <p className="lead">Kaska Exposure Management is the platform that does it all — proving your controls, pricing your risk, and containing what fires.</p>
         </div>
 
         {/* CAPABILITY 1 */}

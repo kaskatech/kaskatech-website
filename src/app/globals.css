@@ -55,7 +55,8 @@ h1,h2,h3{font-family:var(--serif); font-weight:500; line-height:1.06; letter-spa
 .brand .shield{color:var(--brass)}
 .brand .name{font-family:var(--serif); font-size:22px; font-weight:600; letter-spacing:.01em}
 .brand .div{width:1px; height:22px; background:var(--hair)}
-.brand .tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.18em; color:var(--muted)}
+.brand .tag{font-family:var(--mono); font-size:10px; letter-spacing:.13em; color:var(--muted); white-space:nowrap}
+@media (max-width:820px){ .brand .tag, .brand .div{display:none} }
 .navlinks{display:flex; gap:26px; margin-left:14px}
 .navlinks a{font-size:14px; color:var(--muted); transition:color .2s}
 .navlinks a:hover{color:var(--ink)}

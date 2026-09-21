@@ -49,7 +49,7 @@ export default function Navbar() {
             </svg>
             <span className="name">Kaska</span>
             <span className="div"></span>
-            <span className="tag">EXPOSURE MANAGEMENT</span>
+            <span className="tag">AUTONOMOUS CYBER RISK &amp; RESILIENCE</span>
           </Link>
           <div className="navbar">
             <a className="act" href={REGISTER}>
