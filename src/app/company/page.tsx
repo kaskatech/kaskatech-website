@@ -14,6 +14,42 @@ export default function Page() {
         </div>
       </header>
 
+      {/* WHY KASKA EXISTS */}
+      <section className="wrap">
+        <div className="story">
+          <div className="side rev">
+            <span className="kicker">WHY KASKA EXISTS</span>
+            <h2>The one question tools don&rsquo;t <span className="em">answer</span>.</h2>
+          </div>
+          <div className="body">
+            <p className="rev">Enterprises don&rsquo;t lack security tools — they lack a clear, continuous answer to one question: <b>are we actually protected, and what would a breach cost us?</b> Dashboards show green while controls quietly drift out of policy. Risk lives in spreadsheets nobody trusts. And when an incident hits, the scramble starts from zero.</p>
+            <p className="rev">Kaska was built to close that gap. We&rsquo;re an Autonomous Cyber Risk &amp; Resilience platform that sits <b>above the entire security stack</b> — vendor-agnostic, OEM-backed — and continuously answers three things:</p>
+          </div>
+        </div>
+
+        <div className="card-grid" style={{ marginTop: '44px' }}>
+          <div className="card rev">
+            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M9.5 12l2 2 3.5-4" /></svg></div>
+            <h3>Are our controls working?</h3>
+            <p>We validate configurations against real benchmarks across the security stack, and flag the gaps that matter — not noise.</p>
+          </div>
+          <div className="card rev">
+            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M8 6h6a3 3 0 0 1 0 6H8m0 0h7a3 3 0 0 1 0 6H7" /></svg></div>
+            <h3>What&rsquo;s our exposure, in money?</h3>
+            <p>Every gap maps to a specific asset and a financial figure (ALE / Value-at-Risk), so security conversations happen in the language of the board.</p>
+          </div>
+          <div className="card rev">
+            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M12 8v4l2.5 1.5" /></svg></div>
+            <h3>Can we contain what gets through?</h3>
+            <p>Real-time response, guided investigation, and audit-ready evidence for regulators — from the moment of exposure to the moment of impact.</p>
+          </div>
+        </div>
+
+        <div className="pull rev" style={{ marginTop: '40px' }}><span className="em">AI at the Core. Resilience at the Edge.</span> The intelligence runs continuously and autonomously; the resilience shows up where it counts — at the moment of exposure and the moment of impact.</div>
+
+        <p className="rev" style={{ marginTop: '28px', maxWidth: '760px' }}><b>Built in India.</b> Kaska is engineered for the regulatory reality of Indian enterprise, BFSI, and government — DPDP, CERT-In, RBI, SEBI — with deployment models that respect data sovereignty, including on-premise and air-gapped.</p>
+      </section>
+
       {/* STORY */}
       <section className="wrap tint">
         <div className="story">
