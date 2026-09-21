@@ -448,6 +448,17 @@ footer{border-top:1px solid var(--hair); background:var(--panel); padding:72px 0
 .foot-bottom .url{font-family:var(--mono); font-size:12px; color:var(--muted); letter-spacing:.08em}
 .foot-compliance{flex-basis:100%; font-family:var(--mono); font-size:11.5px; color:var(--faint); letter-spacing:.07em; text-align:center; padding-top:6px}
 
+/* real product screenshots — browser-window frame */
+.shotframe{margin:0; border:1px solid var(--hair); border-radius:14px; overflow:hidden; background:var(--panel); box-shadow:0 34px 80px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.03)}
+.shotframe .sf-bar{display:flex; align-items:center; gap:7px; padding:11px 15px; border-bottom:1px solid var(--hair); background:var(--raised)}
+.shotframe .sf-bar span{width:9px; height:9px; border-radius:50%; background:#2b3242}
+.shotframe .sf-bar em{margin-left:10px; font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-style:normal}
+.shotframe img{display:block; width:100%; height:auto; aspect-ratio:2160 / 1350; object-fit:cover; object-position:top left; background:var(--raised)}
+.shot-note{margin-top:12px; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--faint); text-align:center}
+/* screenshot gallery (features page) */
+.shot-gallery{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:48px}
+@media (max-width:900px){ .shot-gallery{grid-template-columns:1fr} }
+
 @media (max-width:900px){
   .wrap{padding:0 24px}
   .navlinks,.navright .signin{display:none}

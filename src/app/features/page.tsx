@@ -183,6 +183,22 @@ export default function Page() {
         </div>
       </section>
 
+      {/* CONSOLE SHOWCASE — real product screenshots */}
+      <section className="wrap tint">
+        <div className="sec-head center rev">
+          <span className="kicker">INSIDE THE CONSOLE</span>
+          <h2 style={{ marginTop: '18px' }}>See it in the <span className="em">console</span>.</h2>
+          <p className="lead">The real Kaska Exposure Management console — control posture, attack paths, quantified risk and real-time command, in one place.</p>
+        </div>
+        <div className="shot-gallery">
+          <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Control Validation · 30 domains</em></div><img src="/platform/control-validation.webp" alt="Kaska Control Validation — posture across 30 control domains" loading="lazy" decoding="async" /></figure>
+          <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Attack Paths · chained exposure</em></div><img src="/platform/attack-paths.webp" alt="Kaska Attack Paths — chained exposure to crown-jewel assets" loading="lazy" decoding="async" /></figure>
+          <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Exposure &amp; Risk · FAIR</em></div><img src="/platform/exposure-risk.webp" alt="Kaska Exposure and Risk — FAIR quantification" loading="lazy" decoding="async" /></figure>
+          <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Incident Command · real-time</em></div><img src="/platform/command-center.webp" alt="Kaska Incident Command Center" loading="lazy" decoding="async" /></figure>
+        </div>
+        <p className="shot-note">Illustrative data shown · Kaska Exposure Management™ console.</p>
+      </section>
+
       {/* ARCHITECTURE DIAGRAM */}
       <section className="wrap" style={{ paddingTop: 0 }}>
         <div className="sec-head center rev">

@@ -278,35 +278,10 @@ export default function Home() {
             <p>Find the exploitable, reachable gaps across your estate and price each one — before it&apos;s used.</p>
           </div>
           <div className="cap-vis">
-            <div className="vis-k">Reachable exposure map</div>
-            <div className="gapmap">
-              <svg viewBox="0 0 400 240" preserveAspectRatio="none">
-                <line x1="70" y1="70" x2="200" y2="130" stroke="#232C3B" strokeWidth="1.5" />
-                <line x1="200" y1="130" x2="320" y2="70" stroke="#232C3B" strokeWidth="1.5" />
-                <line x1="200" y1="130" x2="130" y2="200" stroke="#E0554E" strokeWidth="1.5" strokeDasharray="4 4" opacity=".7" />
-                <line x1="130" y1="200" x2="300" y2="190" stroke="#232C3B" strokeWidth="1.5" />
-              </svg>
-              <div className="pin ok" style={{ left: '17.5%', top: '29%' }}>
-                <div className="b"></div>
-                <div className="t">Edge FW</div>
-              </div>
-              <div className="pin warn" style={{ left: '50%', top: '54%' }}>
-                <div className="b"></div>
-                <div className="t">DMZ host</div>
-              </div>
-              <div className="pin ok" style={{ left: '80%', top: '29%' }}>
-                <div className="b"></div>
-                <div className="t">Identity</div>
-              </div>
-              <div className="pin crit" style={{ left: '32.5%', top: '83%' }}>
-                <div className="b"></div>
-                <div className="t">Finance VLAN</div>
-              </div>
-              <div className="pin warn" style={{ left: '75%', top: '79%' }}>
-                <div className="b"></div>
-                <div className="t">Backup</div>
-              </div>
-            </div>
+            <figure className="shotframe">
+              <div className="sf-bar"><span></span><span></span><span></span><em>Attack Paths · reachable exposure</em></div>
+              <img src="/platform/attack-paths.webp" alt="Kaska platform — Attack Paths, chained exposure to crown-jewel assets" loading="lazy" decoding="async" />
+            </figure>
           </div>
         </div>
 
@@ -319,54 +294,10 @@ export default function Home() {
             <p>~1,400 checks across 31 domains, mapped to CIS, RBI, ISO and NIST — proof, not assumption.</p>
           </div>
           <div className="cap-vis">
-            <div className="vis-k">Control checks · EDR domain</div>
-            <div className="checks">
-              <div className="chk-row">
-                <span className="st pass">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 12l5 5L20 6" />
-                  </svg>
-                </span>
-                <span className="nm">Real-time protection enabled</span>
-                <span className="fw">CIS 10.1</span>
-              </div>
-              <div className="chk-row">
-                <span className="st fail">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M6 6l12 12M18 6L6 18" />
-                  </svg>
-                </span>
-                <span className="nm">EDR in detection-only mode</span>
-                <span className="fw">RBI 6.4</span>
-              </div>
-              <div className="chk-row">
-                <span className="st pass">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 12l5 5L20 6" />
-                  </svg>
-                </span>
-                <span className="nm">Tamper protection on</span>
-                <span className="fw">ISO A.8.7</span>
-              </div>
-              <div className="chk-row">
-                <span className="st pass">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 12l5 5L20 6" />
-                  </svg>
-                </span>
-                <span className="nm">Signatures &lt; 24h old</span>
-                <span className="fw">NIST DE.CM</span>
-              </div>
-              <div className="barwrap">
-                <div className="bar">
-                  <i></i>
-                </div>
-                <div className="barlbl">
-                  <span>Coverage across 31 domains</span>
-                  <span>1,314 / 1,399 enforced</span>
-                </div>
-              </div>
-            </div>
+            <figure className="shotframe">
+              <div className="sf-bar"><span></span><span></span><span></span><em>Control Validation · 30 domains</em></div>
+              <img src="/platform/control-validation.webp" alt="Kaska platform — Control Validation posture across 30 control domains" loading="lazy" decoding="async" />
+            </figure>
           </div>
         </div>
 
@@ -379,25 +310,10 @@ export default function Home() {
             <p>Annual loss and value-at-risk in financial terms, FAIR-style — the number your board understands.</p>
           </div>
           <div className="cap-vis">
-            <div className="vis-k">Board risk view · FAIR model</div>
-            <div className="crq">
-              <div className="big">$8.7M</div>
-              <div className="biglbl">Value at risk (annual)</div>
-              <div className="rows">
-                <div className="cr">
-                  <span>Annual loss expectancy</span>
-                  <b className="money">$3.5M</b>
-                </div>
-                <div className="cr">
-                  <span>Inherent exposure</span>
-                  <b>$11.6M</b>
-                </div>
-                <div className="cr">
-                  <span>Reduction if gaps closed</span>
-                  <b className="money">−$6.2M</b>
-                </div>
-              </div>
-            </div>
+            <figure className="shotframe">
+              <div className="sf-bar"><span></span><span></span><span></span><em>Exposure & Risk · FAIR model</em></div>
+              <img src="/platform/exposure-risk.webp" alt="Kaska platform — Exposure & Risk, FAIR financial quantification" loading="lazy" decoding="async" />
+            </figure>
           </div>
         </div>
 
@@ -410,46 +326,10 @@ export default function Home() {
             <p>When something fires, one governed, reversible, human-approved action to contain it — fully evidenced.</p>
           </div>
           <div className="cap-vis">
-            <div className="vis-k">Governed response · ransomware execution</div>
-            <div className="resp">
-              <div className="rstep done">
-                <div className="rn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 12l5 5L20 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="rt">Threat detected on host FIN-04</div>
-                  <div className="rd">Correlated across EDR + identity signals</div>
-                </div>
-              </div>
-              <div className="rstep done">
-                <div className="rn">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 12l5 5L20 6" />
-                  </svg>
-                </div>
-                <div>
-                  <div className="rt">Isolate host — one action proposed</div>
-                  <div className="rd">Reversible; blast radius scoped</div>
-                </div>
-              </div>
-              <div className="rstep">
-                <div className="rn">3</div>
-                <div>
-                  <div className="rt">Human approval</div>
-                  <div className="rd">Analyst approves the single move</div>
-                  <span className="rtag">AWAITING · 1 CLICK</span>
-                </div>
-              </div>
-              <div className="rstep">
-                <div className="rn">4</div>
-                <div>
-                  <div className="rt">Contained &amp; evidenced</div>
-                  <div className="rd">Tamper-proof record written automatically</div>
-                </div>
-              </div>
-            </div>
+            <figure className="shotframe">
+              <div className="sf-bar"><span></span><span></span><span></span><em>Incident Command · real-time</em></div>
+              <img src="/platform/command-center.webp" alt="Kaska platform — Incident Command Center" loading="lazy" decoding="async" />
+            </figure>
           </div>
         </div>
 
@@ -507,34 +387,10 @@ export default function Home() {
             <p>17 frameworks incl. RBI, SEBI, CERT-In and DPDP; tamper-proof evidence and a CERT-In six-hour filing.</p>
           </div>
           <div className="cap-vis">
-            <div className="vis-k">Framework coverage</div>
-            <div className="frm">
-              <div className="frm-grid">
-                <div className="fchip lit">RBI</div>
-                <div className="fchip lit">SEBI</div>
-                <div className="fchip lit">CERT-In</div>
-                <div className="fchip lit">DPDP</div>
-                <div className="fchip">ISO 27001</div>
-                <div className="fchip">NIST CSF</div>
-                <div className="fchip">CIS v8</div>
-                <div className="fchip">PCI-DSS</div>
-                <div className="fchip">SOC 2</div>
-                <div className="fchip">IRDAI</div>
-                <div className="fchip">NCIIPC</div>
-                <div className="fchip">MeitY</div>
-              </div>
-              <div className="frm-foot">
-                <div className="seal">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V5z" />
-                    <path d="M9 12l2 2 4-4" />
-                  </svg>
-                </div>
-                <div className="ft">
-                  <b>Tamper-proof evidence chain</b> — CERT-In six-hour report generated on demand.
-                </div>
-              </div>
-            </div>
+            <figure className="shotframe">
+              <div className="sf-bar"><span></span><span></span><span></span><em>Compliance · frameworks & evidence</em></div>
+              <img src="/platform/compliance.webp" alt="Kaska platform — Compliance frameworks and evidence" loading="lazy" decoding="async" />
+            </figure>
           </div>
         </div>
       </section>
