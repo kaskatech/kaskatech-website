@@ -16,7 +16,6 @@ const LINKS = [
 // Early-access funnel: route to the contact form until app.kaskatech.com is live.
 // When the self-serve app goes live, set this back to 'https://app.kaskatech.com/register'.
 const REGISTER = '/contact'
-const LOGIN = 'https://app.kaskatech.com/login'
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -114,9 +113,6 @@ export default function Navbar() {
           ))}
         </nav>
         <div className="drawer-div"></div>
-        <a className="drawer-sign" href={LOGIN}>
-          Sign in
-        </a>
         <a className="act full" href={REGISTER}>
           Request early access
         </a>
