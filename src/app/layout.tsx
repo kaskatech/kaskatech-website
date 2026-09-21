@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import RevealInit from '@/components/RevealInit'
+import ImageGuard from '@/components/ImageGuard'
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main>{children}</main>
         <Footer />
         <RevealInit />
+        <ImageGuard />
       </body>
     </html>
   )

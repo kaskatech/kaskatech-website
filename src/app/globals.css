@@ -455,6 +455,8 @@ footer{border-top:1px solid var(--hair); background:var(--panel); padding:72px 0
 .shotframe .sf-bar em{margin-left:10px; font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--faint); font-style:normal}
 .shotframe img{display:block; width:100%; height:auto; aspect-ratio:2160 / 1350; object-fit:cover; object-position:top left; background:var(--raised)}
 .shot-note{margin-top:12px; font-family:var(--mono); font-size:10.5px; letter-spacing:.06em; color:var(--faint); text-align:center}
+/* casual save-deterrent — block drag/select/long-press-save on images */
+img{ -webkit-user-drag:none; -khtml-user-drag:none; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none }
 /* screenshot gallery (features page) */
 .shot-gallery{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-top:48px}
 @media (max-width:900px){ .shot-gallery{grid-template-columns:1fr} }
