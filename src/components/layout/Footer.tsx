@@ -70,7 +70,7 @@ export default function Footer() {
           </div>
           <div className="fcol">
             <h4>Solutions</h4>
-            <Link href="/technology-solutions">Technology Solutions</Link>
+            <Link href="/technology-solutions">Cybersecurity Solutions &amp; Services</Link>
             <Link href="/partners">Partners</Link>
             <a href="#">Industries</a>
           </div>
@@ -90,6 +90,7 @@ export default function Footer() {
         <div className="foot-bottom">
           <span className="cp">© 2026 Kaska Technologies</span>
           <span className="url">kaskatech.com · Privacy · Terms</span>
+          <span className="foot-compliance">Make-in-India aligned · Data-residency options · DPDP-aligned multi-tenant architecture.</span>
         </div>
       </div>
     </footer>
