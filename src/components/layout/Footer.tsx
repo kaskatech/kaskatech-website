@@ -79,9 +79,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="foot-bottom">
-          <span className="cp">© 2026 Kaska Technologies. All rights reserved.</span>
-          <span className="url">kaskatech.com · Privacy · Terms</span>
-          <span className="foot-compliance">Kaska™, Kaska EM™ and Kaska Exposure Management™ are trademarks of Kaska Technologies. All other names and logos are trademarks of their respective owners.</span>
+          <span className="cp">© 2026 Kaska Technologies and Services. All rights reserved.</span>
+          <span className="url">kaskatech.com · <Link href="/privacy">Privacy</Link> · <Link href="/terms">Terms</Link></span>
+          <span className="foot-compliance">Kaska™, Kaska EM™ and Kaska Exposure Management™ are trademarks of Kaska Technologies and Services. All other names and logos are trademarks of their respective owners.</span>
           <span className="foot-compliance">Make-in-India aligned · Data-residency options · DPDP-aligned multi-tenant architecture.</span>
         </div>
       </div>
