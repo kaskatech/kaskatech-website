@@ -64,102 +64,90 @@ export default function Home() {
         </div>
       </header>
 
-      {/* LIFECYCLE RIBBON */}
-      <section className="ribbon">
-        <div className="wrap rev">
-          <span className="kicker rib-k">THE INTELLIGENCE LIFECYCLE</span>
-          <div className="rib-flow">
-            <div className="phase p1">
-              <div className="marker">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" />
-                  <circle cx="12" cy="12" r="2.6" />
-                </svg>
-              </div>
-              <div className="ph-k">
-                Pre-Breach
-                <br />
-                Intelligence
-              </div>
-              <div className="steps">
-                <span className="step">
-                  <span className="dt"></span>Unified visibility
-                </span>
-                <span className="step">
-                  <span className="dt"></span>Risk in financial terms
-                </span>
-                <span className="step">
-                  <span className="dt"></span>Control validation
-                </span>
-              </div>
-            </div>
+      {/* INTELLIGENCE LIFECYCLE — enrichment sources feed the asset spine, then flow through 3 phases */}
+      <section className="lifecycle">
+        <div className="wrap">
+          <div className="sec-head center rev">
+            <span className="kicker">THE INTELLIGENCE LIFECYCLE</span>
+            <h2 style={{ marginTop: 18 }}>
+              Every signal on <span className="em">one asset spine</span>.
+            </h2>
+            <p className="lead">
+              We enrich every asset from every source that matters — then carry that intelligence
+              through the whole breach lifecycle. Nothing left on the table.
+            </p>
+          </div>
 
-            <div className="rib-conn">
-              <svg viewBox="0 0 56 16" fill="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="rc1" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0" stopColor="#C89B45" />
-                    <stop offset="1" stopColor="#4FC9A3" />
-                  </linearGradient>
-                </defs>
-                <path d="M2 8h46M42 3l6 5-6 5" stroke="url(#rc1)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+          {/* ENRICHMENT SOURCES */}
+          <div className="lc-sources rev">
+            <span className="lc-cap">ENRICHED FROM</span>
+            <div className="src-row">
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M16.5 16.5 21 21" /><path d="M11 8v3l2 1.4" /></svg>Threat Intelligence</span>
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" /></svg>External Attack Surface</span>
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z" /></svg>Breach &amp; Attack Simulation</span>
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><circle cx="12" cy="12" r="8" /><path d="M12 1v3M12 20v3M1 12h3M20 12h3" /></svg>Continuous Red Teaming</span>
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z" /><path d="M12 8v4M12 15h.01" /></svg>Vulnerability Management</span>
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" /><path d="M12 3v18M4 7.5l8 4.5 8-4.5" /></svg>xBOM · SBOM / AIBOM</span>
+              <span className="src"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="5" rx="1.4" /><rect x="3" y="15" width="18" height="5" rx="1.4" /><path d="M7 6.5h.01M7 17.5h.01" /></svg>Security Controls &amp; Devices</span>
             </div>
+          </div>
 
-            <div className="phase p2">
-              <div className="marker">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2 3 14h8l-1 8 10-12h-8z" />
-                </svg>
-              </div>
-              <div className="ph-k">
-                Real-Time Breach
-                <br />
-                Intelligence
-              </div>
-              <div className="steps">
-                <span className="step">
-                  <span className="dt"></span>Detection
-                </span>
-                <span className="step">
-                  <span className="dt"></span>Governed response
-                </span>
-              </div>
-            </div>
+          {/* CONVERGE INTO SPINE */}
+          <div className="lc-converge rev" aria-hidden="true">
+            <svg viewBox="0 0 240 44" fill="none" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="lcg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stopColor="#C89B45" stopOpacity=".7" />
+                  <stop offset="1" stopColor="#4FC9A3" stopOpacity=".7" />
+                </linearGradient>
+              </defs>
+              <path d="M20 2 C20 26 120 18 120 42 M120 2 C120 26 120 18 120 42 M220 2 C220 26 120 18 120 42" stroke="url(#lcg)" strokeWidth="1.4" strokeLinecap="round" />
+              <circle cx="120" cy="42" r="3" fill="#4FC9A3" />
+            </svg>
+            <span className="lc-spinepill"><span className="dot"></span>Asset graph spine</span>
+          </div>
 
-            <div className="rib-conn">
-              <svg viewBox="0 0 56 16" fill="none" aria-hidden="true">
-                <defs>
-                  <linearGradient id="rc2" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0" stopColor="#C89B45" />
-                    <stop offset="1" stopColor="#4FC9A3" />
-                  </linearGradient>
-                </defs>
-                <path d="M2 8h46M42 3l6 5-6 5" stroke="url(#rc2)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
+          {/* THREE PHASES */}
+          <div className="lc-flow rev">
+            <article className="lc-phase pre">
+              <div className="lc-top"><span className="lc-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="2.6" /></svg></span><span className="lc-num">01</span></div>
+              <h3>Pre-Breach Intelligence</h3>
+              <p>See the exploitable, reachable gap — and price it — before an attacker uses it.</p>
+              <ul className="lc-steps">
+                <li>Asset &amp; xBOM inventory</li>
+                <li>Threat &amp; exposure intel</li>
+                <li>Attack-path analysis</li>
+                <li>Control validation</li>
+                <li>Risk in financial terms</li>
+              </ul>
+            </article>
 
-            <div className="phase p3">
-              <div className="marker">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z" />
-                  <path d="M9 12l2 2 4-4" />
-                </svg>
-              </div>
-              <div className="ph-k">
-                Post-Breach
-                <br />
-                Resilience
-              </div>
-              <div className="steps">
-                <span className="step">
-                  <span className="dt"></span>Compliance &amp; evidence
-                </span>
-                <span className="step">
-                  <span className="dt"></span>Recovery
-                </span>
-              </div>
-            </div>
+            <div className="lc-arrow" aria-hidden="true"><svg viewBox="0 0 40 16" fill="none"><path d="M2 8h32M28 3l6 5-6 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg></div>
+
+            <article className="lc-phase rt">
+              <div className="lc-top"><span className="lc-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8z" /></svg></span><span className="lc-num">02</span></div>
+              <h3>Real-Time Breach Intelligence</h3>
+              <p>The instant something fires, take one governed, reversible move to contain it.</p>
+              <ul className="lc-steps">
+                <li>Detection &amp; Response</li>
+                <li>Governed, human-approved action</li>
+                <li>Autonomous response</li>
+                <li>Cases &amp; approvals</li>
+              </ul>
+            </article>
+
+            <div className="lc-arrow" aria-hidden="true"><svg viewBox="0 0 40 16" fill="none"><path d="M2 8h32M28 3l6 5-6 5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" /></svg></div>
+
+            <article className="lc-phase post">
+              <div className="lc-top"><span className="lc-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l7 3v6c0 5-3 8-7 9-4-1-7-4-7-9V6z" /><path d="M9 12l2 2 4-4" /></svg></span><span className="lc-num">03</span></div>
+              <h3>Post-Breach Resilience</h3>
+              <p>Restore service, prove recovery, and hand the regulator evidence that holds.</p>
+              <ul className="lc-steps">
+                <li>Recovery orchestration</li>
+                <li>Compliance &amp; evidence</li>
+                <li>Board &amp; executive reporting</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
@@ -267,7 +255,7 @@ export default function Home() {
           <h2 style={{ marginTop: 18 }}>
             Five things Kaska does — <span className="em">end to end</span>.
           </h2>
-          <p className="lead">Kaska Exposure Management is the platform that does it all — proving your controls, pricing your risk, and containing what fires.</p>
+          <p className="lead">Kaska Exposure Management is the platform that does it all — proving your controls, pricing your risk, and containing what fires. <b>Modular by design</b> — license the capabilities you need today, switch on the rest when you&apos;re ready.</p>
         </div>
 
         {/* CAPABILITY 1 */}
@@ -451,6 +439,12 @@ export default function Home() {
           <p className="est-foot rev">
             Vendor-agnostic — <span className="em">Kaska reads the stack you already run.</span>
           </p>
+          <div className="ctas rev" style={{ justifyContent: 'center', marginTop: 26 }}>
+            <Link className="ghost" href="/integrations">
+              150+ connectors across 20+ categories
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 8 }}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </Link>
+          </div>
         </div>
       </section>
 

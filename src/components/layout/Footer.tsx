@@ -56,6 +56,7 @@ export default function Footer() {
             <h4>Platform</h4>
             <Link href="/">Overview</Link>
             <Link href="/features">Features</Link>
+            <Link href="/integrations">Integrations</Link>
             <Link href="/features#architecture">Architecture</Link>
           </div>
           <div className="fcol">

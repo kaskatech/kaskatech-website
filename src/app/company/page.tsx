@@ -58,10 +58,10 @@ export default function Page() {
             <h2>Above the stack, on your side.</h2>
           </div>
           <div className="body">
-            <p className="rev">Security teams have never owned more tools — and never had less certainty. Every product promises protection, yet almost no one can say, with evidence, that a control is actually enforced or what a breach would cost. Kaska was built to answer exactly that. We sit <b>above the security stack you already run</b> — vendor-agnostic, reading what you own rather than replacing it.</p>
+            <p className="rev">Kaska was built on a single conviction: security should be <b>provable</b>. Every product on the floor promises protection, yet almost no one can say, with evidence, that a control is actually enforced or what a breach would cost. That gap is the whole reason we exist.</p>
             <div className="pull rev">We hold ourselves to one rule: <span className="em">no claim without code.</span> If the platform says a control is enforced, it is because we checked — not because a vendor said so.</div>
             <p className="rev">That honesty shapes everything. We would rather show a gap than paper over it, and we would rather quantify risk plainly — <b>in financial terms</b> — than hand a board another red-amber-green chart. The goal is a picture leaders can act on, and a clear, evidenced path to reduce the risk.</p>
-            <p className="rev">And we are <b>India-first by design</b>. Data residency, RBI, SEBI, CERT-In and DPDP are built into the product, not bolted on for a tender — including air-gapped and on-premise deployment for the most sensitive environments. Kaska is led by senior security practitioners who have spent careers on the buying and defending side of this industry, and who know the difference between a demo and a control that holds.</p>
+            <p className="rev">Kaska is led by senior security practitioners who have spent careers on the buying and defending side of this industry — people who know the difference between a demo and a control that holds.</p>
           </div>
         </div>
       </section>

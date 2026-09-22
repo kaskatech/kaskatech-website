@@ -86,9 +86,9 @@ export default function Page() {
       {/* KEY FEATURES */}
       <section className="wrap" style={{ paddingTop: 0 }}>
         <div className="sec-head center rev">
-          <span className="kicker">KEY FEATURES</span>
+          <span className="kicker">KEY FEATURES · MODULAR</span>
           <h2 style={{ marginTop: '18px' }}>One platform. Every capability <span className="em">that matters</span>.</h2>
-          <p className="lead">Sixteen capabilities across the full lifecycle — before a breach, the moment it strikes, and after — each tied to the same asset spine.</p>
+          <p className="lead">Seventeen capabilities across the full lifecycle — before a breach, the moment it strikes, and after — each tied to the same asset spine. <b>Licensed as modules:</b> start with what you need, switch the rest on when you&apos;re ready — no forks, no second console.</p>
         </div>
         <div className="feat-grid">
 
@@ -121,14 +121,19 @@ export default function Page() {
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="7" /><path d="M16 16l5 5" /><path d="M11 8v3l2 1.5" /></svg></span><span className="grp pre">Pre-breach</span></div>
             <h3>Exposure &amp; Threat Intelligence</h3>
-            <p>Live CVE, EPSS and KEV — what's exploitable and reachable now.</p>
+            <p>Live CVE, EPSS and KEV plus BAS, red-teaming and attack-surface signal — what's exploitable and reachable now.</p>
+          </div>
+          <div className="fcard rev">
+            <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" /><path d="M12 3v18M4 7.5l8 4.5 8-4.5" /></svg></span><span className="grp pre">Pre-breach</span></div>
+            <h3>xBOM · Software Supply Chain</h3>
+            <p>SBOM &amp; AIBOM inventory with reachability — which components are actually exploitable, not just present.</p>
           </div>
 
           {/* REAL-TIME */}
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12h4l2.5 7 5-15L18 12h4" /></svg></span><span className="grp rt">Real-time</span></div>
-            <h3>Detection Intelligence</h3>
-            <p>Correlated incidents from your SIEM/XDR, traced to the failed control.</p>
+            <h3>Detection &amp; Response</h3>
+            <p>Correlated incidents from your SIEM/XDR, traced to the failed control — then contained.</p>
           </div>
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M12 8v4M12 15h.01" /></svg></span><span className="grp rt">Real-time</span></div>
@@ -272,6 +277,12 @@ export default function Page() {
 
             <div className="arch-cap"><b>Kaska sits above the tools you already own</b> — nothing ripped out.</div>
           </div>
+        </div>
+        <div className="ctas rev" style={{ justifyContent: 'center', marginTop: 30 }}>
+          <a className="ghost" href="/integrations">
+            Explore 150+ integrations, OEM by OEM
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: 8 }}><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </a>
         </div>
       </section>
 
