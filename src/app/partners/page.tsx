@@ -4,7 +4,7 @@ export default function Page() {
       {/* HERO */}
       <header className="hero wrap">
         <span className="kicker rev">PARTNERS</span>
-        <h1 className="rev">Grow with a platform that <span className="em">proves</span> security works.</h1>
+        <h1 className="rev">Grow with a platform that <span className="em">validates</span> security works.</h1>
         <p className="sub rev">Kaska is building its partner network. If you're an MSSP, systems integrator or reseller, partner with us to bring pre-breach intelligence and board-level risk in financial terms to your customers.</p>
         <div className="ctas rev">
           <a className="act" href="/contact">Become a partner
@@ -29,7 +29,7 @@ export default function Page() {
           <div className="card rev">
             <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l2.4 5 5.6.8-4 3.9 1 5.6L12 20l-5 2.7 1-5.6-4-3.9 5.6-.8z" /></svg></div>
             <h3>Differentiate</h3>
-            <p>Sell risk in financial terms and tamper-proof evidence — above the whole stack. Walk in with a board-level story your competitors can't match.</p>
+            <p>Sell risk in financial terms and tamper-proof evidence — above the whole stack. Walk in with a board-level story built on validated control posture and risk in financial terms.</p>
           </div>
           <div className="card rev">
             <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M8 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2" /><rect x="4" y="8" width="12" height="12" rx="2" /></svg></div>

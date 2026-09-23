@@ -94,7 +94,7 @@ export default function Page() {
         <div className="sec-head center rev">
           <span className="kicker">SOLUTIONS PORTFOLIO</span>
           <h2 style={{ marginTop: '18px' }}>Nine capability sets, <span className="em">one accountable partner</span>.</h2>
-          <p className="lead">A customer-outcome-led portfolio — technologies selected per opportunity for your environment, risk profile and regulatory obligations, then unified by Kaska EM.</p>
+          <p className="lead">A customer-outcome-led portfolio — technologies selected per opportunity for your environment, risk profile and regulatory obligations, then unified by Kaska EM. <b>Kaska EM provides the intelligence and risk layer across the technologies and services we deploy.</b></p>
         </div>
         <div className="cat-grid">
           {SOLUTIONS.map((s) => (

@@ -1,0 +1,13 @@
+# Keep source text normalised, but never line-ending-convert binary assets.
+# Without this, core.autocrlf=true corrupts PDFs/images on checkout.
+* text=auto
+
+*.pdf   binary
+*.webp  binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary

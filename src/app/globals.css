@@ -315,7 +315,7 @@ section{padding:110px 0}
 /* CAPABILITY rows */
 .cap{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center; padding:78px 0; border-top:1px solid var(--hair)}
 .cap.flip .cap-text{order:2}
-.cap-text .num{font-family:var(--mono); font-size:12px; letter-spacing:.2em; color:var(--faint)}
+.cap-text .num{font-family:var(--mono); font-size:12px; letter-spacing:.2em; color:var(--faint); display:block}
 .cap-text .fname{font-family:var(--mono); font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--brass); margin:18px 0 14px; display:inline-block}
 .cap-text h3{font-size:clamp(26px,3.6vw,40px); max-width:18ch}
 .cap-text p{color:var(--muted); font-size:17px; margin-top:18px; line-height:1.7; max-width:44ch}
@@ -833,3 +833,65 @@ img{ -webkit-user-drag:none; -khtml-user-drag:none; user-select:none; -webkit-us
 }
 
 @media (max-width:640px){ .ben{grid-template-columns:1fr !important; gap:28px} .ben-panel{padding:26px} }
+
+/* ==========================================================================
+   HOMEPAGE — product story (2026)
+   Extends existing components (.stage-row/.node, .prob-grid, .est-grid,
+   .achips, .band). No new design language introduced.
+   ========================================================================== */
+
+/* standalone lead paragraph (previously only styled inside .sec-head) */
+.lead{color:var(--muted); font-size:18px; line-height:1.7}
+
+/* hero — descriptor + tagline */
+.hero-desc{font-family:var(--mono); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); margin:-12px 0 28px}
+.hero-tag{font-family:var(--serif); font-style:italic; font-size:clamp(15px,1.9vw,18px);
+  color:var(--brass-hi); margin-top:30px; opacity:.92}
+
+.achips.center{justify-content:center}
+
+/* operating model — five-stage flow (extends .stage-row / .node) */
+.stage-row.five{grid-template-columns:repeat(5,1fr); gap:10px}
+.stage-row.five .flow-line{left:10%; right:10%}
+.node.s1{border-color:var(--crit); color:var(--crit); box-shadow:0 0 26px rgba(224,85,78,.30)}
+.node.s2{border-color:var(--brass); color:var(--brass-hi); box-shadow:0 0 26px rgba(200,155,69,.34)}
+.node.s3{border-color:var(--brass); color:var(--brass-hi); box-shadow:0 0 26px rgba(200,155,69,.36);
+  animation:breathe 3s ease-in-out infinite}
+.node.s4{border-color:var(--money); color:var(--money); box-shadow:0 0 26px rgba(79,201,163,.30)}
+.node.s5{border-color:var(--money); color:var(--money); box-shadow:0 0 26px rgba(79,201,163,.30)}
+@media (max-width:980px){
+  .stage-row.five{grid-template-columns:repeat(3,1fr); gap:34px 10px}
+  .stage-row.five .flow-line{display:none}
+}
+@media (max-width:620px){
+  .stage-row.five{grid-template-columns:1fr; gap:30px}
+  .stage-row.five .st-d{max-width:36ch}
+}
+
+/* five gaps (extends .prob-grid) */
+.prob-grid.five{grid-template-columns:repeat(5,1fr); gap:18px}
+.prob-grid.five .card{padding:28px 22px}
+.prob-grid.five .card .ic svg{width:28px; height:28px}
+.prob-grid.five .card h3{font-size:19px}
+.prob-grid.five .card p{font-size:14px}
+@media (max-width:1100px){ .prob-grid.five{grid-template-columns:repeat(3,1fr)} }
+@media (max-width:760px){ .prob-grid.five{grid-template-columns:1fr} }
+
+/* whole estate — seven environments (extends .est-grid) */
+.est-grid.wide{grid-template-columns:repeat(auto-fit,minmax(245px,1fr))}
+
+/* platform-vision brand lockup */
+.lockup{margin:60px auto 0; max-width:620px; display:flex; flex-direction:column; align-items:center;
+  text-align:center; gap:9px; border:1px solid var(--hair); border-radius:20px; padding:46px 34px;
+  background:linear-gradient(180deg,var(--panel),var(--ground)); position:relative; overflow:hidden}
+.lockup::before{content:""; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(380px 170px at 50% -10%, rgba(200,155,69,.12), transparent 70%)}
+.lockup > *{position:relative; z-index:2}
+.lk-name{font-family:var(--serif); font-size:clamp(38px,6vw,56px); font-weight:600;
+  letter-spacing:.06em; color:var(--ink); line-height:1}
+.lk-product{font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--brass); margin-top:8px}
+.lk-desc{font-size:15px; color:var(--muted)}
+.lk-tag{font-family:var(--serif); font-style:italic; font-size:17px; color:var(--brass-hi); margin-top:12px}
+@media (max-width:560px){ .lockup{padding:34px 22px} }

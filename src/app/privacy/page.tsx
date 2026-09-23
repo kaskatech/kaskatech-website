@@ -35,7 +35,7 @@ export default function Page() {
         <h2 className="rev">2. The data we collect</h2>
         <ul className="rev">
           <li><b>Website visitors.</b> Contact details you submit (name, work email, company, message), and basic technical data such as IP address, browser type and pages viewed.</li>
-          <li><b>Prospects &amp; design partners.</b> Business-contact and evaluation details you share when you request early access or a walkthrough.</li>
+          <li><b>Prospects &amp; design partners.</b> Business-contact and evaluation details you share when you request a demo or a walkthrough.</li>
           <li><b>Platform customers.</b> Account and configuration data, and the security telemetry your connected tools expose to the platform. Kaska reads connected systems read-only and retains only the minimum signal required to produce risk, control and compliance results.</li>
         </ul>
         <p className="rev">We do not sell personal data, and we do not use it for advertising.</p>

@@ -7,7 +7,7 @@ export default function Page() {
         <h1 className="rev">Everything the platform does — and <span className="em">why</span> it matters.</h1>
         <p className="sub rev">Kaska sits above the security tools you already own — proving your controls work, pricing your risk in financial terms, and containing what fires, all on one asset-centric spine.</p>
         <div className="ctas rev">
-          <a className="act" href="/contact">Request early access
+          <a className="act" href="/contact">Request a Demo
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
           </a>
           <a className="ghost" href="/contact">Book a walkthrough</a>
@@ -96,7 +96,7 @@ export default function Page() {
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M9 12l2 2 4-4.5" /></svg></span><span className="grp pre">Pre-breach</span></div>
             <h3>Control Validation</h3>
-            <p>Proves controls are actually enforced — ~1,399 checks across 31 domains.</p>
+            <p>Validates whether controls are actually enforced — current coverage: ~1,399 checks across 31 control domains.</p>
           </div>
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V4M4 20h16" /><path d="M8 16v-4M12 16V8M16 16v-7" /><circle cx="16" cy="9" r="1.4" fill="currentColor" stroke="none" /></svg></span><span className="grp pre">Pre-breach</span></div>
@@ -170,7 +170,7 @@ export default function Page() {
           <div className="fcard rev">
             <div className="top"><span className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="14" rx="1.6" /><path d="M7 14l3-3 2 2 4-5" /><path d="M9 21h6" /></svg></span><span className="grp post">Post-breach</span></div>
             <h3>Board &amp; Executive Reporting</h3>
-            <p>The board-risk story your board and regulator accept.</p>
+            <p>Board-level risk reporting, with the supporting evidence behind every figure.</p>
           </div>
 
           {/* PLATFORM */}
@@ -196,7 +196,7 @@ export default function Page() {
           <p className="lead">The real Kaska Exposure Management console — control posture, attack paths, quantified risk and real-time command, in one place.</p>
         </div>
         <div className="shot-gallery">
-          <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Control Validation · 30 domains</em></div><img src="/platform/control-validation.webp" alt="Kaska Control Validation — posture across 30 control domains" loading="lazy" decoding="async" /></figure>
+          <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Control Validation · 31 domains</em></div><img src="/platform/control-validation.webp" alt="Kaska Control Validation — posture across control domains" loading="lazy" decoding="async" /></figure>
           <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Attack Paths · chained exposure</em></div><img src="/platform/attack-paths.webp" alt="Kaska Attack Paths — chained exposure to crown-jewel assets" loading="lazy" decoding="async" /></figure>
           <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Exposure &amp; Risk · FAIR</em></div><img src="/platform/exposure-risk.webp" alt="Kaska Exposure and Risk — FAIR quantification" loading="lazy" decoding="async" /></figure>
           <figure className="shotframe rev"><div className="sf-bar"><span></span><span></span><span></span><em>Incident Command · real-time</em></div><img src="/platform/command-center.webp" alt="Kaska Incident Command Center" loading="lazy" decoding="async" /></figure>
@@ -291,8 +291,8 @@ export default function Page() {
         <div className="ben">
           <div className="ben-panel rev">
             <span className="kicker">THE OUTCOME</span>
-            <h2>Prove it. Price it. <span className="em">Prevent it.</span></h2>
-            <p>The same asset spine that finds the gap prices it, contains what fires, and proves it to a regulator — one loop, one number, one source of truth.</p>
+            <h2>Prove it. Price it. <span className="em">Reduce it.</span></h2>
+            <p>The same asset spine that identifies the gap quantifies it, supports governed response when something fires, and retains the evidence behind it — one loop, one number, one source of truth.</p>
           </div>
           <div className="ben-list rev">
             <div className="upoint">
@@ -305,11 +305,11 @@ export default function Page() {
             </div>
             <div className="upoint">
               <span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span>
-              <div><b>Regulator-ready</b><span className="d">Evidence a CERT-In or RBI audit will accept — hash-sealed, on demand, without a fire drill.</span></div>
+              <div><b>Audit-ready evidence</b><span className="d">Continuous technical evidence mapped to supported frameworks — hash-sealed and available on demand, without a fire drill.</span></div>
             </div>
             <div className="upoint">
               <span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span>
-              <div><b>Stronger insurance position</b><span className="d">Provable, enforced control is the case underwriters look for at renewal.</span></div>
+              <div><b>Stronger insurance conversation</b><span className="d">Validated, evidenced control posture is the case underwriters look for at renewal.</span></div>
             </div>
           </div>
         </div>
@@ -322,19 +322,19 @@ export default function Page() {
           <h2 style={{ marginTop: '18px' }}>Go <span className="em">deeper</span>.</h2>
         </div>
         <div className="res-grid">
-          <a className="res rev" href="#">
+          <a className="res rev" href="/docs/Kaska_EM_Technical_Whitepaper.pdf" target="_blank" rel="noopener noreferrer">
             <div className="meta"><span className="dt">2026</span>WHITEPAPER</div>
-            <h3>Kaska Technical Whitepaper</h3>
+            <h3>Kaska EM Technical Whitepaper</h3>
             <span className="read">Read <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
           </a>
-          <a className="res rev" href="#">
+          <a className="res rev" href="/docs/Kaska_EM_Product_Datasheet.pdf" target="_blank" rel="noopener noreferrer">
+            <div className="meta"><span className="dt">2026</span>DATASHEET</div>
+            <h3>Kaska EM Product Datasheet</h3>
+            <span className="read">Read <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+          </a>
+          <a className="res rev" href="/privacy">
             <div className="meta"><span className="dt">2026</span>ONE-PAGER</div>
             <h3>Data Governance &amp; Trust</h3>
-            <span className="read">Read <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-          </a>
-          <a className="res rev" href="#">
-            <div className="meta"><span className="dt">2026</span>EXPLAINER</div>
-            <h3>Cyber Risk, Quantified</h3>
             <span className="read">Read <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
           </a>
         </div>
@@ -346,7 +346,7 @@ export default function Page() {
           <span className="kicker">SEE KASKA IN ACTION</span>
           <h2 style={{ marginTop: '18px' }}>See it on your <span className="em">own stack.</span></h2>
           <div className="ctas">
-            <a className="act" href="/contact">Request early access
+            <a className="act" href="/contact">Request a Demo
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
             <a className="ghost" href="/contact">Talk to us</a>

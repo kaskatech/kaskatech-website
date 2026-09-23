@@ -6,15 +6,15 @@ import { usePathname } from 'next/navigation'
 
 const LINKS = [
   { href: '/', label: 'Platform' },
-  { href: '/features', label: 'Features' },
+  { href: '/features', label: 'Capabilities' },
   { href: '/integrations', label: 'Integrations' },
-  { href: '/technology-solutions', label: 'Cybersecurity Solutions & Services' },
+  { href: '/technology-solutions', label: 'Solutions & Services' },
   { href: '/partners', label: 'Partners' },
   { href: '/company', label: 'Company' },
   { href: '/contact', label: 'Contact' },
 ]
 
-// Early-access funnel: route to the contact form until app.kaskatech.com is live.
+// Demo funnel: route to the contact form until app.kaskatech.com is live.
 // When the self-serve app goes live, set this back to 'https://app.kaskatech.com/register'.
 const REGISTER = '/contact'
 
@@ -55,7 +55,7 @@ export default function Navbar() {
           </Link>
           <div className="navbar">
             <a className="act" href={REGISTER}>
-              Request early access
+              Request a Demo
             </a>
             <button
               className="hamb"
@@ -106,7 +106,7 @@ export default function Navbar() {
         </nav>
         <div className="drawer-div"></div>
         <a className="act full" href={REGISTER}>
-          Request early access
+          Request a Demo
         </a>
         <div className="drawer-tag">AI at the Core · Resilience at the Edge</div>
       </aside>

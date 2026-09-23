@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-// Early-access funnel: route to the contact form until app.kaskatech.com is live.
+// Demo funnel: route to the contact form until app.kaskatech.com is live.
 // When the self-serve app goes live, set this back to 'https://app.kaskatech.com/register'.
 const REGISTER = '/contact'
 
@@ -32,50 +32,31 @@ export default function Footer() {
               <span className="name">Kaska</span>
             </Link>
             <p>AI at the Core. Resilience at the Edge.</p>
-            <div className="foot-social">
-              <a href="#" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="3" width="18" height="18" rx="2" />
-                  <path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7" />
-                </svg>
-              </a>
-              <a href="#" aria-label="X">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4l16 16M20 4L4 20" />
-                </svg>
-              </a>
-              <a href="#" aria-label="YouTube">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2.5" y="6" width="19" height="12" rx="3" />
-                  <path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none" />
-                </svg>
-              </a>
-            </div>
           </div>
           <div className="fcol">
             <h4>Platform</h4>
             <Link href="/">Overview</Link>
-            <Link href="/features">Features</Link>
+            <Link href="/features">Capabilities</Link>
             <Link href="/integrations">Integrations</Link>
             <Link href="/features#architecture">Architecture</Link>
           </div>
           <div className="fcol">
             <h4>Solutions</h4>
-            <Link href="/technology-solutions">Cybersecurity Solutions &amp; Services</Link>
+            <Link href="/technology-solutions">Solutions &amp; Services</Link>
             <Link href="/partners">Partners</Link>
-            <a href="#">Industries</a>
           </div>
           <div className="fcol">
             <h4>Company</h4>
             <Link href="/company">About</Link>
             <Link href="/contact">Contact</Link>
-            <a href={REGISTER}>Request early access</a>
+            <a href={REGISTER}>Request a Demo</a>
           </div>
           <div className="fcol">
             <h4>Resources</h4>
-            <a href="#">Technical Whitepaper</a>
-            <a href="#">Data Governance & Trust</a>
-            <a href="#">Risk Model Explained</a>
+            <a href="/docs/Kaska_EM_Technical_Whitepaper.pdf" target="_blank" rel="noopener noreferrer">Technical Whitepaper</a>
+            <a href="/docs/Kaska_EM_Product_Datasheet.pdf" target="_blank" rel="noopener noreferrer">Product Datasheet</a>
+            <Link href="/features">Risk Model Explained</Link>
+            <Link href="/privacy">Data Governance &amp; Trust</Link>
           </div>
         </div>
         <div className="foot-bottom">

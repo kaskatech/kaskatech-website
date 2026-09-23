@@ -52,7 +52,7 @@ export default function Page() {
         </h1>
         <p className="sub rev">
           Kaska is vendor-agnostic by principle. It connects to the security tools you already own —
-          over <b>150 connectors across 20+ categories</b> — reads them read-only, keeps only the
+          over <b>150+ connectors across 20+ categories</b> — reads them read-only, keeps only the
           minimum it needs, and turns every signal into one asset-centric picture. Nothing ripped out.
         </p>
         <div className="ctas rev">
@@ -155,7 +155,7 @@ export default function Page() {
           </h2>
           <div className="ctas">
             <a className="act" href="/contact">
-              Request early access
+              Request a Demo
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
             </a>
             <a className="ghost" href="/features">See how it works</a>

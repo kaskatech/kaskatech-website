@@ -5,7 +5,7 @@ export default function Page() {
       <header className="hero wrap">
         <span className="kicker rev">COMPANY</span>
         <h1 className="rev">Built in India, to prove security <span className="em">works</span>.</h1>
-        <p className="sub rev">Kaska is an Autonomous Cyber Risk &amp; Resilience company. We sit above the security stack you already own — proving controls are enforced, quantifying risk in financial terms, and carrying you from prevention through response to recovery.</p>
+        <p className="sub rev">Kaska Technologies &amp; Services builds the <b>Kaska Exposure Management Platform&trade;</b>, an Autonomous Cyber Risk &amp; Resilience Platform designed to sit above the security stack you already own — validating whether controls are enforced, quantifying risk in financial terms, and carrying you from exposure through response to recovery.</p>
         <div className="ctas rev">
           <a className="act" href="/contact">Get in touch
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -107,7 +107,7 @@ export default function Page() {
           <div className="dcell rev">
             <div className="dk">One loop</div>
             <h3>Quantify, validate, respond.</h3>
-            <p>Not a number in isolation. The same platform prices the risk, proves the control, and governs the response — one connected loop, not three disconnected tools.</p>
+            <p>Not a number in isolation. The same platform quantifies the risk, validates the control, and governs the response — one connected loop, not three disconnected tools.</p>
             <span className="vs">vs. CRQ-only tools</span>
           </div>
           <div className="dcell rev">

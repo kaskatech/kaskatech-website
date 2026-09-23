@@ -122,9 +122,10 @@ export default function ContactForm() {
           </label>
           <select id="interest" name="interest" defaultValue="" required>
             <option value="">Select an option</option>
-            <option>Kaska Platform</option>
-            <option>Kaska Platform Led Managed Services</option>
-            <option>3rd Party Solutions</option>
+            <option>Platform Demo</option>
+            <option>Kaska Risk Assessment</option>
+            <option>Technology Solutions &amp; Services</option>
+            <option>Partnership</option>
             <option>Not sure yet — a briefing</option>
           </select>
         </div>
@@ -133,11 +134,11 @@ export default function ContactForm() {
           <textarea
             id="msg"
             name="message"
-            placeholder="Early access, a briefing, or Technology Solutions for your stack — tell us what you're looking for."
+            placeholder="A platform demo, a risk assessment, or Solutions & Services for your stack — tell us what you're looking for."
           ></textarea>
         </div>
         <button className="act full" type="submit" disabled={submitting}>
-          Request early access
+          Request a Demo
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
