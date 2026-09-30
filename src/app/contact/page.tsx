@@ -1,48 +1,35 @@
-import ContactForm from '@/components/ContactForm';
+import type { Metadata } from 'next'
+import ContactForm from '@/components/ContactForm'
+
+export const metadata: Metadata = {
+  title: 'Contact — Kaska',
+  description:
+    'Request a demo of Kaska Exposure Management Platform™ or Kaska Email Security, or talk to Kaska about technology solutions and partnerships.',
+}
 
 export default function Page() {
   return (
     <>
-      {/* HERO */}
-      <header className="hero wrap">
-        <span className="kicker rev">CONTACT</span>
-        <h1 className="rev">See your risk — <span className="em">in financial terms</span>.</h1>
-        <p className="sub rev">Request a demo of the Kaska Exposure Management Platform&trade;, a Kaska Risk Assessment, or Solutions &amp; Services for your stack.</p>
+      <header className="s-dark">
+        <div className="wrap phero">
+          <span className="kicker">Contact</span>
+          <h1 className="h1">Talk to <em>Kaska</em>.</h1>
+          <p className="lede">
+            Request a demo, ask for a datasheet, or talk to us about technology solutions or partnering.
+          </p>
+        </div>
       </header>
-
-      {/* CONTACT */}
-      <section className="wrap contact">
-        <div className="cgrid">
-          {/* FORM */}
+      <section className="s-warm sec">
+        <div className="wrap contact-g">
           <ContactForm />
-
-          {/* INFO */}
-          <div className="info-card rev">
-            <h3>For a platform demo, a risk assessment, or Solutions &amp; Services</h3>
-            <p className="isub">Whether you want to validate your controls, quantify your risk in financial terms, or have Kaska run the tools for you — start here.</p>
-
-            <div className="contact-line">
-              <span className="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M4 7l8 6 8-6" /></svg></span>
-              <div><div className="cl-k">Email us</div><div className="cl-v">contact@kaskatech.com</div></div>
-            </div>
-            <div className="contact-line">
-              <span className="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.5 4 5.7 4 9s-1.5 6.5-4 9c-2.5-2.5-4-5.7-4-9s1.5-6.5 4-9z" /></svg></span>
-              <div><div className="cl-k">On the web</div><div className="cl-v">kaskatech.com</div></div>
-            </div>
-
-            <div className="reassure">
-              <div className="deploy">
-                <span className="dk">Deployment Models</span>
-                <div className="rpoint"><span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span><div><b>SaaS</b><span>India-hosted. Data residency built in.</span></div></div>
-                <div className="rpoint"><span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span><div><b>On-premise / Hybrid</b></div></div>
-                <div className="rpoint"><span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span><div><b>Air-gapped</b></div></div>
-              </div>
-              <div className="rpoint"><span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span><div><b>Vendor-agnostic</b><span>We read the stack you already run.</span></div></div>
-              <div className="rpoint"><span className="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M4 12l5 5L20 6" /></svg></span><div><b>No obligation</b><span>A conversation first — nothing to sign.</span></div></div>
-            </div>
+          <div className="info">
+            <div className="line"><span>Email</span><b>contact@kaskatech.com</b></div>
+            <div className="line"><span>Web</span><b>kaskatech.com</b></div>
+            <div className="line"><span>What to expect</span><b>A scoped conversation about your environment and priorities, then a focused demo of the product that fits.</b></div>
+            <div className="line"><span>No obligation</span><b>A conversation first. Nothing to sign.</b></div>
           </div>
         </div>
       </section>
     </>
-  );
+  )
 }

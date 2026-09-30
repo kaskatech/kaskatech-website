@@ -1,137 +1,92 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { Arrow, Close, PageHero } from '@/components/k/ui'
+
+export const metadata: Metadata = {
+  title: 'About Kaska — Kaska Technologies & Services Pvt Ltd',
+  description:
+    'Kaska Technologies & Services Pvt Ltd is a cybersecurity technology company building Kaska Exposure Management Platform™ and Kaska Email Security, and delivering cybersecurity technology solutions.',
+}
+
 export default function Page() {
   return (
     <>
-      {/* HERO */}
-      <header className="hero wrap">
-        <span className="kicker rev">COMPANY</span>
-        <h1 className="rev">Built in India, to prove security <span className="em">works</span>.</h1>
-        <p className="sub rev">Kaska Technologies &amp; Services builds the <b>Kaska Exposure Management Platform&trade;</b>, an Autonomous Cyber Risk &amp; Resilience Platform designed to sit above the security stack you already own — validating whether controls are enforced, quantifying risk in financial terms, and carrying you from exposure through response to recovery.</p>
-        <div className="ctas rev">
-          <a className="act" href="/contact">Get in touch
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-          </a>
-          <a className="ghost" href="/">See the platform</a>
+      <PageHero
+        split
+        kicker="Company"
+        title={<>Built in India, to prove security <em>works</em>.</>}
+        lede="Kaska Technologies & Services Pvt Ltd is a cybersecurity technology company. We build Kaska Exposure Management Platform™ and Kaska Email Security, and deliver technology solutions for enterprise, financial services, the public sector and critical infrastructure."
+      >
+        <div className="ctas mt-m">
+          <Link className="btn btn-go" href="/contact">Get in touch<Arrow /></Link>
+          <Link className="btn btn-q" href="/exposure-management">See our products</Link>
         </div>
-      </header>
+      </PageHero>
 
-      {/* WHY KASKA EXISTS */}
-      <section className="wrap">
-        <div className="story">
-          <div className="side rev">
-            <span className="kicker">WHY KASKA EXISTS</span>
-            <h2>The one question tools don&rsquo;t <span className="em">answer</span>.</h2>
+      <section className="s-warm sec">
+        <div className="wrap split top">
+          <div>
+            <span className="kicker">Why Kaska exists</span>
+            <h2 className="h2 mt-s">The one question tools <em>don&apos;t answer</em>.</h2>
           </div>
-          <div className="body">
-            <p className="rev">Enterprises don&rsquo;t lack security tools — they lack a clear, continuous answer to one question: <b>are we actually protected, and what would a breach cost us?</b> Dashboards show green while controls quietly drift out of policy. Risk lives in spreadsheets nobody trusts. And when an incident hits, the scramble starts from zero.</p>
-            <p className="rev">Kaska was built to close that gap. We&rsquo;re an Autonomous Cyber Risk &amp; Resilience platform that sits <b>above the entire security stack</b> — vendor-agnostic, OEM-backed — and continuously answers three things:</p>
-          </div>
-        </div>
-
-        <div className="card-grid" style={{ marginTop: '44px' }}>
-          <div className="card rev">
-            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M9.5 12l2 2 3.5-4" /></svg></div>
-            <h3>Are our controls working?</h3>
-            <p>We validate configurations against real benchmarks across the security stack, and flag the gaps that matter — not noise.</p>
-          </div>
-          <div className="card rev">
-            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M8 6h6a3 3 0 0 1 0 6H8m0 0h7a3 3 0 0 1 0 6H7" /></svg></div>
-            <h3>What&rsquo;s our exposure, in money?</h3>
-            <p>Every gap maps to a specific asset and a financial figure (ALE / Value-at-Risk), so security conversations happen in the language of the board.</p>
-          </div>
-          <div className="card rev">
-            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M12 8v4l2.5 1.5" /></svg></div>
-            <h3>Can we contain what gets through?</h3>
-            <p>Real-time response, guided investigation, and audit-ready evidence for regulators — from the moment of exposure to the moment of impact.</p>
-          </div>
-        </div>
-
-        <div className="pull rev" style={{ marginTop: '40px' }}><span className="em">AI at the Core. Resilience at the Edge.</span> The intelligence runs continuously and autonomously; the resilience shows up where it counts — at the moment of exposure and the moment of impact.</div>
-
-        <p className="rev" style={{ marginTop: '28px', maxWidth: '760px' }}><b>Built in India.</b> Kaska is engineered for the regulatory reality of Indian enterprise, BFSI, and government — DPDP, CERT-In, RBI, SEBI — with deployment models that respect data sovereignty, including on-premise and air-gapped.</p>
-      </section>
-
-      {/* STORY */}
-      <section className="wrap tint">
-        <div className="story">
-          <div className="side rev">
-            <span className="kicker">OUR STORY</span>
-            <h2>Above the stack, on your side.</h2>
-          </div>
-          <div className="body">
-            <p className="rev">Kaska was built on a single conviction: security should be <b>provable</b>. Every product on the floor promises protection, yet almost no one can say, with evidence, that a control is actually enforced or what a breach would cost. That gap is the whole reason we exist.</p>
-            <div className="pull rev">We hold ourselves to one rule: <span className="em">no claim without code.</span> If the platform says a control is enforced, it is because we checked — not because a vendor said so.</div>
-            <p className="rev">That honesty shapes everything. We would rather show a gap than paper over it, and we would rather quantify risk plainly — <b>in financial terms</b> — than hand a board another red-amber-green chart. The goal is a picture leaders can act on, and a clear, evidenced path to reduce the risk.</p>
-            <p className="rev">Kaska is led by senior security practitioners who have spent careers on the buying and defending side of this industry — people who know the difference between a demo and a control that holds.</p>
+          <div className="stack-md">
+            <p className="lede">
+              Organisations don&apos;t lack security tools. They lack a clear answer to one question: are we
+              actually protected? Dashboards show green while controls drift out of policy, and risk lives in
+              spreadsheets nobody trusts.
+            </p>
+            <p className="body">
+              Kaska was built to close that gap. Kaska EM sits above the security stack, vendor-agnostic, and is
+              designed to show whether controls are working, what is exposed and what matters most, and whether
+              the response can be proved. The same discipline shaped Kaska Email Security, because the attack
+              that costs money often arrives as an ordinary-looking email.
+            </p>
+            <p className="body">
+              Kaska is designed with the regulatory reality of Indian enterprise, BFSI and government in mind:
+              DPDP, CERT-In, RBI and SEBI among them.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* BELIEVE */}
-      <section className="wrap">
-        <div className="sec-head center rev">
-          <span className="kicker">WHAT WE BELIEVE</span>
-          <h2 style={{ marginTop: '18px' }}>Three convictions we <span className="em">build on</span>.</h2>
-        </div>
-        <div className="card-grid">
-          <div className="card rev">
-            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9.5C7.5 20.5 4 17 4 12V7z" /><path d="M9.5 12l2 2 3.5-4" /></svg></div>
-            <h3>Prove it, don't assume it.</h3>
-            <p>Every control is checked against a standard and evidenced — protection you can show, not take on faith.</p>
-          </div>
-          <div className="card rev">
-            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M4 20V4M4 20h16" /><path d="M8 16v-4M12 16V8M16 16v-7" /></svg></div>
-            <h3>Risk belongs in financial terms.</h3>
-            <p>A board can't act on a colour. We put a money number on exposure so leaders can decide and prioritise.</p>
-          </div>
-          <div className="card rev">
-            <div className="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /><path d="M4 20h16" opacity=".5" /></svg></div>
-            <h3>Nothing ripped out.</h3>
-            <p>Vendor-agnostic by principle. Kaska reads the stack you already run and makes it prove itself.</p>
+      <section className="s-dark sec">
+        <div className="wrap">
+          <span className="kicker">What we build</span>
+          <h2 className="h2 mt-s">Two products, <em>one discipline</em>.</h2>
+          <div className="cols3 mt-m">
+            <div><b>Kaska Exposure Management Platform&trade;</b><p>An Autonomous Cyber Risk &amp; Resilience Platform. It connects assets, exposure, control validation, risk, governed response and evidence in one model.</p><Link className="more" href="/exposure-management">Explore Kaska EM</Link></div>
+            <div><b>Kaska Email Security</b><p>An API-first email security platform: detection, investigation and controlled response for Microsoft 365 and Google Workspace, with no MX change.</p><Link className="more" href="/email-security">Explore Email Security</Link></div>
+            <div><b>Technology Solutions</b><p>Advisory, implementation, managed services and support, vendor-agnostic, for regulated environments.</p><Link className="more" href="/technology-solutions">Explore solutions</Link></div>
           </div>
         </div>
       </section>
 
-      {/* DIFFERENT */}
-      <section className="wrap tint">
-        <div className="sec-head center rev">
-          <span className="kicker">HOW WE'RE DIFFERENT</span>
-          <h2 style={{ marginTop: '18px' }}>Not another console — <span className="em">a resilience layer</span>.</h2>
-        </div>
-        <div className="diff">
-          <div className="dcell rev">
-            <div className="dk">Before the breach</div>
-            <h3>Acts on root causes.</h3>
-            <p>Traditional SIEM and SOAR react after the alert fires — on symptoms. Kaska finds the reachable, exploitable gap and closes it before an attacker uses it.</p>
-            <span className="vs">vs. plain SIEM / SOAR</span>
-          </div>
-          <div className="dcell rev">
-            <div className="dk">One loop</div>
-            <h3>Quantify, validate, respond.</h3>
-            <p>Not a number in isolation. The same platform quantifies the risk, validates the control, and governs the response — one connected loop, not three disconnected tools.</p>
-            <span className="vs">vs. CRQ-only tools</span>
-          </div>
-          <div className="dcell rev">
-            <div className="dk">Honest depth</div>
-            <h3>Shows the gap, not a green light.</h3>
-            <p>No claim without code. Where a control can't be verified, we say so — because a false green is worse than an honest amber.</p>
-            <span className="vs">vs. dashboard theatre</span>
+      <section className="s-white sec">
+        <div className="wrap">
+          <span className="kicker">What we believe</span>
+          <h2 className="h2 mt-s">Three convictions we <em>build on</em>.</h2>
+          <div className="cols3 mt-m">
+            <div><span className="n">01</span><b>Prove it, don&apos;t assume it.</b><p>Findings and verdicts carry their evidence. Protection you can show, not take on faith.</p></div>
+            <div><span className="n">02</span><b>Honest about gaps.</b><p>Where a control can&apos;t be verified, we say so. An honest gap is worth more than a false green.</p></div>
+            <div><span className="n">03</span><b>Nothing ripped out.</b><p>Vendor-agnostic by principle. Our products work alongside the stack and platforms you already run.</p></div>
           </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="wrap final tint">
-        <div className="rev">
-          <span className="kicker">GET STARTED</span>
-          <h2 style={{ marginTop: '18px' }}>Let's <span className="em">talk.</span></h2>
-          <div className="ctas">
-            <a className="act" href="/contact">Get in touch
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
-            </a>
-            <a className="ghost" href="/">See the platform</a>
+      <section className="s-deep sec">
+        <div className="wrap">
+          <span className="kicker">How we&apos;re different</span>
+          <h2 className="h2 mt-s">Not another console. <em>A layer of evidence.</em></h2>
+          <div className="cols3 mt-m">
+            <div><b>Root causes, before the alert</b><p>Traditional SOAR acts after an alert fires. Kaska EM helps find the exploitable gap so it can be closed first, and connects response to the same context when an incident does occur.</p></div>
+            <div><b>One loop, not three tools</b><p>Risk, control validation and governed response share one asset model, so a number is never separated from the control and the action behind it.</p></div>
+            <div><b>Evidence first</b><p>Every figure shows whether it is measured, calculated or estimated, and what has not been assessed yet.</p></div>
           </div>
+          <p className="note mt-m">Kaska Technologies &amp; Services Pvt Ltd · India</p>
         </div>
       </section>
+
+      <Close kicker="Get started" title={<>Let&apos;s <em>talk</em>.</>} text="About our products, a technology programme, or a partnership." primary={{ href: '/contact', label: 'Get in touch' }} secondary={{ href: '/partners', label: 'Partner with Kaska' }} />
     </>
-  );
+  )
 }

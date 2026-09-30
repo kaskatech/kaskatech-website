@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const ACCESS_KEY = '206302e1-fa36-4003-ba8f-049108c29dba'
 
@@ -22,10 +22,27 @@ function isPublicEmail(email: string): boolean {
 
 const NOTE_DEFAULT = 'We reply within two business days. Your details are never shared.'
 
+// ?interest=<key> on /contact pre-selects the enquiry type (used by product-page CTAs).
+const INTERESTS: { key: string; label: string }[] = [
+  { key: 'em', label: 'Kaska Exposure Management Platform — demo' },
+  { key: 'email-security', label: 'Kaska Email Security — demo' },
+  { key: 'assessment', label: 'Kaska Risk Assessment' },
+  { key: 'solutions', label: 'Technology Solutions & Services' },
+  { key: 'partner', label: 'Partnership' },
+  { key: 'briefing', label: 'Not sure yet — a briefing' },
+]
+
 export default function ContactForm() {
   const [result, setResult] = useState(NOTE_DEFAULT)
   const [emailError, setEmailError] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [interest, setInterest] = useState('')
+
+  useEffect(() => {
+    const key = new URLSearchParams(window.location.search).get('interest')
+    const match = INTERESTS.find((i) => i.key === key)
+    if (match) setInterest(match.label)
+  }, [])
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -53,6 +70,7 @@ export default function ContactForm() {
       const j = await r.json()
       if (j && j.success) {
         form.reset()
+        setInterest('')
         setResult('Thank you — we’ll reply within two business days.')
       } else {
         setResult('Sorry, something went wrong. Please email contact@kaskatech.com.')
@@ -120,13 +138,11 @@ export default function ContactForm() {
           <label htmlFor="interest">
             I’m interested in <span className="req">*</span>
           </label>
-          <select id="interest" name="interest" defaultValue="" required>
+          <select id="interest" name="interest" value={interest} onChange={(e) => setInterest(e.target.value)} required>
             <option value="">Select an option</option>
-            <option>Platform Demo</option>
-            <option>Kaska Risk Assessment</option>
-            <option>Technology Solutions &amp; Services</option>
-            <option>Partnership</option>
-            <option>Not sure yet — a briefing</option>
+            {INTERESTS.map((i) => (
+              <option key={i.key} value={i.label}>{i.label}</option>
+            ))}
           </select>
         </div>
         <div className="field">
@@ -134,7 +150,7 @@ export default function ContactForm() {
           <textarea
             id="msg"
             name="message"
-            placeholder="A platform demo, a risk assessment, or Solutions & Services for your stack — tell us what you're looking for."
+            placeholder="A product demo, a datasheet, or Technology Solutions for your environment — tell us what you're looking for."
           ></textarea>
         </div>
         <button className="act full" type="submit" disabled={submitting}>

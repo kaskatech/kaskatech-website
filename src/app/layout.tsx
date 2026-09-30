@@ -1,22 +1,20 @@
 import type { Metadata } from 'next'
-import { Fraunces, Archivo, IBM_Plex_Mono } from 'next/font/google'
+import { Inter, Inter_Tight, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
-import RevealInit from '@/components/RevealInit'
 import ImageGuard from '@/components/ImageGuard'
 
-const fraunces = Fraunces({
+const interTight = Inter_Tight({
   subsets: ['latin'],
   weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
-  variable: '--font-fraunces',
+  variable: '--font-inter-tight',
   display: 'swap',
 })
-const archivo = Archivo({
+const inter = Inter({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-archivo',
+  weight: ['400', '500', '600'],
+  variable: '--font-inter',
   display: 'swap',
 })
 const plexMono = IBM_Plex_Mono({
@@ -27,13 +25,13 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Kaska — Autonomous Cyber Risk & Resilience Platform',
+  title: 'Kaska — Know what is actually protected',
   description:
-    'One live picture of your risk — exposure in financial terms, a Cyber Resilience Score, validated controls, and compliance you can prove. Kaska responds and recovers at machine speed under human approval.',
+    'Kaska Exposure Management Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
   openGraph: {
-    title: 'Kaska — Autonomous Cyber Risk & Resilience Platform',
+    title: 'Kaska — Know what is actually protected',
     description:
-      'Know your risk before attackers do. Own your real-time resilience — before, during and after a breach.',
+      'Kaska Exposure Management Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
     type: 'website',
     url: 'https://kaskatech.com',
   },
@@ -41,21 +39,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${fraunces.variable} ${archivo.variable} ${plexMono.variable}`}
-        style={
-          {
-            '--serif': 'var(--font-fraunces), Georgia, serif',
-            '--sans': 'var(--font-archivo), system-ui, sans-serif',
-            '--mono': 'var(--font-plex-mono), monospace',
-          } as React.CSSProperties
-        }
-      >
+    <html lang="en" className={`${interTight.variable} ${inter.variable} ${plexMono.variable}`}>
+      <body>
+        <a className="skip" href="#main">Skip to content</a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main">{children}</main>
         <Footer />
-        <RevealInit />
         <ImageGuard />
       </body>
     </html>

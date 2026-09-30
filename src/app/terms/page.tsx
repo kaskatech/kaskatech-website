@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <>
+    <div className="s-warm legal-page">
       <header className="hero wrap legal-hero">
         <span className="kicker rev">LEGAL</span>
         <h1 className="rev">Terms of Use</h1>
@@ -20,7 +20,7 @@ export default function Page() {
         <p className="rev">
           These Terms of Use (&ldquo;Terms&rdquo;) govern your access to and use of the
           <b> kaskatech.com</b> website and any related early-access evaluation made available by
-          <b> Kaska Technologies and Services</b> (&ldquo;Kaska&rdquo;, &ldquo;we&rdquo;,
+          <b> Kaska Technologies &amp; Services Pvt Ltd</b> (&ldquo;Kaska&rdquo;, &ldquo;we&rdquo;,
           &ldquo;us&rdquo;). By using this website, you agree to these Terms. If you do not agree,
           please do not use the site.
         </p>
@@ -52,8 +52,7 @@ export default function Page() {
         <p className="rev">
           The website and its content — text, design, graphics and software — are owned by Kaska or
           its licensors and are protected by intellectual-property laws. <b>Kaska™</b>,
-          <b> Kaska EM™</b> and <b>Kaska Exposure Management™</b> are trademarks of Kaska Technologies
-          and Services. All other product names, logos and brands referenced on this site are the
+          <b> Kaska EM™</b> and <b>Kaska Exposure Management™</b> are trademarks of Kaska Technologies &amp; Services Pvt Ltd. All other product names, logos and brands referenced on this site are the
           property of their respective owners and are used for identification only; their mention does
           not imply endorsement or affiliation.
         </p>
@@ -102,6 +101,6 @@ export default function Page() {
           our <a href="/contact">contact page</a>.
         </p>
       </section>
-    </>
+    </div>
   )
 }

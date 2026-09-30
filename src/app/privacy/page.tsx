@@ -3,12 +3,18 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Privacy Policy — Kaska',
   description:
-    'How Kaska Technologies and Services collects, uses, and protects personal data — aligned with India’s Digital Personal Data Protection Act, 2023.',
+    'How Kaska Technologies & Services Pvt Ltd collects, uses, and protects personal data — aligned with India’s Digital Personal Data Protection Act, 2023.',
 }
 
+// LEGAL REVIEW REQUIRED BEFORE PUBLIC LAUNCH (2026-09-27):
+// - This policy does not yet cover Kaska Email Security: mailbox / email content and metadata,
+//   and data obtained through API connections to Microsoft 365 and Google Workspace.
+// - Controller/processor roles, retention, sub-processors (e.g. Microsoft Azure), cross-border
+//   transfer, grievance officer and registered address still need legal sign-off.
+// Remove the on-page review notice only once legal has approved the updated policy.
 export default function Page() {
   return (
-    <>
+    <div className="s-warm legal-page">
       <header className="hero wrap legal-hero">
         <span className="kicker rev">LEGAL</span>
         <h1 className="rev">Privacy Policy</h1>
@@ -16,9 +22,19 @@ export default function Page() {
         <p className="legal-meta rev">Last updated: 22 September 2026</p>
       </header>
 
+      <div className="wrap">
+        <div className="status-note rev" style={{ margin: '0 0 10px', maxWidth: 760 }}>
+          <b>Under legal review.</b> This policy is being updated to cover Kaska Email Security,
+          including email and mailbox data processed through API connections to Microsoft 365 and
+          Google Workspace. Until the updated policy is published, contact{' '}
+          <a href="mailto:privacy@kaskatech.com" style={{ color: 'var(--brass-hi)' }}>privacy@kaskatech.com</a>{' '}
+          with any question about how that data is handled.
+        </div>
+      </div>
+
       <section className="wrap legal">
         <p className="rev">
-          This Privacy Policy explains how <b>Kaska Technologies and Services</b> (&ldquo;Kaska&rdquo;,
+          This Privacy Policy explains how <b>Kaska Technologies &amp; Services Pvt Ltd</b> (&ldquo;Kaska&rdquo;,
           &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses, shares and protects personal data. It
           covers visitors to <b>kaskatech.com</b> and organisations that evaluate or use the Kaska
           Exposure Management platform. We handle personal data in line with India&rsquo;s
@@ -27,7 +43,7 @@ export default function Page() {
 
         <h2 className="rev">1. Who we are</h2>
         <p className="rev">
-          Kaska Technologies and Services is a cybersecurity company based in India. For any question
+          Kaska Technologies &amp; Services Pvt Ltd is a cybersecurity company based in India. For any question
           about this policy or your personal data, contact us at <a href="mailto:privacy@kaskatech.com">privacy@kaskatech.com</a> or
           through our <a href="/contact">contact page</a>.
         </p>
@@ -36,7 +52,7 @@ export default function Page() {
         <ul className="rev">
           <li><b>Website visitors.</b> Contact details you submit (name, work email, company, message), and basic technical data such as IP address, browser type and pages viewed.</li>
           <li><b>Prospects &amp; design partners.</b> Business-contact and evaluation details you share when you request a demo or a walkthrough.</li>
-          <li><b>Platform customers.</b> Account and configuration data, and the security telemetry your connected tools expose to the platform. Kaska reads connected systems read-only and retains only the minimum signal required to produce risk, control and compliance results.</li>
+          <li><b>Platform customers.</b> Account and configuration data, and the security telemetry your connected tools expose to the platform. Kaska accesses connected systems with least-privilege permissions — read-only wherever possible — and retains only the minimum signal required to produce risk, control and compliance results.</li>
         </ul>
         <p className="rev">We do not sell personal data, and we do not use it for advertising.</p>
 
@@ -60,22 +76,21 @@ export default function Page() {
           We share personal data only with service providers who process it on our behalf (for
           example hosting and infrastructure), under confidentiality and data-protection terms; when
           required by law; and with your organisation&rsquo;s administrators for platform accounts.
-          Any use of AI models is governed by our data-minimisation controls, and customers can be
-          configured to use private or in-region model hosting.
+          Any use of AI models is subject to our data-minimisation controls.
         </p>
 
         <h2 className="rev">6. Data residency</h2>
         <p className="rev">
-          The platform supports India data-residency, and on-premise and air-gapped deployment for
-          the most sensitive environments. Where hosting is used, we apply appropriate safeguards and
-          honour deployment and residency commitments made to each customer.
+          Hosting location and data-residency requirements are agreed with each customer as part of
+          their agreement. Where hosting is used, we apply appropriate safeguards and honour the
+          deployment and residency commitments made to each customer.
         </p>
 
         <h2 className="rev">7. Security</h2>
         <p className="rev">
-          We apply layered technical and organisational safeguards — least-privilege, read-only
-          access to connected systems, encryption of credentials and data in transit and at rest,
-          access controls and audit logging. No system is perfectly secure, but security is the core
+          We apply layered technical and organisational safeguards — least-privilege access to
+          connected systems, encryption of connector credentials and of data in transit, access
+          controls and audit logging. No system is perfectly secure, but security is the core
           of what we do.
         </p>
 
@@ -120,6 +135,6 @@ export default function Page() {
           beyond those in your agreement with Kaska.
         </p>
       </section>
-    </>
+    </div>
   )
 }
