@@ -1,32 +1,45 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Fragment } from 'react'
 import KaskaGate from '@/components/k/KaskaGate'
 import ConfiguredInspector from '@/components/k/ConfiguredInspector'
 import BreachLoop from '@/components/k/BreachLoop'
 import JourneyTable from '@/components/k/JourneyTable'
 import ProductConsole from '@/components/k/ProductConsole'
 import { Arrow, Close, StackDiagram, demo } from '@/components/k/ui'
-import { ARCH, CAPABILITIES, FRAMEWORKS, SECTORS, SOLUTIONS, SPINE } from '@/components/k/content'
+import {
+  CAPABILITIES, CONDITIONS, ECOSYSTEM, FRAMEWORKS, INTEL_INPUTS, NEXT_STEPS, SECTORS, SOLUTIONS,
+  STACK_IN, STACK_OUT, STACK_VERBS,
+} from '@/components/k/content'
 
 export const metadata: Metadata = {
   title: 'Kaska — Know what is actually protected',
   description:
-    'Kaska Exposure Management Platform™ connects assets, exposure, control validation, risk, response and evidence, so organisations can see which controls are effective, what to fix first, and prove it.',
+    'Kaska is the intelligence layer above your security stack. Kaska Exposure Management Platform™ connects what your tools already know into one picture of exposure, risk and resilience, so you can prioritise, act before a breach and show whether risk has reduced.',
 }
 
 const TOOLS: [string, string][] = [
-  ['Endpoint protection', 'agent health'],
+  ['SIEM / XDR', 'alerts'],
+  ['Endpoint (EDR)', 'agent health'],
+  ['Identity & PAM', 'users & roles'],
   ['Vulnerability scanner', 'CVE list'],
-  ['Identity directory', 'users & roles'],
-  ['SIEM', 'alerts'],
   ['Cloud posture', 'misconfigurations'],
   ['GRC', 'spreadsheets'],
+]
+
+const QUESTIONS = [
+  'How exposed are we, really?',
+  'What could an attacker do next?',
+  'Which weaknesses actually matter?',
+  'Are our controls protecting what matters?',
+  'What should we fix first?',
+  'Has the risk actually reduced?',
 ]
 
 export default function Page() {
   return (
     <>
-      {/* 1 · HERO + KASKA GATE */}
+      {/* 1 · HERO — THE OUTCOME */}
       <section className="s-dark">
         <div className="wrap">
           <div className="hero-a">
@@ -36,12 +49,13 @@ export default function Page() {
             </div>
             <div className="hero-b">
               <p className="say">
-                Your tools report that controls are configured. Kaska helps you see which are effective,
-                where the gaps are and what to fix first, with the evidence behind every answer.
+                Kaska is the intelligence layer above your security stack. It connects what your tools
+                already know into one picture of exposure, risk and resilience, so you can act on what
+                matters before a breach, and show whether the risk has reduced.
               </p>
               <div className="ctas">
                 <Link className="btn btn-go" href={demo('em')}>Request a Demo<Arrow /></Link>
-                <Link className="btn btn-q" href="#breach-intelligence">See how it works</Link>
+                <Link className="btn btn-q" href="#intelligence-layer">See how it works</Link>
               </div>
               <div className="hero-id">
                 <b>Kaska EM</b>
@@ -54,42 +68,18 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 2 · CONFIGURED ≠ PROTECTED */}
-      <section className="s-warm sec" id="configured">
-        <div className="wrap">
-          <div className="split">
-            <div>
-              <span className="kicker">Configured → Validated → Effective</span>
-              <h2 className="h2 mt-s">Configured doesn&apos;t mean <em>protected</em>.</h2>
-            </div>
-            <p className="lede">
-              A console can report every agent deployed and every policy assigned while the control
-              underneath is failing. Kaska measures each control against the outcome it is meant to
-              deliver.
-            </p>
-          </div>
-          <div className="mt-m"><ConfiguredInspector /></div>
-          <div className="unm mt-l">
-            <p className="l">Unmeasured is <em>not</em> passing.</p>
-            <div className="pair">
-              <div><b className="d">03</b><span>Outcomes for every control<small>Validated, gap, or not assessed. Never a silent green.</small></span></div>
-              <div><b>01</b><span>Evidence trail behind every verdict<small>Each result shows where it came from.</small></span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 3 · THE PROBLEM */}
+      {/* 2 · THE FRAGMENTED SECURITY STACK */}
       <section className="s-white sec">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">The problem</span>
-              <h2 className="h2 mt-s">Tools create data. Organisations need <em>connected understanding</em>.</h2>
+              <span className="kicker">The fragmented security stack</span>
+              <h2 className="h2 mt-s">Many excellent tools. <em>No connected answer.</em></h2>
             </div>
             <p className="lede">
-              Every security tool answers its own question well. None of them answers the one leadership
-              asks: which of our important assets are exposed, and is anything actually stopping an attack?
+              SIEM and XDR, endpoint, identity and privileged access, cloud, vulnerability, network, email,
+              data and GRC each do their job well. The problem is not the tools. It is that their
+              intelligence stays in separate places.
             </p>
           </div>
           <div className="frag">
@@ -121,24 +111,92 @@ export default function Page() {
               </div>
             </div>
           </div>
+          <div className="mt-l">
+            <div className="xlabel"><span>The questions no single tool answers</span><i /></div>
+            <div className="cols3 mt-s">
+              {QUESTIONS.map((q) => <div key={q}><b>{q}</b></div>)}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* 4 · CYBER RISK & RESILIENCE MODEL */}
+      {/* 3 · KASKA — THE INTELLIGENCE LAYER */}
+      <section className="s-warm sec" id="intelligence-layer">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Kaska — the intelligence layer</span>
+              <h2 className="h2 mt-s">Above the stack. <em>Not instead of it.</em></h2>
+            </div>
+            <p className="lede">
+              Kaska doesn&apos;t replace your security investments. It connects what they already know into
+              one decision model, for the people accountable for security.
+            </p>
+          </div>
+          <StackDiagram
+            inputs={STACK_IN}
+            verbs={STACK_VERBS}
+            outputs={STACK_OUT}
+            title={['The intelligence', 'layer']}
+            inLabel="Your existing security stack"
+            outLabel="One connected picture for"
+          />
+          <Link className="more mt-m" href="/integrations">How Kaska connects</Link>
+        </div>
+      </section>
+
+      {/* 4 · FROM SIGNAL TO INTELLIGENCE */}
       <section className="s-dark sec">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">The Cyber Risk &amp; Resilience model</span>
-              <h2 className="h2 mt-s">From asset to <em>resilience</em>, in one model.</h2>
+              <span className="kicker">From signal to intelligence</span>
+              <h2 className="h2 mt-s">Intelligence is <em>the product</em>.</h2>
             </div>
             <p className="lede">
-              Every risk follows the same path, so every figure traces back to a specific asset, a specific
-              control and the action taken on it.
+              One connected intelligence foundation. Kaska connects separate facts around the asset they
+              belong to, so they become one picture of cyber risk rather than another list of findings.
             </p>
           </div>
-          <div className="spine">
-            {SPINE.map((s, i) => (
+          <div className="cols4 mt-m">
+            {INTEL_INPUTS.map((x) => <div key={x.t}><b>{x.t}</b><p>{x.d}</p></div>)}
+          </div>
+          <div className="flow-down" aria-hidden="true">Connected around the asset</div>
+          <div className="arch" style={{ marginTop: 0 }} aria-label="Kaska intelligence">
+            <div className="lyr core">
+              <div className="ln">Kaska intelligence<b>One connected intelligence foundation</b></div>
+              <div className="lv">{STACK_VERBS.map((v) => <span key={v}>{v}</span>)}</div>
+            </div>
+          </div>
+          <p className="note mt-s">Out of it: one picture of exposure, risk and resilience, for the CISO, the security team, the board and the regulator.</p>
+        </div>
+      </section>
+
+      {/* 5 · BEFORE A BREACH — PREDICT & PREVENT */}
+      <section className="s-deep sec" id="before-a-breach">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Before a breach · Predict &amp; Prevent</span>
+              <h2 className="h2 mt-s">What could <em>happen next?</em></h2>
+            </div>
+            <p className="lede">
+              Kaska connects individual signals into the conditions that make an exposure matter. One finding
+              rarely tells the story; the combination does. Kaska helps you find it, understand its business
+              significance and act before it is exploited.
+            </p>
+          </div>
+          <div className="cond" aria-label="Example of connected conditions">
+            {CONDITIONS.map((c, i) => (
+              <Fragment key={c.t}>
+                {i > 0 && <i aria-hidden="true">+</i>}
+                <div><small>{c.t}</small><b>{c.e}</b></div>
+              </Fragment>
+            ))}
+          </div>
+          <div className="flow-down" aria-hidden="true">Connected risk</div>
+          <div className="spine s4">
+            {NEXT_STEPS.map((s, i) => (
               <div key={s.t} className={`st ${s.cls ?? ''}`}>
                 <span className="n">{String(i + 1).padStart(2, '0')}</span>
                 <b>{s.t}</b>
@@ -148,12 +206,92 @@ export default function Page() {
           </div>
           <div className="spine-back">
             <svg viewBox="0 0 520 24" aria-hidden="true"><path d="M516 4 V14 H8" fill="none" stroke="#C9A44C" strokeWidth="1.2" /><path d="M14 8 L8 14 L14 20" fill="none" stroke="#C9A44C" strokeWidth="1.2" /></svg>
-            <span>Resilience feeds the next assessment. It is a loop, not a report.</span>
+            <span>Illustrative example. Threat-informed prioritisation of connected conditions, not a guarantee of what will happen.</span>
           </div>
         </div>
       </section>
 
-      {/* 5 · BREACH INTELLIGENCE */}
+      {/* 6 · HOW KASKA KNOWS — CONTROL VALIDATION */}
+      <section className="s-warm sec" id="configured">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">How Kaska knows · One of Kaska&apos;s intelligence lenses</span>
+              <h2 className="h2 mt-s">Configured doesn&apos;t mean <em>protected</em>.</h2>
+            </div>
+            <p className="lede">
+              Kaska doesn&apos;t assume a control is protecting you because a console says it is configured.
+              It measures each control against the outcome it should deliver, Configured → Validated →
+              Effective, and feeds that into exposure, risk, priorities, action and verification.
+            </p>
+          </div>
+          <div className="mt-m"><ConfiguredInspector /></div>
+        </div>
+      </section>
+
+      {/* 7 · HOW KASKA KNOWS — EVIDENCE & PROVENANCE */}
+      <section className="s-white sec">
+        <div className="wrap">
+          <div className="ev-grid">
+            <div>
+              <span className="kicker">How Kaska knows · Evidence &amp; provenance</span>
+              <h2 className="h2 mt-s">Trust the intelligence. <em>See where it came from.</em></h2>
+              <p className="lede mt-s">
+                Every figure in Kaska carries its source and its state, so you always know whether you are
+                looking at a measurement, a calculation or an estimate.
+              </p>
+              <div className="legend5">
+                <div><b>LIVE</b><span>Read directly from your systems.</span></div>
+                <div><b>DERIVED</b><span>Calculated by Kaska from measured data.</span></div>
+                <div><b>PROVISIONAL</b><span>An estimate awaiting calibration with your data.</span></div>
+                <div><b>SAMPLE</b><span>Illustrative data, always labelled as such.</span></div>
+                <div><b>NOT ASSESSED</b><span>No evidence yet, and never shown as a pass.</span></div>
+              </div>
+            </div>
+            <div className="trail-card" aria-label="Example evidence trail">
+              <div className="tc-h">
+                <span>Finding · Identity</span>
+                <b>Workforce MFA coverage below policy</b>
+                <div className="val">50%<small>of users registered for MFA</small></div>
+              </div>
+              <div className="nodes">
+                <div className="node l"><span className="dot" /><div><b>User and MFA records</b><span className="sm">Identity directory</span></div><span className="chip live">Live</span></div>
+                <div className="node d"><span className="dot" /><div><b>Coverage calculation</b><span className="sm">Kaska EM</span></div><span className="chip der">Derived</span></div>
+                <div className="node p"><span className="dot" /><div><b>Risk estimate</b><span className="sm">Risk model, before calibration</span></div><span className="chip prov">Provisional</span></div>
+                <div className="node s"><span className="dot" /><div><b>Walkthrough example</b><span className="sm">This page</span></div><span className="chip smp">Sample</span></div>
+                <div className="node n"><span className="dot" /><div><b>Legacy authentication</b><span className="sm">No connected source</span></div><span className="chip na">Not assessed</span></div>
+              </div>
+            </div>
+          </div>
+          <div className="unm mt-l">
+            <p className="l">Unmeasured is <em>not</em> passing.</p>
+            <div className="pair">
+              <div><b className="d">03</b><span>Outcomes for every control<small>Validated, gap, or not assessed. Never a silent green.</small></span></div>
+              <div><b>01</b><span>Evidence trail behind every verdict<small>Each result shows where it came from.</small></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8 · PRIORITISE & ACT */}
+      <section className="s-dark sec">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Prioritise &amp; act</span>
+              <h2 className="h2 mt-s">What matters most, <em>and what to do about it</em>.</h2>
+            </div>
+            <p className="lede">
+              Not another long list of findings. Exposure, attack paths where supported, asset criticality
+              and business context bring the few risks that matter to the top. Each becomes a case and an
+              action, and Kaska re-validates to confirm the exposure actually reduced.
+            </p>
+          </div>
+          <div className="mt-m"><JourneyTable /></div>
+        </div>
+      </section>
+
+      {/* 9 · BREACH INTELLIGENCE — BEFORE, DURING & AFTER */}
       <section className="s-deep sec" id="breach-intelligence">
         <div className="wrap">
           <div className="split">
@@ -162,92 +300,85 @@ export default function Page() {
               <h2 className="h2 mt-s">Three doors. <em>One intelligence loop.</em></h2>
             </div>
             <p className="lede">
-              Before, during and after a breach, Kaska works from the same assets, the same exposure and
-              the same control evidence, so what one team learns is never lost to the next.
+              Before a breach, Kaska helps predict and prevent. During one, it brings context to your existing
+              detection. After, it carries what was learned back into the same model.
             </p>
           </div>
-          <BreachLoop />
+          <BreachLoop initial={1} />
           <div className="bl-foot">
             <div><b>Before informs during</b>The exposure and control context is already there when a signal arrives.</div>
             <div><b>During informs after</b>Every response action is recorded as evidence for recovery and reporting.</div>
-            <div><b>After informs before</b>Every incident informs reassessment; every gap becomes a validation target.</div>
+            <div><b>After informs before</b>The same class of attack should not succeed twice: every incident informs reassessment.</div>
             <div><b>Governed throughout</b>Actions follow policy, with human approval where it matters.</div>
           </div>
         </div>
       </section>
 
-      {/* 6 · EVIDENCE / PROVENANCE */}
-      <section className="s-warm sec">
-        <div className="wrap ev-grid">
-          <div>
-            <span className="kicker">Evidence &amp; provenance</span>
-            <h2 className="h2 mt-s">No claim without <em>evidence</em>.</h2>
-            <p className="lede mt-s">
-              Every figure in Kaska carries its source and its state, so you always know whether you are
-              looking at a measurement, a calculation or an estimate.
-            </p>
-            <div className="legend5">
-              <div><b>LIVE</b><span>Read directly from your systems.</span></div>
-              <div><b>DERIVED</b><span>Calculated by Kaska from measured data.</span></div>
-              <div><b>PROVISIONAL</b><span>An estimate awaiting calibration with your data.</span></div>
-              <div><b>SAMPLE</b><span>Illustrative data, always labelled as such.</span></div>
-              <div><b>NOT ASSESSED</b><span>No evidence yet, and never shown as a pass.</span></div>
-            </div>
-          </div>
-          <div className="trail-card" aria-label="Example evidence trail">
-            <div className="tc-h">
-              <span>Finding · Identity</span>
-              <b>Workforce MFA coverage below policy</b>
-              <div className="val">50%<small>of users registered for MFA</small></div>
-            </div>
-            <div className="nodes">
-              <div className="node l"><span className="dot" /><div><b>User and MFA records</b><span className="sm">Identity directory</span></div><span className="chip live">Live</span></div>
-              <div className="node d"><span className="dot" /><div><b>Coverage calculation</b><span className="sm">Kaska EM</span></div><span className="chip der">Derived</span></div>
-              <div className="node p"><span className="dot" /><div><b>Risk estimate</b><span className="sm">Risk model, before calibration</span></div><span className="chip prov">Provisional</span></div>
-              <div className="node s"><span className="dot" /><div><b>Walkthrough example</b><span className="sm">This page</span></div><span className="chip smp">Sample</span></div>
-              <div className="node n"><span className="dot" /><div><b>Legacy authentication</b><span className="sm">No connected source</span></div><span className="chip na">Not assessed</span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7 · JOURNEY */}
+      {/* 10 · PROOF — THE PRODUCT */}
       <section className="s-dark sec">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">How it works</span>
-              <h2 className="h2 mt-s">Discover to report, in <em>one view</em>.</h2>
+              <span className="kicker">Proof · The product</span>
+              <h2 className="h2 mt-s">Every answer opens to its <em>evidence</em>.</h2>
             </div>
             <p className="lede">
-              Watch one product view build itself: assets gain context, controls are validated, and at
-              Prioritise the few risks that matter rise to the top.
+              Exposure, risk, control validation, evidence and reporting: five views of one model. Open any
+              finding to see where each part of it came from.
             </p>
           </div>
-          <div className="mt-m"><JourneyTable /></div>
+          <div className="mt-m"><ProductConsole initialView="exp" /></div>
         </div>
       </section>
 
-      {/* 8 · CAPABILITY MODEL */}
-      <section className="s-deep sec">
+      {/* 10b · TECHNOLOGY ECOSYSTEM — how Kaska gets the intelligence */}
+      <section className="s-white sec">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">Capability model</span>
-              <h2 className="h2 mt-s">Ten capabilities. <em>One platform.</em></h2>
+              <span className="kicker">Integrations</span>
+              <h2 className="h2 mt-s">Connect the security stack <em>you already have</em>.</h2>
+            </div>
+            <p className="lede">
+              Your security stack already knows a lot. Kaska brings signals from the technologies already
+              deployed across your environment into one connected view of exposure, risk and resilience,
+              instead of adding another isolated console.
+            </p>
+          </div>
+          <div className="cols4 mt-m">
+            {ECOSYSTEM.map(([cat, vendors]) => (
+              <div key={cat}>
+                <span className="n">{cat.toUpperCase()}</span>
+                <div className="eco-v">{vendors.map((v) => <span key={v}>{v}</span>)}</div>
+              </div>
+            ))}
+          </div>
+          <svg className="eco-feed" viewBox="0 0 1000 64" preserveAspectRatio="none" aria-hidden="true">
+            {[125, 375, 625, 875].map((x) => (
+              <path key={x} d={`M${x} 0 C ${x} 40, 500 24, 500 64`} fill="none" stroke="#C9A44C" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
+            ))}
+          </svg>
+          <div className="eco-bar">
+            <b>KASKA INTELLIGENCE</b>
+            <span>One connected view of exposure, risk and resilience</span>
+          </div>
+          <p className="note mt-s">Representative vendors with Kaska connectors. Connector availability and validation vary by environment, and are confirmed during evaluation.</p>
+          <Link className="more mt-m" href="/integrations">Explore integrations</Link>
+        </div>
+      </section>
+
+      {/* 11 · CAPABILITIES & COMPLIANCE */}
+      <section className="s-warm sec">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Capabilities &amp; compliance</span>
+              <h2 className="h2 mt-s">One intelligence foundation. <em>Ten capabilities.</em></h2>
             </div>
             <p className="lede">
               Each capability is designed to stand on its own, and to become stronger because it shares one
               asset foundation, one analytics core and one evidence trail with the rest.
             </p>
-          </div>
-          <div className="arch" aria-label="Kaska architecture, top to bottom">
-            {ARCH.map((l) => (
-              <div key={l.t} className={`lyr ${l.k}`}>
-                <div className="ln">{l.n}<b>{l.t}</b></div>
-                <div className="lv">{l.v.map((v) => <span key={v}>{v}</span>)}</div>
-              </div>
-            ))}
           </div>
           <div className="capx">
             {CAPABILITIES.map((c, i) => (
@@ -260,71 +391,21 @@ export default function Page() {
             ))}
           </div>
           <p className="note mt-s">Capability availability is confirmed for your environment during evaluation.</p>
+          <div className="mt-l">
+            <div className="xlabel"><span>Compliance, as an output of the same evidence</span><i /></div>
+            <p className="body mt-s">
+              Control evidence is mapped to the frameworks you report against. Requirements without evidence
+              are reported as not assessed, never counted as met.
+            </p>
+            <p className="h3 mt-s">{FRAMEWORKS.join(' · ')}</p>
+            <p className="note mt-s">Framework names indicate the regulatory context Kaska maps to. They do not imply certification or regulatory approval.</p>
+          </div>
           <Link className="more mt-m" href="/features">Explore the capabilities</Link>
         </div>
       </section>
 
-      {/* 9 · PRODUCT CONSOLE */}
-      <section className="s-dark sec">
-        <div className="wrap">
-          <div className="split">
-            <div>
-              <span className="kicker">The product</span>
-              <h2 className="h2 mt-s">Every answer opens to its <em>evidence</em>.</h2>
-            </div>
-            <p className="lede">
-              Five views of one model. Open any finding to see where each part of it came from.
-            </p>
-          </div>
-          <div className="mt-m"><ProductConsole /></div>
-        </div>
-      </section>
-
-      {/* 10 · ABOVE THE STACK */}
-      <section className="s-warm sec">
-        <div className="wrap">
-          <div className="split">
-            <div>
-              <span className="kicker">Above the stack</span>
-              <h2 className="h2 mt-s">Works with what you <em>already run</em>.</h2>
-            </div>
-            <p className="lede">
-              Kaska doesn&apos;t replace your security tools. It sits above them, reading their signals,
-              checking their controls and connecting it all around the asset.
-            </p>
-          </div>
-          <StackDiagram />
-          <Link className="more mt-m" href="/integrations">How Kaska connects</Link>
-        </div>
-      </section>
-
-      {/* 11 · COMPLIANCE & CONTROL VALIDATION */}
-      <section className="s-dark sec">
-        <div className="wrap">
-          <div className="split">
-            <div>
-              <span className="kicker">Compliance &amp; control validation</span>
-              <h2 className="h2 mt-s">Evidence mapped to the frameworks <em>you report against</em>.</h2>
-            </div>
-            <p className="lede">
-              Compliance built on validated controls, not questionnaires.
-            </p>
-          </div>
-          <div className="cols3 mt-m">
-            <div><span className="n">01</span><b>Validated, not attested</b><p>Control checks read configuration and state from your tools rather than relying on self-assessment.</p></div>
-            <div><span className="n">02</span><b>Mapped once, reused</b><p>The same control evidence supports every framework it applies to, so audits stop repeating work.</p></div>
-            <div><span className="n">03</span><b>Gaps stay visible</b><p>Requirements without evidence are reported as not assessed, never counted as met.</p></div>
-          </div>
-          <div className="mt-m">
-            <div className="xlabel"><span>Mapping context includes</span><i /></div>
-            <p className="h3 mt-s" style={{ color: '#CFCDC5' }}>{FRAMEWORKS.join(' · ')}</p>
-            <p className="note mt-s">Framework names indicate the regulatory context Kaska maps to. They do not imply certification or regulatory approval.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 12 · INDUSTRIES */}
-      <section className="s-warm sec">
+      {/* 12 · BREADTH & TRUST — INDUSTRIES */}
+      <section className="s-white sec">
         <div className="wrap">
           <div className="split">
             <div>
@@ -345,7 +426,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 13 · EMAIL SECURITY */}
+      {/* 12 · BREADTH & TRUST — EMAIL SECURITY */}
       <section className="s-dark sec">
         <div className="wrap split even">
           <div>
@@ -379,7 +460,7 @@ export default function Page() {
         <p className="wrap note mt-s">Illustrative example · fictional organisation and message.</p>
       </section>
 
-      {/* 14 · TECHNOLOGY SOLUTIONS (compact) */}
+      {/* 12 · BREADTH & TRUST — TECHNOLOGY SOLUTIONS (compact) */}
       <section className="s-white sec">
         <div className="wrap split top">
           <div>
@@ -397,7 +478,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 15 · TRUST / COMPANY */}
+      {/* 12 · BREADTH & TRUST — COMPANY */}
       <section className="s-warm sec">
         <div className="wrap">
           <div className="split">
@@ -419,10 +500,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 16 · CLOSE */}
+      {/* 13 · CLOSE */}
       <Close
         title={<>Know what is <em>actually</em> protected.</>}
-        text="A focused walkthrough of your controls, the evidence behind them and what to fix first."
+        text="A focused walkthrough of your exposure, the risks that matter most, and the evidence behind every answer."
       />
     </>
   )

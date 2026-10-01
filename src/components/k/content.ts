@@ -47,3 +47,49 @@ export const SOLUTIONS = [
   'Network Security', 'Cloud Security', 'OT Security', 'Incident Response & Recovery', 'Security Architecture',
   'Advisory', 'Implementation', 'Managed Device Support',
 ]
+
+// Home · Kaska as the intelligence layer
+export const STACK_IN = ['SIEM / XDR', 'EDR', 'IAM / PAM', 'Cloud', 'Vulnerability', 'Network', 'Email', 'Data', 'GRC']
+export const STACK_VERBS = ['Understand', 'Correlate', 'Validate', 'Quantify', 'Prioritise', 'Act', 'Prove', 'Reassess']
+export const STACK_OUT = ['CISO', 'Security team', 'Board', 'Regulator']
+
+export const INTEL_INPUTS = [
+  { t: 'Assets', d: 'What exists, who owns it and how critical it is.' },
+  { t: 'Identities', d: 'Who and what can reach it, and with which privileges.' },
+  { t: 'Exposures', d: 'Vulnerabilities, misconfigurations and public reach.' },
+  { t: 'Controls', d: 'Whether the protections in place actually hold.' },
+  { t: 'Threats', d: 'Known-exploited flaws and attacker techniques.' },
+  { t: 'Relationships', d: 'How assets, identities and access paths connect.' },
+  { t: 'Business context', d: 'What each asset supports, and what its loss would mean.' },
+  { t: 'Evidence', d: 'Where every fact came from, and how current it is.' },
+]
+
+// Home · before a breach: the conditions that make an exposure matter (illustrative example in `e`)
+export const CONDITIONS = [
+  { t: 'Exposure', e: 'A known-exploited flaw' },
+  { t: 'Asset criticality', e: 'on a payments system' },
+  { t: 'Control weakness', e: 'where MFA is not enforced' },
+  { t: 'Threat', e: 'using a technique in active use' },
+  { t: 'Relationship', e: 'reachable from a user workstation, where supported' },
+  { t: 'Business context', e: 'supporting customer payments' },
+]
+export const NEXT_STEPS = [
+  { t: 'Connected risk', d: 'The combination that makes the exposure matter, designed to be expressed in business terms.' },
+  { t: 'Prioritise', d: 'The few conditions most likely to matter, first.' },
+  { t: 'Act', d: 'A case, an owner and a governed change.', cls: 'act' },
+  { t: 'Verify', d: 'Re-validated, so reduced exposure is shown, not assumed.', cls: 'res' },
+]
+
+// Home · technology ecosystem. Every vendor maps to a connector in
+// services/data-ingestion/connector-framework/connectors. Only Okta is live-proven (V1);
+// the rest are implemented and unit-tested, so the section carries a validation qualifier.
+export const ECOSYSTEM: [string, string[]][] = [
+  ['Identity', ['Okta', 'Microsoft Entra ID', 'Ping Identity', 'SailPoint', 'CyberArk']],
+  ['Endpoint', ['Microsoft Defender', 'CrowdStrike', 'SentinelOne', 'Trend Micro']],
+  ['SIEM / security operations', ['Microsoft Sentinel', 'Splunk', 'IBM QRadar', 'Google Security Operations (Chronicle)']],
+  ['Network', ['Palo Alto Networks', 'Fortinet', 'Check Point', 'Cisco']],
+  ['Cloud', ['AWS', 'Microsoft Azure', 'Google Cloud']],
+  ['Email', ['Microsoft Defender for Office 365', 'Proofpoint', 'Mimecast']],
+  ['Vulnerability', ['Tenable', 'Qualys', 'Rapid7']],
+  ['Application security', ['Checkmarx', 'Veracode', 'OpenText Fortify', 'HCL AppScan']],
+]

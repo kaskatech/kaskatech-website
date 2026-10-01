@@ -215,7 +215,7 @@ export default function KaskaGate() {
           <span className="e"><i></i>Not assessed</span>
           <span className="d"><i></i>Act first</span>
         </div>
-        <span>Illustrative view of Kaska&apos;s measurement model · select a control</span>
+        <span>One lens of Kaska&apos;s intelligence: how your controls actually measure up · illustrative · select a control</span>
       </div>
     </div>
   )

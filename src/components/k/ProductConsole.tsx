@@ -28,10 +28,11 @@ const FINDINGS: { t: string; v: string; trail: Trail }[] = [
 ]
 const CL = { l: 'live', d: 'der', p: 'prov', n: 'na' } as const
 
-export default function ProductConsole() {
-  const [v, setV] = useState<ViewKey>('val')
+export default function ProductConsole({ initialView = 'val' }: { initialView?: ViewKey }) {
+  const [v, setV] = useState<ViewKey>(initialView)
   const [f, setF] = useState<number | null>(null)
-  useEffect(() => { if (window.innerWidth > 900) setF(0) }, [])
+  // open the first finding's evidence on wide screens, when the opening view lists findings
+  useEffect(() => { if (initialView === 'val' && window.innerWidth > 900) setF(0) }, [initialView])
   const choose = (k: ViewKey) => { setV(k); setF(null) }
 
   return (

@@ -27,16 +27,16 @@ const DOORS: Door[] = [
     chain: [['Asset'], ['Exposure', 'vulnerabilities, attack paths where supported'], ['Control', 'validated, not assumed'], ['Risk', 'in business context'], ['Priority'], ['Case & action'], ['Verification']],
   },
   {
-    id: 'during', when: 'During a breach', name: 'Detect & Respond', enters: 'finding',
-    q: 'An incident is never isolated in an alert queue. Kaska connects it to the same asset, exposure, control and risk context used before it happened.',
+    id: 'during', when: 'During a breach', name: 'Detect & Contain', enters: 'finding',
+    q: 'Kaska does not replace your SIEM or XDR. It brings each incident together with the same asset, exposure and control context used before it happened, for investigation and governed containment.',
     lit: ['finding', 'asset', 'case', 'action', 'evidence', 'score'],
-    chain: [['Signal / incident', 'from your SIEM or XDR'], ['Asset context'], ['Exposure & control state'], ['Blast radius', 'where available'], ['Business impact'], ['Investigation & case'], ['Governed response']],
+    chain: [['Detection signal', 'from your SIEM or XDR'], ['Asset context'], ['Exposure & control state'], ['Attack path & blast radius', 'where supported'], ['Business impact'], ['Investigation & case'], ['Governed response', 'human approval where it matters']],
   },
   {
     id: 'after', when: 'After a breach', name: 'Recover & Adapt', enters: 'reassess',
-    q: 'Recovery feeds the model forward. Every incident informs reassessment; every gap becomes a validation target; every fix is verified.',
+    q: 'Recovery feeds the model forward, so the same class of attack should not succeed twice. Every incident informs reassessment; every fix is verified.',
     lit: ['evidence', 'reassess', 'resilience', 'report', 'score', 'asset'],
-    chain: [['Recovery'], ['Evidence'], ['Control revalidation'], ['Risk reassessment'], ['Lessons learned'], ['Resilience improvement']],
+    chain: [['Incident'], ['Recovery'], ['Evidence'], ['Reassessment'], ['Control revalidation'], ['Risk reassessment'], ['Resilience improvement']],
   },
 ]
 
@@ -50,8 +50,8 @@ const POS: Record<string, [number, number, 'n' | 's' | 'e' | 'w']> = {
 }
 const TRACK = `M${X0 + 30} ${Y0} H${X1 - 30} Q${X1} ${Y0} ${X1} ${Y0 + 30} V${Y1 - 30} Q${X1} ${Y1} ${X1 - 30} ${Y1} H${X0 + 30} Q${X0} ${Y1} ${X0} ${Y1 - 30} V${Y0 + 30} Q${X0} ${Y0} ${X0 + 30} ${Y0} Z`
 
-export default function BreachLoop() {
-  const [di, setDi] = useState(0)
+export default function BreachLoop({ initial = 0 }: { initial?: number }) {
+  const [di, setDi] = useState(initial)
   const [reduce, setReduce] = useState(true)
   useEffect(() => {
     setReduce(!!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches))

@@ -72,20 +72,42 @@ export function PageHero({ kicker, title, lede, children, split }: { kicker: str
 /* ---------- Above the stack: tool categories converge on Kaska, which produces outcomes ---------- */
 const IN = ['SIEM / XDR', 'Endpoint', 'Identity & PAM', 'Cloud posture', 'Vulnerability', 'Network & firewall', 'Email', 'OT / ICS']
 const OUT = ['Validated controls', 'Prioritised risk', 'Governed action', 'Board-ready evidence']
+const VERBS = ['Validate', 'Quantify', 'Prioritise', 'Respond', 'Evidence']
 
-export function StackDiagram({ tone = 'warm' }: { tone?: 'warm' | 'dark' }) {
+export function StackDiagram({
+  tone = 'warm',
+  inputs = IN,
+  outputs = OUT,
+  verbs = VERBS,
+  title = ['Asset-centric', 'intelligence'],
+  inLabel = 'Your existing tools',
+  outLabel = 'What you get',
+}: {
+  tone?: 'warm' | 'dark'
+  inputs?: string[]
+  outputs?: string[]
+  verbs?: string[]
+  title?: [string, string]
+  inLabel?: string
+  outLabel?: string
+}) {
   const ink = tone === 'warm' ? '#101010' : '#EDEBE4'
   const mute = tone === 'warm' ? '#595750' : '#A09F98'
   const line = tone === 'warm' ? '#BDB9AC' : '#30333B'
-  const W = 1240, H = 460, kx = 520, kw = 220, ky = 120, kh = 220
+  const pairs: string[] = []
+  for (let i = 0; i < verbs.length; i += 2) pairs.push(verbs.slice(i, i + 2).join(' · ').toUpperCase())
+  const W = 1240, kx = 520, kw = 220
+  const kh = Math.max(220, 158 + (pairs.length - 1) * 20 + 22)
+  const H = Math.max(460, 40 + (inputs.length - 1) * 54 + 40)
+  const ky = (H - kh) / 2
   const iy = (i: number) => 40 + i * 54
-  const oy = (i: number) => 110 + i * 80
+  const oy = (i: number) => H / 2 - ((outputs.length - 1) * 80) / 2 + i * 80
   return (
     <div className="conv">
-      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Kaska sits above your existing tools (${IN.join(', ')}) and turns their signals into ${OUT.join(', ').toLowerCase()}.`}>
-        <text x="0" y="12" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" fill={mute}>YOUR EXISTING TOOLS</text>
-        <text x={W} y="12" textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" fill={mute}>WHAT YOU GET</text>
-        {IN.map((t, i) => (
+      <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Kaska sits above your existing tools (${inputs.join(', ')}) and turns their signals into intelligence for ${outputs.join(', ')}.`}>
+        <text x="0" y="12" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" fill={mute}>{inLabel.toUpperCase()}</text>
+        <text x={W} y="12" textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" fill={mute}>{outLabel.toUpperCase()}</text>
+        {inputs.map((t, i) => (
           <g key={t}>
             <text x="0" y={iy(i) + 5} fontFamily="Inter Tight, Inter, sans-serif" fontSize="17" fill={ink}>{t}</text>
             <path d={`M190 ${iy(i)} C 360 ${iy(i)}, 380 ${ky + 30 + i * 22}, ${kx} ${ky + 30 + i * 22}`} fill="none" stroke={line} strokeWidth="1.2" />
@@ -95,12 +117,12 @@ export function StackDiagram({ tone = 'warm' }: { tone?: 'warm' | 'dark' }) {
         <rect x={kx} y={ky} width={kw} height={kh} fill="#08090C" />
         <rect x={kx} y={ky} width="3" height={kh} fill="#C9A44C" />
         <text x={kx + 28} y={ky + 44} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="2.5" fill="#C9A44C">KASKA</text>
-        <text x={kx + 28} y={ky + 84} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" fill="#EDEBE4">Asset-centric</text>
-        <text x={kx + 28} y={ky + 110} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" fill="#EDEBE4">intelligence</text>
-        <text x={kx + 28} y={ky + 158} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="1.5" fill="#A09F98">VALIDATE · QUANTIFY</text>
-        <text x={kx + 28} y={ky + 178} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="1.5" fill="#A09F98">PRIORITISE · RESPOND</text>
-        <text x={kx + 28} y={ky + 198} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="1.5" fill="#A09F98">EVIDENCE</text>
-        {OUT.map((t, i) => (
+        <text x={kx + 28} y={ky + 84} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" fill="#EDEBE4">{title[0]}</text>
+        <text x={kx + 28} y={ky + 110} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" fill="#EDEBE4">{title[1]}</text>
+        {pairs.map((p, i) => (
+          <text key={p} x={kx + 28} y={ky + 158 + i * 20} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="1.5" fill="#A09F98">{p}</text>
+        ))}
+        {outputs.map((t, i) => (
           <g key={t}>
             <path d={`M${kx + kw} ${ky + 50 + i * 40} C ${kx + kw + 120} ${ky + 50 + i * 40}, ${W - 330} ${oy(i)}, ${W - 250} ${oy(i)}`} fill="none" stroke="#C9A44C" strokeWidth="1.4" />
             <circle cx={W - 250} cy={oy(i)} r="4" fill={i === 1 ? '#B7E33A' : '#C9A44C'} />
@@ -109,9 +131,9 @@ export function StackDiagram({ tone = 'warm' }: { tone?: 'warm' | 'dark' }) {
         ))}
       </svg>
       <div className="conv-m">
-        <div><span>Your existing tools</span><b>{IN.join(' · ')}</b></div>
-        <div className="kk"><span>Kaska</span><b>Asset-centric intelligence: validate, quantify, prioritise, respond, evidence</b></div>
-        <div><span>What you get</span><b>{OUT.join(' · ')}</b></div>
+        <div><span>{inLabel}</span><b>{inputs.join(' · ')}</b></div>
+        <div className="kk"><span>Kaska</span><b>{title.join(' ')}: {verbs.map((v) => v.toLowerCase()).join(', ')}</b></div>
+        <div><span>{outLabel}</span><b>{outputs.join(' · ')}</b></div>
       </div>
     </div>
   )
