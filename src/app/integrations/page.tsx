@@ -83,10 +83,25 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="s-white sec">
+              {/* DUAL-PATH INTELLIGENCE */}
+        <section className="s-warm sec">
+          <div className="wrap">
+          <span className="kicker">Dual-path data ingestion</span>
+          <h2 className="h2 mt-s">Two intelligence paths, <em>because two kinds of data are required.</em></h2>
+          <div className="cols3 mt-m">
+            <div><b>Event data</b><p>Your SIEM and XDR correlate events into incidents. Kaska consumes that result — the incident — and does not re-do the correlation. Supported today: IBM QRadar, Microsoft Sentinel, Splunk, CrowdStrike XDR.</p></div>
+            <div><b>Control and OEM intelligence</b><p>Every security tool knows things its alerts never say: which controls are enforced, which are only configured, what is misconfigured, what is exposed, what it has found. Kaska reads this directly from each tool.</p></div>
+            <div><b>Alongside both</b><p>External attack surface and OSINT, the Kaska vulnerability database, asset and software bill-of-materials intelligence, and the probabilistic engine.</p></div>
+          </div>
+          <p className="lede mt-m">Only one of these paths is available from an aggregator. Both are needed to answer whether a control is actually working.</p>
+          </div>
+        </section>
+
+<section className="s-white sec">
         <div className="wrap">
-          <span className="kicker">How it connects</span>
-          <h2 className="h2 mt-s">Two ways in. <em>Nothing out of your control.</em></h2>
+          <span className="kicker">Connection methods</span>
+          <h2 className="h2 mt-s">Two connection methods. <em>Nothing out of your control.</em></h2>
+          <p className="lede mt-s">However the intelligence reaches Kaska, the connection itself works one of two ways.</p>
           <div className="cols3 mt-m">
             <div><b>Cloud-to-cloud</b><p>SIEM, cloud, identity and email tools are designed to connect through vendor APIs, with no agent or appliance.</p></div>
             <div><b>Outbound collector</b><p>Tools behind the perimeter, such as firewalls, EDR, PAM and OT, are designed to reach Kaska through one light, outbound-only collector.</p></div>

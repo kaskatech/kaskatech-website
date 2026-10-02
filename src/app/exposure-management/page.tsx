@@ -7,7 +7,7 @@ import { Arrow, Close, PageHero, demo } from '@/components/k/ui'
 import { CAPABILITIES, SPINE } from '@/components/k/content'
 
 export const metadata: Metadata = {
-  title: 'Kaska Exposure Management Platform™ — Kaska',
+  title: 'Kaska Exposure Management Platform™ — Kaska Autonomous Cyber Risk & Resilience Platform',
   description:
     'Kaska Exposure Management Platform™ — An Autonomous Cyber Risk & Resilience Platform. Kaska EM connects assets, exposure, control validation, risk, governed response and evidence, before, during and after a breach.',
 }

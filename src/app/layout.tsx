@@ -25,11 +25,11 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Kaska — Know what is actually protected',
+  title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
   description:
     'Kaska Exposure Management Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
   openGraph: {
-    title: 'Kaska — Know what is actually protected',
+    title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
     description:
       'Kaska Exposure Management Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
     type: 'website',

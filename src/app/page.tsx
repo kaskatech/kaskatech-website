@@ -13,7 +13,7 @@ import {
 } from '@/components/k/content'
 
 export const metadata: Metadata = {
-  title: 'Kaska — Know what is actually protected',
+  title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
   description:
     'Kaska is the intelligence layer above your security stack. Kaska Exposure Management Platform™ connects what your tools already know into one picture of exposure, risk and resilience, so you can prioritise, act before a breach and show whether risk has reduced.',
 }
@@ -44,14 +44,15 @@ export default function Page() {
         <div className="wrap">
           <div className="hero-a">
             <div>
-              <span className="kicker">Kaska Exposure Management Platform&trade;</span>
-              <h1 className="h1">Know what is <em>actually</em> protected.</h1>
+              <span className="kicker">Built from the ashes of real-world breaches</span>
+              <h1 className="h1">Know your risk before attackers do. Own your real-time <em>resilience</em>.</h1>
             </div>
             <div className="hero-b">
               <p className="say">
-                Kaska is the intelligence layer above your security stack. It connects what your tools
-                already know into one picture of exposure, risk and resilience, so you can act on what
-                matters before a breach, and show whether the risk has reduced.
+                <b>Intelligence Spine at work.</b> One live picture of your risk — exposure in financial
+                terms, a Cyber Resilience Score, validated controls, and compliance you can prove to your
+                regulators, board and insurers. Kaska responds and recovers at machine speed under human
+                approval — prepared before, during and after a breach.
               </p>
               <div className="ctas">
                 <Link className="btn btn-go" href={demo('em')}>Request a Demo<Arrow /></Link>
@@ -142,6 +143,30 @@ export default function Page() {
             outLabel="One connected picture for"
           />
           <Link className="more mt-m" href="/integrations">How Kaska connects</Link>
+        </div>
+      </section>
+
+      {/* 3b · DUAL-PATH DATA INGESTION */}
+      <section className="s-white sec">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Dual-path data ingestion</span>
+              <h2 className="h2 mt-s">Two kinds of data. <em>Only one comes from your SIEM.</em></h2>
+            </div>
+            <p className="lede">
+              Your SIEM and XDR already do the hard work of turning events into incidents. Kaska takes
+              that result and does not repeat it. But an incident tells you what happened — it cannot
+              tell you whether the control that should have stopped it was actually enforced. That answer
+              sits inside each security tool, and the only way to get it is to ask the tool directly.
+            </p>
+          </div>
+          <div className="cols3 mt-m">
+            <div><b>Event data</b><p>Already-correlated incidents and events, taken from SIEM and XDR platforms. Kaska does not re-do the correlation your SIEM has already performed.</p></div>
+            <div><b>Control and OEM intelligence</b><p>Control validation, misconfigurations, vulnerabilities, findings, alerts and posture, read through direct connections to the tools you already run.</p></div>
+            <div><b>Alongside both</b><p>External attack surface and OSINT, the Kaska vulnerability database, asset and software bill-of-materials intelligence, and the probabilistic engine.</p></div>
+          </div>
+          <p className="lede mt-m">Both are required. Only one is available from an aggregator. That is why Kaska connects to your security tools as well as to your SIEM.</p>
         </div>
       </section>
 
@@ -324,7 +349,9 @@ export default function Page() {
             </div>
             <p className="lede">
               Exposure, risk, control validation, evidence and reporting: five views of one model. Open any
-              finding to see where each part of it came from.
+              finding to see where each part of it came from. Every case event — including approvals
+              and actions — is written to a tamper-evident, WORM-sealed hash chain, so the
+              record of what was done can be checked rather than taken on trust.
             </p>
           </div>
           <div className="mt-m"><ProductConsole initialView="exp" /></div>

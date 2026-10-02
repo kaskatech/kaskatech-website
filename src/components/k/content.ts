@@ -16,9 +16,9 @@ export const CAPABILITIES = [
 export const ARCH = [
   { k: 'top', n: '05', t: 'Exposure & Resilience Dashboard', v: ['Executive view', 'Risk & resilience', 'Compliance posture', 'Board reporting'] },
   { k: '', n: '04', t: 'Orchestration & Case Management', v: ['Cases', 'Approvals', 'Governed actions', 'Playbooks', 'Audit trail'] },
-  { k: 'core', n: '03', t: 'Kaska AI & Analytics Core', v: ['Control validation', 'Risk quantification (FAIR)', 'Prioritisation', 'AI-assisted investigation'] },
-  { k: '', n: '02', t: 'Asset Intelligence Foundation', v: ['Asset graph', 'Criticality', 'Ownership', 'Software (xBOM)'] },
-  { k: 'base', n: '01', t: 'Data & Signal Ingestion', v: ['SIEM / XDR', 'Endpoint', 'Identity', 'Cloud', 'Vulnerability', 'Threat intelligence'] },
+  { k: 'core', n: '03', t: 'Kaska AI Core™', v: ['Control validation', 'Risk quantification (FAIR)', 'Prioritisation', 'AI-assisted investigation'] },
+  { k: '', n: '02', t: 'Asset Intelligence Graph', v: ['Asset graph', 'Criticality', 'Ownership', 'Software (xBOM)'] },
+  { k: 'base', n: '01', t: 'Dual-Path Data Ingestion', v: ['SIEM / XDR', 'Endpoint', 'Identity', 'Cloud', 'Vulnerability', 'Threat intelligence'] },
 ]
 
 export const SPINE = [
