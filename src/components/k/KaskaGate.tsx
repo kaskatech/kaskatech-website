@@ -127,7 +127,7 @@ export default function KaskaGate() {
             el('line', { x1: G.g1, y1: y, x2: endX, y2: y, stroke: '#C9A44C', 'stroke-width': 1.5, 'stroke-dasharray': '7 5' }, rg)
             if (mob && c.rank > 0) {
               el('circle', { cx: G.px, cy: y, r: 5, fill: '#B7E33A' }, rg)
-              const tt = el('text', { x: G.px + 12, y: y + 4, 'font-family': 'IBM Plex Mono, monospace', 'font-size': 11, fill: '#B7E33A' }, rg)
+              const tt = el('text', { x: G.px + 12, y: y + 4, 'font-family': 'IBM Plex Mono, monospace', 'font-size': 11, fill: '#C9A44C' }, rg)
               tt.textContent = String(c.rank)
             } else el('circle', { cx: endX, cy: y, r: 4, fill: 'none', stroke: '#C9A44C', 'stroke-width': 1.5 }, rg)
           }
@@ -152,7 +152,7 @@ export default function KaskaGate() {
           .forEach((c) => {
             const yy = priY(c.rank)
             el('circle', { cx: G.px, cy: yy, r: 6, fill: '#B7E33A' }, prig)
-            const n = el('text', { x: G.px + 18, y: yy + 5, 'font-family': 'IBM Plex Mono, monospace', 'font-size': 13, fill: '#B7E33A' }, prig)
+            const n = el('text', { x: G.px + 18, y: yy + 5, 'font-family': 'IBM Plex Mono, monospace', 'font-size': 13, fill: '#C9A44C' }, prig)
             n.textContent = String(c.rank)
             const tx = el('text', { x: G.px + 38, y: yy + 5, 'font-family': 'Inter Tight, Inter, sans-serif', 'font-size': 14.5, fill: '#EDEBE4' }, prig)
             tx.textContent = SHORT[c.name] || c.name

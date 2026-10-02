@@ -84,8 +84,8 @@ export default function BreachLoop({ initial = 0 }: { initial?: number }) {
             const on = i === di
             return (
               <g key={d.id} style={{ cursor: 'pointer' }} onClick={() => setDi(i)}>
-                <line x1={dx} y1={d.id === 'after' ? dy - 18 : dy + 14} x2={sx} y2={d.id === 'after' ? sy + 12 : sy - 12} stroke={on ? '#B7E33A' : '#3A3C43'} strokeWidth="1.4" />
-                <text x={dx} y={d.id === 'after' ? dy : dy + 8} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="2" fill={on ? '#B7E33A' : '#6B6A64'}>{d.when.toUpperCase()}</text>
+                <line x1={dx} y1={d.id === 'after' ? dy - 18 : dy + 14} x2={sx} y2={d.id === 'after' ? sy + 12 : sy - 12} stroke={on ? '#C9A44C' : '#3A3C43'} strokeWidth="1.4" />
+                <text x={dx} y={d.id === 'after' ? dy : dy + 8} textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="2" fill={on ? '#C9A44C' : '#6B6A64'}>{d.when.toUpperCase()}</text>
               </g>
             )
           })}
@@ -99,7 +99,7 @@ export default function BreachLoop({ initial = 0 }: { initial?: number }) {
             const anchor = side === 'e' ? 'start' : side === 'w' ? 'end' : 'middle'
             return (
               <g key={s.k} className={`stn${lit ? '' : ' dim'}`}>
-                <rect x={x - 9} y={y - 9} width="18" height="18" fill={entry ? '#B7E33A' : lit ? '#C9A44C' : '#12151B'} stroke={lit ? '#C9A44C' : '#3A3C43'} strokeWidth="1.4" />
+                <rect x={x - 9} y={y - 9} width="18" height="18" fill={entry ? '#C9A44C' : lit ? '#C9A44C' : '#12151B'} stroke={lit ? '#C9A44C' : '#3A3C43'} strokeWidth="1.4" />
                 {!lit && <rect x={x - 6} y={y - 6} width="12" height="12" fill="url(#bl-hz)" />}
                 <text x={lx} y={ly} textAnchor={anchor} fontFamily="Inter Tight, Inter, sans-serif" fontSize="15.5" fill={lit ? '#EDEBE4' : '#6B6A64'}>{s.t}</text>
               </g>
