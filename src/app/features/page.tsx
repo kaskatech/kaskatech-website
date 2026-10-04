@@ -56,6 +56,21 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <div className="split mt-m">
+            <div>
+              <span className="kicker">The Command Center</span>
+              <h3 className="h3 mt-s">One model. Three vantage points.</h3>
+            </div>
+            <p className="lede">
+              Above the five layers sits the Command Center — Executive Dashboard, Incident Command and
+              Intelligence Search. The same intelligence is read differently depending on where you stand.
+              An executive opens the dashboard and sees posture, exposure and resilience in business terms.
+              A responder opens incident command and sees the affected assets, the control that failed and
+              the actions available. An auditor searches the intelligence and finds the evidence behind any
+              figure, with its provenance attached. One model, three vantage points — not three products
+              that have to be reconciled.
+            </p>
+          </div>
         </div>
       </section>
 

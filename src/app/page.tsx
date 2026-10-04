@@ -329,6 +329,11 @@ export default function Page() {
               detection. After, it carries what was learned back into the same model.
             </p>
           </div>
+          <div className="cols3 mt-m">
+            <div><b>Before a breach</b><p>Pre-Breach Risk Intelligence</p></div>
+            <div><b>During a breach</b><p>Real-Time Breach Intelligence</p></div>
+            <div><b>After a breach</b><p>Post-Breach Resilience</p></div>
+          </div>
           <BreachLoop initial={1} />
           <div className="bl-foot">
             <div><b>Before informs during</b>The exposure and control context is already there when a signal arrives.</div>
