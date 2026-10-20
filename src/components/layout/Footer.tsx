@@ -13,14 +13,14 @@ export default function Footer() {
           </div>
           <div className="c">
             <h4>Products</h4>
-            <Link href="/email-security">Vantmail</Link>
-            <Link href="/exposure-management">Kaska EM</Link>
+            <Link href="/">Kaska EM</Link>
+            <Link href="/email-security">Vantmail email security</Link>
             <Link href="/features">Platform capabilities</Link>
             <Link href="/integrations">Integrations</Link>
           </div>
           <div className="c">
             <h4>Services</h4>
-            <Link href="/technology-solutions">Managed Security Services</Link>
+            <Link href="/managed-services">Managed Security Services</Link>
             <Link href="/industries">Industries</Link>
           </div>
           <div className="c">

@@ -50,7 +50,7 @@ const WORKSPACE: [string, string][] = [
 ]
 
 const TRUST: [string, string][] = [
-  ['Per-tenant encryption', 'Provider credentials are encrypted with AES-GCM, using keys derived per tenant.'],
+  ['Per-tenant encryption', 'Provider credentials are encrypted with AES-GCM, using tenant-specific key derivation.'],
   ['Least-privilege access', 'Each capability gets only the permissions it needs. Tokens are not stored in plain form or logged.'],
   ['Tamper-evident audit', 'All analyst and system actions go into a hash-chained, append-only log.'],
 ]
@@ -72,8 +72,8 @@ export default function Page() {
       >
         <div className="vre">{['API-first', 'No MX change', 'Observe before enforcing', 'Microsoft 365 · Google Workspace · Zoho Mail'].map((t) => <span key={t}>{t}</span>)}</div>
         <div className="ctas mt-m">
-          <a className="btn btn-go" href={POV} {...ext}>Start a proof of value<Arrow /></a>
-          <a className="btn btn-q" href={`${SITE}/platform`} {...ext}>Explore the platform</a>
+          <a className="btn btn-go" href={POV} {...ext}>Start a 14-day proof of value<Arrow /></a>
+          <a className="btn btn-q" href={SITE} {...ext}>Visit vantmail.ai</a>
         </div>
       </PageHero>
 
@@ -111,7 +111,7 @@ export default function Page() {
             {POV_STEPS.map(([n, t, d]) => <div key={n}><span className="n">{n.toUpperCase()}</span><b>{t}</b><p>{d}</p></div>)}
           </div>
           <div className="ctas mt-m">
-            <a className="btn btn-go" href={POV} {...ext}>Start a proof of value<Arrow /></a>
+            <a className="btn btn-go" href={POV} {...ext}>Start a 14-day proof of value<Arrow /></a>
           </div>
         </div>
       </section>
@@ -175,7 +175,7 @@ export default function Page() {
               <span className="kicker">Trust &amp; security</span>
               <h2 className="h2 mt-s">We read your email so attackers can&apos;t. <em>That demands a higher bar.</em></h2>
             </div>
-            <p className="lede">The controls behind the platform. Data residency, retention and regulatory alignment are agreed for each deployment.</p>
+            <p className="lede">The controls behind the platform. Data residency is validated for each deployment.</p>
           </div>
           <div className="cols3 mt-m">
             {TRUST.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
@@ -208,7 +208,7 @@ export default function Page() {
         kicker="Vantmail · a product of Kaska Technologies and Services Private Limited"
         title={<>A clearer view of your <em>email risk</em>.</>}
         text="Discuss deployment, threat coverage and controls — or start a 14-day proof of value on your own tenant."
-        primary={{ href: POV, label: 'Start a proof of value' }}
+        primary={{ href: POV, label: 'Start a 14-day proof of value' }}
         secondary={{ href: SITE, label: 'Visit vantmail.ai' }}
       />
     </>

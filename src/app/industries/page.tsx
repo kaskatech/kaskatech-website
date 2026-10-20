@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 }
 
 type P = { href: string; label: string }
-const EM: P = { href: '/exposure-management', label: 'Kaska EM' }
+const EM: P = { href: '/', label: 'Kaska EM' }
 const ES: P = { href: '/email-security', label: 'Vantmail' }
-const TS: P = { href: '/technology-solutions', label: 'Technology Solutions' }
+const TS: P = { href: '/managed-services', label: 'Managed Services' }
 
 const SECTORS: { id: string; k: string; t: ReactNode; body: ReactNode[]; products: P[]; ctx: string[] }[] = [
   {

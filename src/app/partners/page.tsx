@@ -19,7 +19,7 @@ export default function Page() {
       >
         <div className="ctas mt-m">
           <Link className="btn btn-go" href={demo('partner')}>Talk about partnering<Arrow /></Link>
-          <Link className="btn btn-q" href="/exposure-management">See our products</Link>
+          <Link className="btn btn-q" href="/">See our products</Link>
         </div>
       </PageHero>
 
