@@ -1,59 +1,64 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Arrow, Close, PageHero, demo } from '@/components/k/ui'
+import { Arrow, Close, PageHero } from '@/components/k/ui'
 
 export const metadata: Metadata = {
-  title: 'Kaska Email Security — API-First Email Security Platform',
+  title: 'Vantmail — email security by Kaska',
   description:
-    'Kaska Email Security is an API-first, post-delivery email security platform for detecting, investigating and responding to phishing, business email compromise, impersonation and other email-borne threats, without requiring an MX change.',
+    'Vantmail is API-first email security for Microsoft 365, Google Workspace and Zoho Mail. No MX change: observe detections alongside your existing protection, then decide. A product of Kaska Technologies and Services Private Limited.',
 }
 
-const DEMO = demo('email-security')
+const SITE = 'https://vantmail.ai'
+const POV = 'https://vantmail.ai/contact'
+const ext = { target: '_blank', rel: 'noopener noreferrer' } as const
 
-const EXPLOITS = ['Trusted identities', 'Business relationships', 'Conversation context', 'Executive impersonation', 'Vendor relationships', 'Payment workflows', 'Compromised accounts']
-
-const SPINE = [
-  { t: 'Connect', d: 'Microsoft 365 or Google Workspace, through their APIs.' },
-  { t: 'Understand', d: 'Authentication, sender and recipient, content, URLs, attachments and relationships.' },
-  { t: 'Detect', d: 'Layered analysis producing a verdict, a risk level and its evidence.' },
-  { t: 'Investigate', d: 'Why it was flagged, related messages and campaigns, in one case.' },
-  { t: 'Respond', d: 'Detect-only, policy-controlled quarantine, analyst allow / block, controlled clawback.' },
-  { t: 'Report / Prove', d: 'Audit trail, evidence, security reporting and integration-ready event output.' },
+const POV_STEPS: [string, string, string][] = [
+  ['Day 1', 'Connect', 'Scoped call and tenant connection, in observe mode. No MX change, nothing blocked.'],
+  ['Days 1–14', 'Observe', 'Live detections and dashboards on your real mail.'],
+  ['Day 14', 'Report', 'A findings report covering threats, verdicts and recommendations.'],
 ]
 
-const THREATS: [string, string[]][] = [
-  ['Phishing', ['Credential theft', 'Malicious URLs', 'QR / quishing']],
-  ['Business Email Compromise', ['Vendor impersonation', 'Invoice fraud', 'Payment redirection', 'Bank-account change requests', 'First-time payment requests', 'Reply-chain attacks', 'Thread hijacking']],
-  ['Identity & Impersonation', ['Executive impersonation', 'Lookalike domains', 'Sender spoofing', 'Compromised senders']],
-  ['Campaigns & Context', ['Campaign clustering', 'Relationship intelligence', 'IOC / reputation signals', 'AI-assisted analysis']],
+const TIERS: [string, string, string][] = [
+  ['Tier 0', 'Authentication', 'Email authentication results, sender alignment, reply-to mismatches and header evidence — SPF, DKIM and DMARC.'],
+  ['Tier 1', 'URLs, files & QR', 'URLs and QR codes decoded and inspected; file signatures, macros, PDF active content, HTML smuggling and archives.'],
+  ['Tier 2', 'Identity & BEC', 'VIP impersonation, lookalike domains, first-time senders, payment requests and urgency language.'],
+  ['Tier 3', 'Selective AI review', 'Ambiguous messages get an additional intent review. AI informs the evidence; deterministic signals and policies retain decision authority. AI is never the sole decision-maker.'],
 ]
 
-const LAYERS: [string, string][] = [
-  ['Metadata', 'headers, routing and sending infrastructure'],
-  ['Authentication', 'SPF, DKIM and DMARC results'],
-  ['Reputation', 'sender, domain, URL and IOC signals'],
-  ['Content / Intent', 'requests, urgency and payment language'],
-  ['URL', 'links, redirects and QR codes'],
-  ['Attachment', 'file type and attachment analysis'],
-  ['Relationship', 'sender–recipient history and business context'],
+const THREATS: [string, string][] = [
+  ['Business email compromise', 'Text-only scams that impersonate executives, lawyers or finance staff.'],
+  ['Quishing', 'Malicious QR codes that shift the attack onto an unmanaged personal phone.'],
+  ['Credential phishing', 'Fake login pages, adversary-in-the-middle kits and abused redirects.'],
+  ['Malicious attachments', 'Weaponised documents and hidden HTML payloads.'],
+  ['Vendor & supply-chain fraud', 'Fraud sent from genuine but compromised supplier accounts.'],
+  ['Account takeover', 'Hijacked internal accounts used to attack the organisation from within.'],
 ]
 
-const RESPONSE: [string, string][] = [
-  ['Detect', 'Layered analysis produces a verdict, risk and evidence.'],
-  ['Investigate', 'Signals, related messages and campaign context in one case.'],
-  ['Evidence', 'The rationale behind the verdict is preserved for review.'],
-  ['Quarantine', 'Only where policy allows, or on analyst decision.'],
-  ['Verify', 'Confirm the campaign scope before acting across mailboxes.'],
-  ['Release / Remediate', 'Release false positives, or remediate with controlled clawback.'],
+const PLATFORMS: [string, string][] = [
+  ['Microsoft 365', 'Microsoft Graph, with change notifications reconciled by delta queries. Admin-consented application permissions; quarantine, release and warning banners. Onboarding through Entra ID admin consent.'],
+  ['Google Workspace', 'Gmail API and Pub/Sub, with domain-wide delegation limited to specific services. Mailbox changes watched with history sync; quarantine and release with labels.'],
+  ['Zoho Mail', 'Zoho Mail API with an organisation-level OAuth connector. Webhooks with a polling fallback; quarantine and release using folders.'],
 ]
 
-const WHO: [string, string][] = [
-  ['Enterprise', 'Organisations on Microsoft 365 or Google Workspace that want protection beyond native email controls.'],
-  ['BFSI', 'Payment workflows, vendor relationships and executive impersonation are prime targets for BEC.'],
-  ['IT / ITES', 'Large, distributed mailboxes and client relationships that attackers try to exploit.'],
-  ['Pharma', 'Supplier, partner and research communications that need closer scrutiny.'],
-  ['Manufacturing', 'Vendor invoices and procurement workflows exposed to payment fraud.'],
-  ['Government / PSU', 'Official communications targeted by impersonation and phishing, subject to your hosting requirements.'],
+const WORKSPACE: [string, string][] = [
+  ['Visibility & intelligence', 'Dashboards, analytics, account risk, campaigns, threat intel and shadow SaaS.'],
+  ['Investigation & response', 'Threat records, quarantine, forensics, cases and employee reports.'],
+  ['Analysis & validation', 'Raw-email parsing, attachment uploads, QR analysis, Red Team scenarios and detection evaluation.'],
+  ['Tenant administration', 'Mailbox and VIP controls, policies, response settings, roles, licences and support records.'],
+  ['Platform management', 'Provisioning, read-only tenant inspection, connector health, capacity alerts and licence certificates.'],
+  ['Security foundations', 'Tenant-scoped access, encrypted credentials and tamper-evident auditing.'],
+]
+
+const TRUST: [string, string][] = [
+  ['Per-tenant encryption', 'Provider credentials are encrypted with AES-GCM, using keys derived per tenant.'],
+  ['Least-privilege access', 'Each capability gets only the permissions it needs. Tokens are not stored in plain form or logged.'],
+  ['Tamper-evident audit', 'All analyst and system actions go into a hash-chained, append-only log.'],
+]
+
+const PARTNERS: [string, string][] = [
+  ['MSP & MSSP', 'Manage every customer from one console with tenant hierarchy, delegated roles and consolidated reporting.'],
+  ['Distributors & resellers', 'Deal registration, enablement, demo tenants and co-marketing support.'],
+  ['Technology partners', 'Integrate Vantmail verdicts and actions into SIEM, SOAR and exposure-management platforms through the API.'],
 ]
 
 export default function Page() {
@@ -61,46 +66,76 @@ export default function Page() {
     <>
       <PageHero
         split
-        kicker="Kaska Email Security"
-        title={<>Protect your mailboxes <em>without changing mail flow</em>.</>}
-        lede="API-First Email Security Platform · AI-Powered Email Threat Detection & Response. Protection for Microsoft 365 and Google Workspace against phishing, BEC, impersonation and email-borne threats, with no MX change."
+        kicker="Vantmail — email security by Kaska"
+        title={<>Email security. <em>Inside your cloud.</em></>}
+        lede="API-first protection for Microsoft 365, Google Workspace and Zoho Mail — threat inspection, evidence review and response, through the provider's own API."
       >
-        <div className="vre">{['API-first', 'No MX change', 'Post-delivery', 'Microsoft 365 · Google Workspace'].map((t) => <span key={t}>{t}</span>)}</div>
+        <div className="vre">{['API-first', 'No MX change', 'Observe before enforcing', 'Microsoft 365 · Google Workspace · Zoho Mail'].map((t) => <span key={t}>{t}</span>)}</div>
         <div className="ctas mt-m">
-          <Link className="btn btn-go" href={DEMO}>Request a Demo<Arrow /></Link>
-          <Link className="btn btn-q" href="/contact">Talk to Kaska</Link>
+          <a className="btn btn-go" href={POV} {...ext}>Start a proof of value<Arrow /></a>
+          <a className="btn btn-q" href={`${SITE}/platform`} {...ext}>Explore the platform</a>
         </div>
       </PageHero>
 
-      {/* PROBLEM */}
+      {/* NOT ANOTHER GATEWAY */}
       <section className="s-warm sec">
-        <div className="wrap split top">
-          <div>
-            <span className="kicker">The problem</span>
-            <h2 className="h2 mt-s">A dangerous email does not always <em>look dangerous</em>.</h2>
-            <p className="lede mt-s">
-              Modern email attacks increasingly carry no malware and no obviously bad link. They exploit trust:
-              a familiar name, an existing thread, a routine payment request from a supplier you already pay.
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Cloud-native</span>
+              <h2 className="h2 mt-s">Cloud-native security. <em>Not another gateway.</em></h2>
+            </div>
+            <p className="lede">
+              Vantmail connects through provider APIs without changing MX records. Observe detections alongside
+              your existing protection before enforcing thresholds. Every flag is explained with authentication
+              results, file evidence, decoded links and weighted signals.
             </p>
           </div>
-          <div>
-            <div className="xlabel"><span>What modern email attacks exploit</span><i /></div>
-            <div className="elist two mt-s">
-              {EXPLOITS.map((e, i) => <div key={e}><b>{e}</b><p className="note">{String(i + 1).padStart(2, '0')}</p></div>)}
-            </div>
+          <div className="cols3 mt-m">
+            {PLATFORMS.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
           </div>
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
+      {/* PROOF OF VALUE */}
       <section className="s-dark sec">
         <div className="wrap">
-          <span className="kicker">How it works</span>
-          <h2 className="h2 mt-s">From connection to <em>proof</em>.</h2>
-          <div className="es-spine mt-m">
-            {SPINE.map((s, i) => (
-              <div key={s.t}><span className="n">{String(i + 1).padStart(2, '0')}</span><b>{s.t}</b><p>{s.d}</p></div>
-            ))}
+          <div className="split">
+            <div>
+              <span className="kicker">14-day proof of value</span>
+              <h2 className="h2 mt-s">See what your current filters miss. <em>Risk-free.</em></h2>
+            </div>
+            <p className="lede">Vantmail connects in observe mode — no MX change, nothing blocked — and shows what it finds on your real mail.</p>
+          </div>
+          <div className="cols3 mt-m">
+            {POV_STEPS.map(([n, t, d]) => <div key={n}><span className="n">{n.toUpperCase()}</span><b>{t}</b><p>{d}</p></div>)}
+          </div>
+          <div className="ctas mt-m">
+            <a className="btn btn-go" href={POV} {...ext}>Start a proof of value<Arrow /></a>
+          </div>
+        </div>
+      </section>
+
+      {/* DETECTION TIERS */}
+      <section className="s-deep sec">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Layered defence</span>
+              <h2 className="h2 mt-s">Four tiers. <em>One explainable decision.</em></h2>
+            </div>
+            <p className="lede">Inspect identity. Examine content. Understand intent. Deterministic evidence first, with selective AI review where a message is ambiguous.</p>
+          </div>
+          <div className="cols4 mt-m">
+            {TIERS.map(([n, t, d]) => <div key={n}><span className="n">{n.toUpperCase()}</span><b>{t}</b><p>{d}</p></div>)}
+          </div>
+          <div className="mt-l">
+            <div className="xlabel"><span>Policy-driven response</span><i /></div>
+            <p className="body mt-s">
+              Policy maps confidence to an action — alert, banner, move to junk or quarantine. Observe mode,
+              configurable thresholds, quarantine and release, and an auditable decision trail. Reversible by
+              design: analysts review outcomes in the console.
+            </p>
           </div>
         </div>
       </section>
@@ -108,155 +143,73 @@ export default function Page() {
       {/* THREATS */}
       <section className="s-white sec">
         <div className="wrap">
-          <span className="kicker">Threat coverage</span>
-          <h2 className="h2 mt-s">Built for the threats that <em>reach the inbox</em>.</h2>
-          <div className="cols4 mt-m">
-            {THREATS.map(([t, items]) => (
-              <div key={t}><b>{t}</b><p>{items.join(' · ')}</p></div>
-            ))}
+          <span className="kicker">Threats covered</span>
+          <h2 className="h2 mt-s">The attacks that <em>get through</em>.</h2>
+          <div className="cols3 mt-m">
+            {THREATS.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
           </div>
         </div>
       </section>
 
-      {/* BEC */}
-      <section className="s-dark sec">
-        <div className="wrap split even">
-          <div>
-            <span className="kicker">Business email compromise &amp; payment fraud</span>
-            <h2 className="h2 mt-s">The costliest emails <em>ask politely</em>.</h2>
-            <p className="lede mt-s">
-              BEC rarely looks like an attack. It looks like a supplier with new bank details, or a reply
-              inside an invoice thread your team has worked on for weeks.
-            </p>
-            <p className="body mt-s">
-              Kaska Email Security looks at who is asking, who they normally talk to and what they are asking
-              for, combining relationships, impersonation signals, authentication, intent and payment-risk
-              indicators into one explained verdict.
-            </p>
-          </div>
-          <div>
-            <div className="mail" aria-label="Illustrative business email compromise example">
-              <div className="mail-h">
-                <div><b>From</b>Accounts · Meridian Supplies &lt;accounts@meridian-supp1ies.com&gt;</div>
-                <div><b>To</b>Accounts Payable</div>
-                <div><b>Subject</b>RE: Invoice MS-4471 — updated bank details</div>
-              </div>
-              <div className="mail-b">Hi, please note our bank account has changed. Kindly process invoice MS-4471 to the new account below before Friday&apos;s payment run so there is no delay in supply.</div>
-              <div className="mail-s">
-                <span className="h">Signals behind the verdict</span>
-                <div className="sg"><i className="w" />Lookalike sender domain</div>
-                <div className="sg"><i className="w" />Bank-account change request</div>
-                <div className="sg"><i className="w" />First-time payment destination</div>
-                <div className="sg"><i />Reply inside an existing invoice thread</div>
-                <div className="sg"><i />Deadline pressure</div>
-                <div className="vd"><span>Verdict · likely BEC · high risk</span><span>Evidence retained</span></div>
-              </div>
-            </div>
-            <p className="note mt-s">Illustrative example · fictional organisation and message.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* LAYERS */}
-      <section className="s-deep sec">
-        <div className="wrap split top">
-          <div>
-            <span className="kicker">How Kaska detects</span>
-            <h2 className="h2 mt-s">Layered analysis. <em>Explained verdicts.</em></h2>
-            <p className="lede mt-s">Every verdict keeps the signals that produced it, so an analyst can see why, not just what.</p>
-          </div>
-          <div>
-            <div className="layers">
-              {LAYERS.map(([t, d], i) => (
-                <div key={t}><i>{String(i + 1).padStart(2, '0')}</i><div><b>{t}</b><span>{d}</span></div></div>
-              ))}
-              <div className="ai"><i>08</i><div><b>AI-assisted analysis</b><span>of context and intent</span></div></div>
-            </div>
-            <div className="vre">{['Verdict', 'Risk', 'Evidence'].map((t) => <span key={t}>{t}</span>)}</div>
-          </div>
-        </div>
-      </section>
-
-      {/* RESPONSE */}
-      <section className="s-warm sec">
-        <div className="wrap">
-          <div className="split">
-            <div>
-              <span className="kicker">Investigation &amp; response</span>
-              <h2 className="h2 mt-s">Controlled response, with the <em>evidence attached</em>.</h2>
-            </div>
-            <p className="lede">Start in detect-only mode, then enable policy-controlled actions. Every action is on the audit trail.</p>
-          </div>
-          <div className="es-spine mt-m">
-            {RESPONSE.map(([t, d], i) => (
-              <div key={t}><span className="n">{i + 1}</span><b>{t}</b><p>{d}</p></div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* API-FIRST + AI */}
+      {/* WORKSPACE */}
       <section className="s-dark sec">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">API-first</span>
-              <h2 className="h2 mt-s">Alongside your email platform. <em>Not in front of it.</em></h2>
+              <span className="kicker">The security workspace</span>
+              <h2 className="h2 mt-s">From detection to investigation. <em>One connected view.</em></h2>
             </div>
-            <p className="lede">
-              Kaska Email Security connects to Microsoft 365 or Google Workspace through their APIs. Mail flow,
-              MX records and existing email controls stay exactly as they are. It is designed to augment, not replace.
-            </p>
+            <p className="lede">Six modules for analysts, administrators and the platform team.</p>
           </div>
           <div className="cols3 mt-m">
-            <div><b>No MX change</b><p>Mail flow and MX records stay as they are.</p></div>
-            <div><b>Post-delivery</b><p>Analysis and response after messages are delivered.</p></div>
-            <div><b>Governed actions</b><p>Read for analysis; response actions only by policy or analyst decision.</p></div>
-          </div>
-          <div className="split even mt-l" style={{ alignItems: 'start' }}>
-            <div>
-              <div className="xlabel"><span>AI assists with</span><i /></div>
-              <p className="h3 mt-s">Analysis · Triage · Context · Correlation · Threat intelligence · Impact assessment · Timeline generation</p>
-            </div>
-            <div>
-              <div className="xlabel"><span>Security actions stay governed by</span><i /></div>
-              <p className="h3 mt-s" style={{ color: 'var(--gold-hi)' }}>Evidence · Explicit policy · Safety controls · Human approval where required · Auditability</p>
-            </div>
+            {WORKSPACE.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
           </div>
         </div>
       </section>
 
-      {/* WHO + DEPLOYMENT */}
+      {/* TRUST */}
       <section className="s-warm sec">
         <div className="wrap">
-          <span className="kicker">Who it is for</span>
-          <h2 className="h2 mt-s">For organisations where one email can <em>move money</em>.</h2>
-          <div className="cols3 mt-m">
-            {WHO.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
-          </div>
-          <div className="mt-l">
-            <span className="kicker">Deployment</span>
-            <h3 className="h3 mt-s">Cloud-delivered. API-connected.</h3>
-            <div className="elist two mt-s">
-              <div><b>Cloud / SaaS</b><p>Delivered as a cloud service.</p></div>
-              <div><b>Microsoft Azure</b><p>Designed for India-region hosting (Azure Central India).</p></div>
-              <div><b>API-first</b><p>Connects through Microsoft 365 / Google Workspace APIs.</p></div>
+          <div className="split">
+            <div>
+              <span className="kicker">Trust &amp; security</span>
+              <h2 className="h2 mt-s">We read your email so attackers can&apos;t. <em>That demands a higher bar.</em></h2>
             </div>
-            <p className="status-note mt-m">
-              <b>Product status.</b> Kaska Email Security is being prepared for controlled customer launch and
-              design-partner validation. Microsoft 365 is the primary integration for the first release, with
-              Google Workspace following the same API-first approach. Capability availability depends on the
-              release and integration status we confirm with you during evaluation.
-            </p>
+            <p className="lede">The controls behind the platform. Data residency, retention and regulatory alignment are agreed for each deployment.</p>
+          </div>
+          <div className="cols3 mt-m">
+            {TRUST.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
+          </div>
+          <a className="more mt-m" href={`${SITE}/trust`} {...ext}>Trust &amp; compliance on vantmail.ai</a>
+        </div>
+      </section>
+
+      {/* PARTNERS */}
+      <section className="s-white sec">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Partners</span>
+              <h2 className="h2 mt-s">Built to be delivered <em>by partners</em>.</h2>
+            </div>
+            <p className="lede">A multi-tenant console, fast API onboarding and a clear margin model make Vantmail a natural addition to any managed security portfolio.</p>
+          </div>
+          <div className="cols3 mt-m">
+            {PARTNERS.map(([t, d]) => <div key={t}><b>{t}</b><p>{d}</p></div>)}
+          </div>
+          <div className="ctas mt-m">
+            <a className="btn btn-q" href={`${SITE}/partners`} {...ext}>Become a partner</a>
+            <Link className="more" href="/partners">Partnering with Kaska</Link>
           </div>
         </div>
       </section>
 
       <Close
-        kicker="Get started"
-        title={<>See what Kaska can find in your <em>email</em>.</>}
-        text="A focused demo of Kaska Email Security for Microsoft 365 or Google Workspace."
-        primary={{ href: DEMO, label: 'Request a Demo' }}
+        kicker="Vantmail · a product of Kaska Technologies and Services Private Limited"
+        title={<>A clearer view of your <em>email risk</em>.</>}
+        text="Discuss deployment, threat coverage and controls — or start a 14-day proof of value on your own tenant."
+        primary={{ href: POV, label: 'Start a proof of value' }}
+        secondary={{ href: SITE, label: 'Visit vantmail.ai' }}
       />
     </>
   )

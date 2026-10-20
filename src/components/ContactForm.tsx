@@ -24,10 +24,10 @@ const NOTE_DEFAULT = 'We reply within two business days. Your details are never 
 
 // ?interest=<key> on /contact pre-selects the enquiry type (used by product-page CTAs).
 const INTERESTS: { key: string; label: string }[] = [
-  { key: 'em', label: 'Kaska Exposure Management Platform — demo' },
-  { key: 'email-security', label: 'Kaska Email Security — demo' },
+  { key: 'kaska-em', label: 'Kaska EM — briefing' },
+  { key: 'email-security', label: 'Vantmail — email security' },
   { key: 'assessment', label: 'Kaska Risk Assessment' },
-  { key: 'solutions', label: 'Technology Solutions & Services' },
+  { key: 'solutions', label: 'Managed Security Services' },
   { key: 'partner', label: 'Partnership' },
   { key: 'briefing', label: 'Not sure yet — a briefing' },
 ]

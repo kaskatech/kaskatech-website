@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 }
 
 // LEGAL REVIEW REQUIRED BEFORE PUBLIC LAUNCH (2026-09-27):
-// - This policy does not yet cover Kaska Email Security: mailbox / email content and metadata,
+// - This policy does not yet cover Vantmail: mailbox / email content and metadata,
 //   and data obtained through API connections to Microsoft 365 and Google Workspace.
 // - Controller/processor roles, retention, sub-processors (e.g. Microsoft Azure), cross-border
 //   transfer, grievance officer and registered address still need legal sign-off.
@@ -24,7 +24,7 @@ export default function Page() {
 
       <div className="wrap">
         <div className="status-note rev" style={{ margin: '0 0 10px', maxWidth: 760 }}>
-          <b>Under legal review.</b> This policy is being updated to cover Kaska Email Security,
+          <b>Under legal review.</b> This policy is being updated to cover Vantmail,
           including email and mailbox data processed through API connections to Microsoft 365 and
           Google Workspace. Until the updated policy is published, contact{' '}
           <a href="mailto:privacy@kaskatech.com" style={{ color: 'var(--brass-hi)' }}>privacy@kaskatech.com</a>{' '}

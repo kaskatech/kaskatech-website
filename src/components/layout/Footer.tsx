@@ -9,18 +9,18 @@ export default function Footer() {
         <div className="g">
           <div className="c">
             <Link className="brand" href="/" aria-label="Kaska home"><KaskaMark /><span className="nm">Kaska</span></Link>
-            <span style={{ marginTop: 12, maxWidth: '32ch' }}>Cybersecurity products and technology solutions. Built in India.</span>
+            <span style={{ marginTop: 12, maxWidth: '32ch' }}>Cybersecurity products and services. Built in India.</span>
           </div>
           <div className="c">
             <h4>Products</h4>
-            <Link href="/exposure-management">Kaska Exposure Management</Link>
+            <Link href="/email-security">Vantmail</Link>
+            <Link href="/exposure-management">Kaska EM</Link>
             <Link href="/features">Platform capabilities</Link>
             <Link href="/integrations">Integrations</Link>
-            <Link href="/email-security">Kaska Email Security</Link>
           </div>
           <div className="c">
-            <h4>Solutions</h4>
-            <Link href="/technology-solutions">Technology Solutions</Link>
+            <h4>Services</h4>
+            <Link href="/technology-solutions">Managed Security Services</Link>
             <Link href="/industries">Industries</Link>
           </div>
           <div className="c">
@@ -28,7 +28,7 @@ export default function Footer() {
             <Link href="/company">About Kaska</Link>
             <Link href="/partners">Partners</Link>
             <Link href="/contact">Contact</Link>
-            <Link href={REGISTER}>Request a Demo</Link>
+            <Link href={REGISTER}>Talk to us</Link>
           </div>
           <div className="c">
             <h4>Resources</h4>

@@ -68,7 +68,7 @@ export default function Page() {
         lede="Kaska sits above the security stack you already own and turns distributed security intelligence into one asset-centric risk and resilience view — before, during and after a breach."
       >
         <div className="ctas mt-m">
-          <Link className="btn btn-go" href={demo('em')}>Request a Demo<Arrow /></Link>
+          <Link className="btn btn-go" href={demo('kaska-em')}>Request a Demo<Arrow /></Link>
           <Link className="btn btn-q" href="/exposure-management">About Kaska EM</Link>
         </div>
       </PageHero>

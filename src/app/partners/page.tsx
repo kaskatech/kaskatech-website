@@ -5,7 +5,7 @@ import { Arrow, Close, PageHero, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Partners — Kaska',
   description:
-    'Partner with Kaska: systems integrators, solution partners, technology (OEM) partners and advisory firms working with Kaska Exposure Management Platform™ and Kaska Email Security.',
+    'Partner with Kaska: systems integrators, solution partners, technology (OEM) partners and advisory firms working with Kaska Exposure Management Platform™ and Vantmail.',
 }
 
 export default function Page() {

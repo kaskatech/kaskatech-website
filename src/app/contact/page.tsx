@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact — Kaska',
   description:
-    'Request a demo of Kaska Exposure Management Platform™ or Kaska Email Security, or talk to Kaska about technology solutions and partnerships.',
+    'Request a demo of Kaska Exposure Management Platform™ or Vantmail, or talk to Kaska about technology solutions and partnerships.',
 }
 
 export default function Page() {

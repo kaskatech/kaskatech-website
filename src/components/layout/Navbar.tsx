@@ -65,7 +65,7 @@ export default function Navbar() {
           <Link className="brand" href="/" aria-label="Kaska home">
             <KaskaMark />
             <span className="nm">Kaska</span>
-            <span className="tg">Technologies<br />Products &amp; Solutions</span>
+            <span className="tg">Technologies<br />Products &amp; Services</span>
           </Link>
 
           <div className="navlinks">
@@ -104,8 +104,7 @@ export default function Navbar() {
           </div>
 
           <div className="navbar">
-            <Link className="talk" href="/contact">Talk to Kaska</Link>
-            <Link className="btn btn-go" href={REGISTER}>Request a Demo</Link>
+            <Link className="btn btn-q" href={REGISTER}>Talk to us</Link>
             <button className="hamb" aria-label="Open menu" aria-expanded={open} aria-controls="siteDrawer" onClick={() => setOpen(true)}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
                 <path d="M4 7h16M4 12h16M4 17h16" />
@@ -136,13 +135,12 @@ export default function Navbar() {
               </>
             ) : (
               <Link href={g.href!} className={isActive(g.href!) ? 'active' : undefined}>
-                {g.label === 'Solutions' ? 'Technology Solutions' : g.label}
+                {g.label}
               </Link>
             )}
           </div>
         ))}
-        <Link className="btn btn-go" href={REGISTER}>Request a Demo</Link>
-        <Link className="btn btn-q" href="/contact" style={{ marginTop: 10, justifyContent: 'center' }}>Talk to Kaska</Link>
+        <Link className="btn btn-go" href={REGISTER}>Talk to us</Link>
         <div className="dn-tag">Kaska Technologies &amp; Services Pvt Ltd</div>
       </aside>
     </>

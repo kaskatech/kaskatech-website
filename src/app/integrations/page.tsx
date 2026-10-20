@@ -38,7 +38,7 @@ export default function Page() {
         lede="Kaska doesn't scan, block or replace. It is designed to read the tools you already own through a common connector framework, keep only the signal it needs, and connect it all around the asset."
       >
         <div className="ctas mt-m">
-          <Link className="btn btn-go" href={demo('em')}>Ask about your stack<Arrow /></Link>
+          <Link className="btn btn-go" href={demo('kaska-em')}>Ask about your stack<Arrow /></Link>
           <Link className="btn btn-q" href="/exposure-management">About Kaska EM</Link>
         </div>
       </PageHero>

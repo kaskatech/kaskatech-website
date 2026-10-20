@@ -72,7 +72,7 @@ export default function Page() {
           </div>
           <p className="body">
             Where it fits a programme, Kaska&apos;s own products can be part of the solution: <Link className="more" href="/exposure-management">Kaska EM</Link> to
-            measure whether controls are effective, and <Link className="more" href="/email-security">Kaska Email Security</Link> for post-delivery email protection.
+            measure whether controls are effective, and <Link className="more" href="/email-security">Vantmail</Link> for post-delivery email protection.
           </p>
         </div>
       </section>

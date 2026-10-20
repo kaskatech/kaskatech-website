@@ -7,10 +7,14 @@ export type NavItem = { href: string; label: string; desc?: string }
 export type NavGroup = { label: string; href?: string; items?: NavItem[] }
 
 export const PRODUCTS: NavItem[] = [
-  { href: '/exposure-management', label: 'Kaska Exposure Management Platform', desc: 'An Autonomous Cyber Risk & Resilience Platform' },
+  { href: '/email-security', label: 'Vantmail', desc: 'Email security' },
+  { href: '/exposure-management', label: 'Kaska EM', desc: 'Cyber Risk & Resilience' },
+]
+
+export const KASKA_EM: NavItem[] = [
+  { href: '/exposure-management', label: 'Kaska EM', desc: 'Cyber Risk & Resilience platform' },
   { href: '/features', label: 'Platform capabilities', desc: 'From asset intelligence to resilience reporting' },
   { href: '/integrations', label: 'Integrations', desc: 'Above the security stack you already run' },
-  { href: '/email-security', label: 'Kaska Email Security', desc: 'API-First Email Security Platform' },
 ]
 
 export const INDUSTRIES: NavItem[] = [
@@ -22,15 +26,16 @@ export const INDUSTRIES: NavItem[] = [
 ]
 
 export const NAV: NavGroup[] = [
-  { label: 'Products', items: PRODUCTS },
-  { label: 'Solutions', href: '/technology-solutions' },
-  { label: 'Industries', items: INDUSTRIES },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Vantmail', href: '/email-security' },
+  { label: 'Managed Services', href: '/technology-solutions' },
+  { label: 'Kaska EM', items: KASKA_EM },
+  { label: 'Partners', href: '/partners' },
   {
     label: 'Company',
     items: [
       { href: '/company', label: 'About Kaska' },
-      { href: '/partners', label: 'Partners' },
+      { href: '/industries', label: 'Industries' },
+      { href: '/resources', label: 'Resources' },
       { href: '/contact', label: 'Contact' },
     ],
   },

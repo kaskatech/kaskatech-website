@@ -13,7 +13,7 @@ export function Close({
   kicker = 'See Kaska in action',
   title,
   text,
-  primary = { href: demo('em'), label: 'Request a Demo' },
+  primary = { href: demo('kaska-em'), label: 'Request a briefing' },
   secondary = { href: '/contact', label: 'Talk to Kaska' },
 }: {
   kicker?: string

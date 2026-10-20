@@ -5,7 +5,7 @@ import { Arrow, Close, PageHero } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'About Kaska — Kaska Technologies & Services Pvt Ltd',
   description:
-    'Kaska Technologies & Services Pvt Ltd is a cybersecurity technology company building Kaska Exposure Management Platform™ and Kaska Email Security, and delivering cybersecurity technology solutions.',
+    'Kaska Technologies & Services Pvt Ltd is a cybersecurity technology company building Kaska Exposure Management Platform™ and Vantmail, and delivering cybersecurity technology solutions.',
 }
 
 export default function Page() {
@@ -15,7 +15,7 @@ export default function Page() {
         split
         kicker="Company"
         title={<>Built in India, to prove security <em>works</em>.</>}
-        lede="Kaska Technologies & Services Pvt Ltd is a cybersecurity technology company. We build Kaska Exposure Management Platform™ and Kaska Email Security, and deliver technology solutions for enterprise, financial services, the public sector and critical infrastructure."
+        lede="Kaska Technologies & Services Pvt Ltd is a cybersecurity technology company. We build Kaska Exposure Management Platform™ and Vantmail, and deliver technology solutions for enterprise, financial services, the public sector and critical infrastructure."
       >
         <div className="ctas mt-m">
           <Link className="btn btn-go" href="/contact">Get in touch<Arrow /></Link>
@@ -38,7 +38,7 @@ export default function Page() {
             <p className="body">
               Kaska was built to close that gap. Kaska EM sits above the security stack, vendor-agnostic, and is
               designed to show whether controls are working, what is exposed and what matters most, and whether
-              the response can be proved. The same discipline shaped Kaska Email Security, because the attack
+              the response can be proved. The same discipline shaped Vantmail, because the attack
               that costs money often arrives as an ordinary-looking email.
             </p>
             <p className="body">
@@ -55,7 +55,7 @@ export default function Page() {
           <h2 className="h2 mt-s">Two products, <em>one discipline</em>.</h2>
           <div className="cols3 mt-m">
             <div><b>Kaska Exposure Management Platform&trade;</b><p>An Autonomous Cyber Risk &amp; Resilience Platform. It connects assets, exposure, control validation, risk, governed response and evidence in one model.</p><Link className="more" href="/exposure-management">Explore Kaska EM</Link></div>
-            <div><b>Kaska Email Security</b><p>An API-first email security platform: detection, investigation and controlled response for Microsoft 365 and Google Workspace, with no MX change.</p><Link className="more" href="/email-security">Explore Email Security</Link></div>
+            <div><b>Vantmail</b><p>An API-first email security platform: detection, investigation and controlled response for Microsoft 365 and Google Workspace, with no MX change.</p><Link className="more" href="/email-security">Explore Vantmail</Link></div>
             <div><b>Technology Solutions</b><p>Advisory, implementation, managed services and support, vendor-agnostic, for regulated environments.</p><Link className="more" href="/technology-solutions">Explore solutions</Link></div>
           </div>
         </div>
