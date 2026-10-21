@@ -4,9 +4,9 @@ import RedirectTo from '@/components/k/RedirectTo'
 export const metadata: Metadata = {
   title: 'Kaska EM — Kaska',
   robots: { index: false, follow: true },
-  alternates: { canonical: '/' },
+  alternates: { canonical: '/kaska-em' },
 }
 
 export default function Page() {
-  return <RedirectTo to="/" label="Kaska EM" />
+  return <RedirectTo to="/kaska-em" label="Kaska EM" />
 }

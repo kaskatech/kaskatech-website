@@ -682,22 +682,16 @@ ul{list-style:none}
 
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
 
-/* ── v4 home: hero, three doors, trust strip, Kaska EM box ── */
-.home-hero{padding:88px 0 64px}
-.doors{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:16px;margin-top:44px}
-.door{display:flex;flex-direction:column;border:1px solid var(--ln2);border-radius:10px;padding:26px;background:rgba(255,255,255,.02)}
-.door.main{border-color:var(--gold-deep);background:linear-gradient(160deg,rgba(201,164,76,.08) 0%,rgba(255,255,255,.02) 60%)}
-.door h3{font-family:var(--display);font-size:26px;font-weight:600;margin:16px 0 6px}
-.door p{color:var(--mute-d);font-size:15px;margin:0 0 16px}
-.door ul{margin:0 0 22px;padding-left:18px;font-size:14.5px;line-height:1.7}
-.door .btn{margin-top:auto;align-self:flex-start}
+/* ── home doorway: hero, three doors ── */
+.home-hero{padding:88px 0 72px}
+.hdoors{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px;margin-top:48px}
+.hdoor{display:flex;flex-direction:column;border:1px solid var(--ln2);border-radius:10px;padding:28px;background:rgba(255,255,255,.02)}
+.hdoor.main{border-color:var(--gold-deep);background:linear-gradient(160deg,rgba(201,164,76,.08) 0%,rgba(255,255,255,.02) 60%)}
+.hdoor h3{font-family:var(--display);font-size:26px;line-height:1.15;font-weight:600;margin:16px 0 8px}
+.hdoor p{color:var(--mute-d);font-size:15px;line-height:1.6;margin:0 0 22px}
+.hdoor .ctas{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .dtag{display:inline-block;align-self:flex-start;font:500 11px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-deep);border-radius:999px;padding:3px 10px}
-.trust-strip{border-top:1px solid var(--ln2);border-bottom:1px solid var(--ln2);padding:20px 0;font-size:13.5px;color:var(--mute-d)}
-.trust-strip .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center}
-.trust-strip b{color:var(--ink-d);font-weight:500}
-.em-box{border:1px dashed var(--gold-deep);border-radius:12px;padding:40px}
-.pov3 .n{color:var(--gold)}
-@media (max-width:960px){.doors{grid-template-columns:1fr}.home-hero{padding:56px 0 44px}.em-box{padding:24px}}
+@media (max-width:960px){.hdoors{grid-template-columns:1fr}.home-hero{padding:56px 0 44px}}
 
 /* Also from Kaska strip (home) */
 .also-k{padding:28px 0}

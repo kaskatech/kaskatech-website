@@ -13,8 +13,8 @@ export default function Footer() {
           </div>
           <div className="c">
             <h4>Products</h4>
-            <Link href="/">Kaska EM</Link>
-            <Link href="/email-security">Vantmail email security</Link>
+            <Link href="/kaska-em">Kaska EM</Link>
+            <Link href="/email-security">Vantmail</Link>
             <Link href="/features">Platform capabilities</Link>
             <Link href="/integrations">Integrations</Link>
           </div>

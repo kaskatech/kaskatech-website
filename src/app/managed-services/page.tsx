@@ -73,7 +73,7 @@ export default function Page() {
           </div>
           <div className="ctas mt-m">
             <Link className="btn btn-go" href={demo('exposure-assessment')}>Request a briefing<Arrow /></Link>
-            <Link className="btn btn-q" href="/">About Kaska EM</Link>
+            <Link className="btn btn-q" href="/kaska-em">About Kaska EM</Link>
           </div>
         </div>
       </section>

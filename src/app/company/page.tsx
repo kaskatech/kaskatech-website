@@ -54,7 +54,7 @@ export default function Page() {
           <span className="kicker">What we build</span>
           <h2 className="h2 mt-s">Two products, <em>one discipline</em>.</h2>
           <div className="cols3 mt-m">
-            <div><b>Kaska Exposure Management Platform&trade;</b><p>An Autonomous Cyber Risk &amp; Resilience Platform. It connects assets, exposure, control validation, risk, governed response and evidence in one model.</p><Link className="more" href="/">Explore Kaska EM</Link></div>
+            <div><b>Kaska Exposure Management Platform&trade;</b><p>An Autonomous Cyber Risk &amp; Resilience Platform. It connects assets, exposure, control validation, risk, governed response and evidence in one model.</p><Link className="more" href="/kaska-em">Explore Kaska EM</Link></div>
             <div><b>Vantmail</b><p>An API-first email security platform: detection, investigation and controlled response for Microsoft 365 and Google Workspace, with no MX change.</p><Link className="more" href="/email-security">Explore Vantmail</Link></div>
             <div><b>Technology Solutions</b><p>Advisory, implementation, managed services and support, vendor-agnostic, for regulated environments.</p><Link className="more" href="/managed-services">Explore solutions</Link></div>
           </div>

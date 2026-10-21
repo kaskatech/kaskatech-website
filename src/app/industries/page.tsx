@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 type P = { href: string; label: string }
-const EM: P = { href: '/', label: 'Kaska EM' }
+const EM: P = { href: '/kaska-em', label: 'Kaska EM' }
 const ES: P = { href: '/email-security', label: 'Vantmail' }
 const TS: P = { href: '/managed-services', label: 'Managed Services' }
 
