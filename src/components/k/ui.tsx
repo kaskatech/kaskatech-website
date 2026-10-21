@@ -30,8 +30,12 @@ export function Close({
         <div className="row">
           <p>{text}</p>
           <div className="ctas">
-            <Link className="btn btn-go" href={primary.href}>{primary.label}<Arrow /></Link>
-            {secondary && <Link className="btn btn-q" href={secondary.href}>{secondary.label}</Link>}
+            {primary.href.startsWith('http')
+              ? <a className="btn btn-go" href={primary.href} target="_blank" rel="noopener noreferrer">{primary.label}<Arrow /></a>
+              : <Link className="btn btn-go" href={primary.href}>{primary.label}<Arrow /></Link>}
+            {secondary && (secondary.href.startsWith('http')
+              ? <a className="btn btn-q" href={secondary.href} target="_blank" rel="noopener noreferrer">{secondary.label}</a>
+              : <Link className="btn btn-q" href={secondary.href}>{secondary.label}</Link>)}
           </div>
         </div>
       </div>

@@ -15,6 +15,7 @@ export default function Footer() {
             <h4>Products</h4>
             <Link href="/kaska-em">Kaska EM</Link>
             <Link href="/email-security">Vantmail</Link>
+            <a href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">vantmail.ai ↗</a>
             <Link href="/features">Platform capabilities</Link>
             <Link href="/integrations">Integrations</Link>
           </div>

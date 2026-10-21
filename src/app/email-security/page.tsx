@@ -97,6 +97,43 @@ export default function Page() {
         </div>
       </section>
 
+      {/* WHY API, NOT A GATEWAY (vantmail.ai) */}
+      <section className="s-white sec">
+        <div className="wrap">
+          <div className="split">
+            <div>
+              <span className="kicker">Why API, not a gateway</span>
+              <h2 className="h2 mt-s">Gateways were built for the spam era. <em>Attacks moved on.</em></h2>
+            </div>
+            <p className="lede">
+              Traditional secure email gateways reroute your mail through a third party and filter at the edge.
+              Text-only fraud and QR lures are designed to pass straight through that model.
+            </p>
+          </div>
+          <div className="cols2 mt-m vcmp">
+            <div>
+              <b>Where gateways fall short</b>
+              <ul>
+                <li>Require an MX record change — your mail is rerouted through a third party before it reaches you.</li>
+                <li>Filter only at the edge: blind to internal mail and to what happens after delivery.</li>
+                <li>Pass attacks sent from real, compromised supplier and partner accounts.</li>
+                <li>Signature and bulk-spam logic misses targeted, text-only fraud with no attachment or link.</li>
+              </ul>
+            </div>
+            <div>
+              <b>How API-first answers</b>
+              <ul>
+                <li>Connects to Microsoft 365, Google Workspace or Zoho Mail — no MX change, no rerouting, no disruption.</li>
+                <li>Sees every message the moment it lands, including internal mail a gateway never touches.</li>
+                <li>Reads identity, relationship and intent context — not just signatures — to catch fraud from real accounts.</li>
+                <li>Removes or banners a threat across every mailbox, even after delivery.</li>
+              </ul>
+            </div>
+          </div>
+          <p className="body mt-m">Already have a gateway? Vantmail layers alongside it — or replaces it — your choice.</p>
+        </div>
+      </section>
+
       {/* PROOF OF VALUE */}
       <section className="s-dark sec">
         <div className="wrap">
@@ -200,6 +237,20 @@ export default function Page() {
           <div className="ctas mt-m">
             <a className="btn btn-q" href={`${SITE}/partners`} {...ext}>Become a partner</a>
             <Link className="more" href="/partners">Partnering with Kaska</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPANY BEHIND VANTMAIL (vantmail.ai) */}
+      <section className="s-warm sec">
+        <div className="wrap split">
+          <div>
+            <span className="kicker">The company behind Vantmail</span>
+            <h2 className="h2 mt-s">A product of <em>Kaska Technologies and Services Private Limited</em>.</h2>
+          </div>
+          <div className="ctas">
+            <Link className="btn btn-q" href="/company">Meet Kaska &amp; Vantmail</Link>
+            <a className="btn btn-q" href={`${SITE}/company`} {...ext}>About Vantmail on vantmail.ai</a>
           </div>
         </div>
       </section>

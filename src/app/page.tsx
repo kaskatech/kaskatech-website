@@ -5,7 +5,7 @@ import { Arrow, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Kaska — Stop the attack before it starts. Recover fast if it does.',
   description:
-    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Managed Security Services; and Vantmail email security.',
+    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Vantmail email security; and Managed Security Services.',
 }
 
 export default function Page() {
@@ -38,20 +38,20 @@ export default function Page() {
               </div>
             </div>
             <div className="hdoor">
-              <span className="dtag">Security Services</span>
-              <h3>Managed Security Services</h3>
-              <p>SOC / MDR, VAPT, GRC and compliance, delivered by Kaska with MSSP and OEM partners.</p>
-              <div className="ctas">
-                <Link className="btn btn-q" href="/managed-services">Managed services<Arrow /></Link>
-              </div>
-            </div>
-            <div className="hdoor">
               <span className="dtag">Email Security</span>
               <h3>Vantmail</h3>
               <p>API-first email security for Microsoft 365, Google Workspace and Zoho Mail. No MX change.</p>
               <div className="ctas">
                 <Link className="btn btn-q" href="/email-security">Email security<Arrow /></Link>
-                <a className="more" href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">vantmail.ai</a>
+                <a className="more" href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">Visit vantmail.ai ↗</a>
+              </div>
+            </div>
+            <div className="hdoor">
+              <span className="dtag">Security Services</span>
+              <h3>Managed Security Services</h3>
+              <p>SOC / MDR, VAPT, GRC and compliance, delivered by Kaska with MSSP and OEM partners.</p>
+              <div className="ctas">
+                <Link className="btn btn-q" href="/managed-services">Managed services<Arrow /></Link>
               </div>
             </div>
           </div>
