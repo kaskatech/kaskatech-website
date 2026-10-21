@@ -16,7 +16,7 @@ const NAV: [ViewKey, string][] = [
 const NOTES: Record<ViewKey, [string, string][]> = {
   val: [['Enforced, not just configured', 'Each control is measured against its intended outcome.'], ['Gaps are specific', 'A finding names the failing check and the asset it affects.'], ['Open a finding', 'Every finding opens to its evidence trail.']],
   exp: [['Exploitability in context', 'Findings are matched to vulnerabilities attackers are known to use.'], ['The software you run', 'Components from your SBOM, with a CERT-In guidelines scorecard.'], ['Attached where it applies', 'Exposure is linked to the assets and controls it affects.']],
-  risk: [['One resilience view', 'The console and the board report read the same view, so they never disagree.'], ['Risk in context', 'Exposure, control effectiveness and business criticality, together.'], ['Calibrated before quoted', 'Financial estimates appear once the model is calibrated with your data.']],
+  risk: [['One resilience view', 'The console and the board report read the same view, so they never disagree.'], ['Risk in context', 'Exposure, control effectiveness and business criticality, together.'], ['Calibrated before quoted', 'Loss ranges are labelled provisional until the model is calibrated with your data.']],
   evi: [['Live', 'Read directly from your systems.'], ['Derived · Provisional', 'Calculated from measured data, or awaiting calibration.'], ['Not assessed', 'No evidence yet, and never shown as a pass.']],
   rep: [['Plain language', 'Written for the board, not the SOC.'], ['Same source of truth', 'Built from the same evidence as the console.'], ['Gaps stay visible', 'Areas without evidence are reported, not hidden.']],
 }
@@ -90,7 +90,7 @@ export default function ProductConsole({ initialView = 'val' }: { initialView?: 
                 <div className="g2">
                   <div className="pn"><div className="ph"><span>Resilience view</span><span className="chip der">Derived</span></div>
                     <div className="dl"><div><span>Identity</span><span className="chip gap">Weakest</span></div><div><span>Email</span><span className="chip ok">Strong</span></div><div><span>Recovery</span><span className="chip ok">Strong</span></div><div><span>Endpoint</span><span className="chip na">Not assessed</span></div></div></div>
-                  <div className="pn prov"><div className="ph"><span>Risk model (FAIR)</span><span className="chip prov">Provisional</span></div><div className="bv na">—</div><div className="sb" style={{ color: '#D6B465' }}>Financial estimates appear once the model is calibrated with your organisation&apos;s data.</div></div>
+                  <div className="pn prov"><div className="ph"><span>Risk model (FAIR)</span><span className="chip prov">Provisional</span></div><div className="bv na">—</div><div className="sb" style={{ color: '#D6B465' }}>Loss ranges are labelled provisional until the model is calibrated with your organisation&apos;s data.</div></div>
                 </div>
                 <div className="ft">
                   <div className="tr th"><span>Priority</span><span className="m">Why</span><span></span></div>

@@ -28,9 +28,9 @@ export default function Page() {
               <span className="dtag">Exposure Management</span>
               <h3>Kaska EM</h3>
               <p>
-                An Autonomous Cyber Risk &amp; Resilience Platform above the security stack you already run. One
-                picture of exposure, validated controls and breach paths, with risk in financial terms, before,
-                during and after a breach.
+                Kaska Exposure Management Platform™, above the security stack you already run. One evidenced
+                picture of exposure, validated controls and breach paths, with loss ranges, before, during and
+                after a breach.
               </p>
               <div className="ctas">
                 <Link className="btn btn-go" href="/kaska-em">Explore Kaska EM<Arrow /></Link>

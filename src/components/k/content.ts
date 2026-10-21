@@ -1,16 +1,13 @@
 // Shared site copy: one source for content that appears on more than one page.
 
 export const CAPABILITIES = [
-  { t: 'Asset Intelligence', d: 'One inventory of what you run, who owns it and how critical it is, assembled from the tools you already have.', layer: 'Asset foundation' },
-  { t: 'Asset Graph & xBOM', d: 'Relationships between assets, identities and software components, including SBOM-based software inventory.', layer: 'Asset foundation' },
-  { t: 'Exposure Management', d: 'Vulnerabilities, misconfigurations and public exposure in context: known-exploited flaws first, attached to the assets they affect.', layer: 'Analytics core' },
-  { t: 'Control Validation', d: 'Checks whether each security control is enforced as intended, not only configured, across identity, endpoint, cloud, network, email and more.', layer: 'Analytics core' },
-  { t: 'Cyber Risk Quantification', d: 'A FAIR-based model designed to express exposure in business terms, with its calibration state shown alongside every estimate.', layer: 'Analytics core' },
-  { t: 'Compliance & Evidence', d: 'Control evidence mapped to the regulatory and industry frameworks you report against, with its provenance kept.', layer: 'Analytics core' },
-  { t: 'Detection & Response', d: 'Incidents from your SIEM or XDR connected to the same asset, exposure and control context used before the breach.', layer: 'Orchestration' },
-  { t: 'Investigation & Case Management', d: 'Cases with owners, timelines and evidence, so every finding and incident is worked to a verified close.', layer: 'Orchestration' },
-  { t: 'Governed Response & Orchestration', d: 'Playbooks and response actions that follow policy, with human approval where it matters and an audit trail throughout.', layer: 'Orchestration' },
-  { t: 'Resilience & Reporting', d: 'A resilience view and plain-language reporting for leadership, built from the same evidence as the console.', layer: 'Dashboard' },
+  { t: 'Asset Intelligence', d: 'Asset inventory, asset graph and xBOM, data stores, OT/ICS and AI applications, each with an owner and a criticality.', layer: 'Foundation' },
+  { t: 'Risk & Exposure', d: 'Exposure Register, top fixes, business impact and loss ranges, on the same asset record.', layer: 'Before a breach' },
+  { t: 'Threat & Exposure', d: 'Attack paths with evidence per step, threat intelligence, simulation results, external surface and MITRE ATT&CK coverage.', layer: 'Before a breach' },
+  { t: 'Controls & Compliance', d: 'Control validation across 31 domains, the check library, Zero Trust targets and framework compliance.', layer: 'Before a breach' },
+  { t: 'Detection & Response', d: 'Incidents from your SIEM or XDR, with asset, exposure and control context, worked as cases under governed response.', layer: 'During a breach' },
+  { t: 'Recovery & Resilience', d: 'Recovery plans, recovery exercises, lessons learned and a resilience view against NIST CSF, including Govern.', layer: 'After a breach' },
+  { t: 'Third-Party & Governance', d: 'Vendor risk, approvals, evidence and reporting for the board and regulators.', layer: 'Govern' },
 ]
 
 export const ARCH = [
@@ -32,20 +29,22 @@ export const SPINE = [
   { t: 'Resilience', d: 'A stronger position each cycle.', cls: 'res' },
 ]
 
-export const FRAMEWORKS = ['RBI', 'SEBI CSCRF', 'IRDAI', 'CERT-In', 'DPDP', 'NCIIPC', 'CEA', 'ISO 27001', 'NIST CSF', 'CIS Controls v8', 'PCI DSS', 'IEC 62443']
+// The 17 frameworks in services/compliance-services/compliance-mapper/framework_library.py
+export const FRAMEWORKS = [
+  'RBI', 'RBI FREE-AI', 'DPDPA', 'CERT-In', 'CEA 2025', 'NCIIPC', 'SEBI CSCRF', 'IRDAI', 'MeitY',
+  'ISO 27001', 'NIST CSF', 'PCI-DSS (mapped)', 'SOC 2', 'GDPR', 'HIPAA (mapped)', 'FISMA', 'CIS Controls v8',
+]
 
 export const SECTORS = [
-  { id: 'enterprise', t: 'Enterprise', d: 'IT / ITES, pharma and manufacturing: broad security stacks that still need one answer on what is actually exposed.', ctx: 'DPDP · ISO 27001 · NIST CSF' },
   { id: 'bfsi', t: 'BFSI', d: 'Banks, NBFCs and insurers, where regulators and boards expect control evidence, and payment workflows attract fraud.', ctx: 'RBI · SEBI CSCRF · IRDAI' },
+  { id: 'enterprise', t: 'Enterprise', d: 'IT / ITES, pharma and manufacturing: broad security stacks that still need one answer on what is actually exposed.', ctx: 'DPDP · ISO 27001 · NIST CSF' },
   { id: 'government', t: 'Government / PSU', d: 'Departments and public-sector undertakings working under CERT-In obligations and strict hosting requirements.', ctx: 'CERT-In · NCIIPC · MeitY' },
   { id: 'defence', t: 'Defence', d: 'Restricted environments that demand local control of data and rigorous assurance of every control.', ctx: 'Assessed case by case' },
   { id: 'critical-infrastructure', t: 'Critical Infrastructure', d: 'Power, energy and regulated sectors that must secure IT and OT together.', ctx: 'CEA · IEC 62443 · NCIIPC' },
 ]
 
 export const SOLUTIONS = [
-  'Managed Security Services', 'SOC / MDR', 'VAPT', 'GRC', 'IAM / PAM', 'Data Security', 'Application Security',
-  'Network Security', 'Cloud Security', 'OT Security', 'Incident Response & Recovery', 'Security Architecture',
-  'Advisory', 'Implementation', 'Managed Device Support',
+  'SOC / MDR', 'VAPT & red teaming', 'GRC & compliance', 'Identity security', 'Data security', 'Application security',
 ]
 
 // Home · Kaska as the intelligence layer
@@ -74,7 +73,7 @@ export const CONDITIONS = [
   { t: 'Business context', e: 'supporting customer payments' },
 ]
 export const NEXT_STEPS = [
-  { t: 'Connected risk', d: 'The combination that makes the exposure matter, designed to be expressed in business terms.' },
+  { t: 'Connected risk', d: 'The combination that makes the exposure matter, with its business context.' },
   { t: 'Prioritise', d: 'The few conditions most likely to matter, first.' },
   { t: 'Act', d: 'A case, an owner and a governed change.', cls: 'act' },
   { t: 'Verify', d: 'Re-validated, so reduced exposure is shown, not assumed.', cls: 'res' },

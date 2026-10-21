@@ -94,16 +94,15 @@ export default function Page() {
           <div className="split mt-m">
             <div>
               <span className="kicker">The Command Center</span>
-              <h3 className="h3 mt-s">One model. Three vantage points.</h3>
+              <h3 className="h3 mt-s">One model. <em>Read from where you stand.</em></h3>
             </div>
             <p className="lede">
-              Above the five layers sits the Command Center — Executive Dashboard, Incident Command and
-              Intelligence Search. The same intelligence is read differently depending on where you stand.
-              An executive opens the dashboard and sees posture, exposure and resilience in business terms.
-              A responder opens incident command and sees the affected assets, the control that failed and
-              the actions available. An auditor searches the intelligence and finds the evidence behind any
-              figure, with its provenance attached. One model, three vantage points — not three products
-              that have to be reconciled.
+              Above the five layers sits the Command Center. The Risk Command Center reads one risk model
+              through three views: Executive (the risk position against your appetite), CISO (control gaps,
+              top fixes and owners) and Operations (the work queue). Incident Command shows a responder the
+              affected assets, the control that failed and the actions available. Intelligence Search finds
+              the evidence behind any figure across 7 record types, with its provenance attached. One model,
+              read from where you stand — not separate products that have to be reconciled.
             </p>
           </div>
         </div>
@@ -129,7 +128,7 @@ export default function Page() {
         lede="Both are required to answer whether a control is actually working. Only one of them is available from an aggregator."
         capability="Two acquisition paths. Event data: already-correlated incidents from IBM QRadar, Microsoft Sentinel, Splunk and CrowdStrike XDR. Control and OEM intelligence: control validation, posture, misconfigurations, vulnerabilities, findings and alerts read directly from each security tool's API."
         how="Kaska does not re-correlate raw events; that is the SIEM's job and it is already done well. Each connector declares what it can and cannot determine, so absent data is recorded as absent rather than assumed."
-        intel="Alongside both paths: external attack surface intelligence, the Kaska vulnerability database, asset and software bill-of-materials intelligence, and MITRE ATT&CK-based threat intelligence."
+        intel="Alongside both paths: external attack surface intelligence, public vulnerability and exploit intelligence (NVD, CISA KEV, EPSS), asset and software bill-of-materials intelligence, and MITRE ATT&CK-based threat intelligence."
         why="An incident tells you what happened. It cannot tell you whether the control that should have stopped it was enforced."
         benefit="You keep your SIEM, and still get the control answer it was never designed to give."
         outcome="One intelligence model fed by the whole stack, without replacing any of it."
@@ -149,13 +148,13 @@ export default function Page() {
       <Cap
         n="05" kicker="Exposure and Risk" tone="s-white"
         title={<>Exposure, weighted by <em>what actually matters</em>.</>}
-        lede="Risk expressed in business terms, with the method visible and the calibration state shown beside every estimate."
-        capability="FAIR-based cyber risk quantification on the asset graph: Annual Loss Expectancy, Monte Carlo value-at-risk including correlated portfolio VaR, return on security investment, attack-path analysis and exploitability-weighted exposure."
+        lede="Risk expressed as loss ranges, with the method visible and the calibration state shown beside every estimate."
+        capability="Loss ranges by Monte Carlo, from sourced defaults calibrated to your data; shown at portfolio level, not per control or framework. Attack-path analysis and exploitability-weighted exposure sit on the same asset graph."
         how="Risk is computed from asset criticality, measured control effectiveness and live exposure, so the multipliers are driven by validated control state rather than a questionnaire. Attack paths show which exposures chain toward critical systems."
         intel="Asset criticality and business context, control validation results, vulnerability and software composition intelligence, exploit-probability scoring."
         why="A colour-coded heat map cannot be argued in a budget meeting, and a number without a method cannot be defended in an audit."
-        benefit="A risk figure the board can act on, with a method you can show to an auditor or an insurer."
-        outcome="Security investment argued in business terms rather than in red, amber and green."
+        benefit="A loss range the board can act on, with a method you can show to an auditor or an insurer."
+        outcome="Security investment argued in loss ranges rather than in red, amber and green."
       />
 
       {/* 06 · CONTROL VALIDATION */}
@@ -163,7 +162,7 @@ export default function Page() {
         n="06" kicker="Control Validation" tone="s-deep"
         title={<>Configured doesn&apos;t mean <em>protected</em>.</>}
         lede="An MFA policy can exist and still not apply to the accounts that matter. An EDR agent can be deployed and still sit in detection-only mode."
-        capability="Continuous validation across 31 control domains — identity and access, privileged access, endpoint, firewall and network, cloud, email, data protection, backup, vulnerability management, OT/ICS, application security, key management and more, each with domain-specific checks rather than a generic template."
+        capability="Scheduled validation across 31 control domains, with Partial and Not assessed shown honestly — identity and access, privileged access, endpoint, firewall and network, cloud, email, data protection, backup, vulnerability management, OT/ICS, application security, key management and more, each with domain-specific checks rather than a generic template."
         how="Configuration becomes evidence, evidence becomes validation, validation becomes a gap with risk context. A severity gate means a critical gap can never aggregate into a passing score, and a domain with no data reads not assessed rather than green."
         intel="Configuration and posture read directly from each tool's API, against control definitions mapped to CIS, NIST, ISO and the applicable Indian regulatory frameworks."
         why="Most organisations assume a deployed control is a working control. The gap between the two is where breaches happen."
@@ -178,12 +177,12 @@ export default function Page() {
         n="07" kicker="Compliance and Evidence" tone="s-white"
         title={<>One validated control. <em>Many requirements.</em></>}
         lede="Compliance and security share the same underlying evidence base — the configuration state of the controls themselves."
-        capability="17 regulatory and standards frameworks on a shared control crosswalk: RBI, DPDPA, CERT-In, SEBI CSCRF, IRDAI, CEA, NCIIPC and MeitY alongside ISO 27001, NIST CSF, PCI-DSS, SOC 2, GDPR, HIPAA, FISMA and CIS Controls v8."
+        capability="17 regulatory and standards frameworks on a shared control crosswalk: RBI, RBI FREE-AI, DPDPA, CERT-In, SEBI CSCRF, IRDAI, CEA, NCIIPC and MeitY alongside ISO 27001, NIST CSF, PCI-DSS, SOC 2, GDPR, HIPAA, FISMA and CIS Controls v8. PCI-DSS and HIPAA are mapped, not certified."
         how="Compliance reads the real control-validation result and maps each finding to the framework controls it satisfies. Controls with no assessed check are excluded from scoring rather than counted as compliant."
         intel="Control validation findings and their evidence, mapped through the framework crosswalk."
         why="Compliance is usually operated as a separate workload, re-gathering evidence the security team already holds."
         benefit="One validated control satisfies clauses across several frameworks simultaneously, so the evidence base is shared rather than rebuilt."
-        outcome="Audit answers that come from measurement, assembled continuously instead of in the fortnight before the audit."
+        outcome="Audit answers that come from measurement, assembled from each validation run, not in the fortnight before the audit."
       />
 
       {/* 08 · VULNERABILITY & xBOM */}
@@ -212,12 +211,12 @@ export default function Page() {
         outcome="Fewer priorities, each of which you can justify."
       />
 
-      {/* 10 · PRE-BREACH RISK INTELLIGENCE */}
+      {/* 10 · BEFORE A BREACH */}
       <section className="s-deep sec" id="pre-breach-risk-intelligence">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">10 · Pre-Breach Risk Intelligence</span>
+              <span className="kicker">10 · Before a breach</span>
               <h2 className="h2 mt-s">Understand and <em>prepare</em>.</h2>
             </div>
             <p className="lede">
@@ -243,12 +242,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 11 · REAL-TIME BREACH INTELLIGENCE */}
+      {/* 11 · DURING A BREACH */}
       <section className="s-white sec" id="real-time-breach-intelligence">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">11 · Real-Time Breach Intelligence</span>
+              <span className="kicker">11 · During a breach</span>
               <h2 className="h2 mt-s">Contextualise, prioritise <em>and respond</em>.</h2>
             </div>
             <p className="lede">
@@ -262,7 +261,7 @@ export default function Page() {
             <div><b>What else is exposed</b><p>Vulnerabilities, software components and attack paths on those same assets, from the same graph.</p></div>
           </div>
           <div className="cols3 mt-m">
-            <div><b>What it is worth</b><p>Business impact and financial exposure, in the terms the decision will be made in.</p></div>
+            <div><b>What it is worth</b><p>Business impact and a provisional loss range, in the terms the decision will be made in.</p></div>
             <div><b>What may be done</b><p>A case with a named owner and a governed action, inside approved boundaries.</p></div>
             <div><b>Already in place</b><p>Because the pre-breach intelligence was built beforehand, the context is there the moment the signal arrives rather than assembled after it.</p></div>
           </div>
@@ -274,12 +273,12 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 12 · POST-BREACH RESILIENCE */}
+      {/* 12 · AFTER A BREACH */}
       <section className="s-deep sec" id="post-breach-resilience">
         <div className="wrap">
           <div className="split">
             <div>
-              <span className="kicker">12 · Post-Breach Resilience</span>
+              <span className="kicker">12 · After a breach</span>
               <h2 className="h2 mt-s">Close the gap permanently, <em>and prove it</em>.</h2>
             </div>
             <p className="lede">
@@ -344,7 +343,7 @@ export default function Page() {
           </div>
 
           <div className="cols4 mt-m">
-            <div><b>Four autonomy levels</b><p>Manual, assisted, auto-low-risk and auto. Kaska ships on assisted.</p></div>
+            <div><b>Four autonomy levels</b><p>Manual, assisted, auto-low-risk and auto. Default level: assisted.</p></div>
             <div><b>Irreversible actions</b><p>Treated separately, and never auto-execute by default.</p></div>
             <div><b>Safety floor</b><p>A hard floor that forces approval regardless of configuration.</p></div>
             <div><b>Explainable</b><p>Every decision returns the rule that produced it, in language a reviewer can read.</p></div>
@@ -373,7 +372,7 @@ export default function Page() {
         how="Every action is evaluated against its own risk, the criticality tier of the asset it touches, whether it is reversible, and the tenant's autonomy level. The engine returns either proceed or approval required at this tier, together with the reason."
         intel="The case, the asset record, control state, the configured autonomy policy and the approver directory."
         why="Automation without governance is unsellable to anyone accountable for a production environment."
-        benefit="Response at machine speed, inside boundaries a named person set and a reviewer can inspect."
+        benefit="Faster response inside boundaries a named person sets and a reviewer can inspect."
         outcome="Faster containment, with a defensible answer to why each action was permitted."
       >
         <div className="mt-m"><JourneyTable /></div>
@@ -467,7 +466,7 @@ export default function Page() {
           <div className="cols3 mt-m">
             <div><b>Prove what was done</b><p>A tamper-evident chain covering every approval and every action.</p></div>
             <div><b>Verify that remediation held</b><p>A case closes only when the fix is confirmed, not when it is claimed.</p></div>
-            <div><b>Improve resilience continuously</b><p>Every closed case updates the shared model, so the same weakness does not recur.</p></div>
+            <div><b>Improve resilience with every case</b><p>Every closed case updates the shared model, so the same weakness does not recur.</p></div>
           </div>
 
           <div className="split mt-l">
@@ -481,7 +480,7 @@ export default function Page() {
             <div><b>CISO</b><p>Know which controls are genuinely enforced, where the gaps are, and be able to defend both answers under questioning.</p></div>
             <div><b>Board</b><p>A plain-language position on cyber risk and resilience, in business terms, without a translation layer.</p></div>
             <div><b>Security Operations</b><p>Incident context assembled before the call is made, and response executed inside approved boundaries.</p></div>
-            <div><b>Risk and GRC</b><p>Risk derived from measured control effectiveness rather than from a survey, updated continuously.</p></div>
+            <div><b>Risk and GRC</b><p>Risk derived from measured control effectiveness rather than from a survey, updated each time controls are re-validated.</p></div>
           </div>
           <div className="cols3 mt-m">
             <div><b>Audit and Compliance</b><p>One validated control satisfying clauses across multiple frameworks, with verifiable evidence attached to each.</p></div>
