@@ -150,7 +150,7 @@ export default function ContactForm() {
           <textarea
             id="msg"
             name="message"
-            placeholder="A product demo, a datasheet, or Technology Solutions for your environment — tell us what you're looking for."
+            placeholder="A product demo, a datasheet, or managed services for your environment — tell us what you're looking for."
           ></textarea>
         </div>
         <button className="act full" type="submit" disabled={submitting}>

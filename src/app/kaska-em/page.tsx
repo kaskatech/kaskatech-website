@@ -498,7 +498,7 @@ export default function Page() {
       <section className="s-white sec">
         <div className="wrap split top">
           <div>
-            <span className="kicker">Technology Solutions</span>
+            <span className="kicker">Managed Services</span>
             <h2 className="h3 mt-s">Security programmes, delivered around your environment.</h2>
             <p className="body mt-s">
               Alongside its products, Kaska designs, implements and supports the security technologies
