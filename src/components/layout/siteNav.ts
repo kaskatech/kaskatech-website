@@ -7,7 +7,7 @@ export type NavItem = { href: string; label: string; desc?: string }
 export type NavGroup = { label: string; href?: string; items?: NavItem[] }
 
 export const PRODUCTS: NavItem[] = [
-  { href: '/kaska-em', label: 'Kaska EM', desc: 'An Autonomous Cyber Risk & Resilience Platform' },
+  { href: '/kaska-em', label: 'Exposure Management', desc: 'An Autonomous Cyber Risk & Resilience Platform' },
   { href: '/email-security', label: 'Vantmail', desc: 'API-first email security' },
   { href: '/features', label: 'Platform capabilities', desc: 'Kaska EM, from asset intelligence to resilience reporting' },
   { href: '/integrations', label: 'Integrations', desc: 'Above the security stack you already run' },

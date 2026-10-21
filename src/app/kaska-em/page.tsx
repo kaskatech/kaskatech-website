@@ -460,40 +460,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 12 · BREADTH & TRUST — EMAIL SECURITY */}
-      <section className="s-dark sec">
-        <div className="wrap split even">
-          <div>
-            <span className="kicker">Vantmail · email security by Kaska</span>
-            <h2 className="h2 mt-s">API-first email security. <em>No MX change.</em></h2>
-            <p className="lede mt-s">
-              A separate Kaska product, run through vantmail.ai: email security for Microsoft 365, Google Workspace
-              and Zoho Mail, connected through the provider&apos;s own API. Observe detections alongside your existing
-              protection, then set response thresholds.
-            </p>
-            <div className="ctas mt-m">
-              <Link className="btn btn-go" href="/email-security">Explore Vantmail<Arrow /></Link>
-              <a className="btn btn-q" href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">Visit vantmail.ai</a>
-            </div>
-          </div>
-          <div className="mail" aria-label="Illustrative business email compromise example">
-            <div className="mail-h">
-              <div><b>From</b>Accounts · Meridian Supplies &lt;accounts@meridian-supp1ies.com&gt;</div>
-              <div><b>Subject</b>RE: Invoice MS-4471 — updated bank details</div>
-            </div>
-            <div className="mail-b">Hi, please note our bank account has changed. Kindly process invoice MS-4471 to the new account below before Friday&apos;s payment run.</div>
-            <div className="mail-s">
-              <span className="h">Signals behind the verdict</span>
-              <div className="sg"><i className="w" />Lookalike sender domain</div>
-              <div className="sg"><i className="w" />Bank-account change request</div>
-              <div className="sg"><i />Reply inside an existing invoice thread</div>
-              <div className="vd"><span>Likely BEC · high risk</span><span>Evidence retained</span></div>
-            </div>
-          </div>
-        </div>
-        <p className="wrap note mt-s">Illustrative example · fictional organisation and message.</p>
-      </section>
-
       {/* 12 · BREADTH & TRUST — TECHNOLOGY SOLUTIONS (compact) */}
       <section className="s-white sec">
         <div className="wrap split top">
