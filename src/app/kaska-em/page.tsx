@@ -39,7 +39,7 @@ const QUESTIONS = [
 
 export default function Page() {
   return (
-    <>
+    <div className="em-brand">
       {/* 1 · HERO — THE OUTCOME */}
       <section className="s-dark">
         <div className="wrap">
@@ -94,9 +94,9 @@ export default function Page() {
             <div className="mid" aria-hidden="true">
               <svg viewBox="0 0 120 260" preserveAspectRatio="none">
                 {[30, 70, 110, 150, 190, 230].map((y) => (
-                  <path key={y} d={`M4 ${y} C 60 ${y}, 60 130, 112 130`} fill="none" stroke="#BDB9AC" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
+                  <path key={y} d={`M4 ${y} C 60 ${y}, 60 130, 112 130`} fill="none" stroke="var(--ln2)" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
                 ))}
-                <circle cx="112" cy="130" r="4" fill="#C9A44C" />
+                <circle cx="112" cy="130" r="4" fill="var(--gold)" />
               </svg>
             </div>
             <div className="col">
@@ -274,7 +274,7 @@ export default function Page() {
             ))}
           </div>
           <div className="spine-back">
-            <svg viewBox="0 0 520 24" aria-hidden="true"><path d="M516 4 V14 H8" fill="none" stroke="#C9A44C" strokeWidth="1.2" /><path d="M14 8 L8 14 L14 20" fill="none" stroke="#C9A44C" strokeWidth="1.2" /></svg>
+            <svg viewBox="0 0 520 24" aria-hidden="true"><path d="M516 4 V14 H8" fill="none" stroke="var(--gold)" strokeWidth="1.2" /><path d="M14 8 L8 14 L14 20" fill="none" stroke="var(--gold)" strokeWidth="1.2" /></svg>
             <span>Illustrative example. Threat-informed prioritisation of connected conditions, not a guarantee of what will happen.</span>
           </div>
           <div className="split mt-l">
@@ -504,7 +504,7 @@ export default function Page() {
           </div>
           <svg className="eco-feed" viewBox="0 0 1000 64" preserveAspectRatio="none" aria-hidden="true">
             {[125, 375, 625, 875].map((x) => (
-              <path key={x} d={`M${x} 0 C ${x} 40, 500 24, 500 64`} fill="none" stroke="#C9A44C" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
+              <path key={x} d={`M${x} 0 C ${x} 40, 500 24, 500 64`} fill="none" stroke="var(--gold)" strokeWidth="1.2" vectorEffect="non-scaling-stroke" />
             ))}
           </svg>
           <div className="eco-bar">
@@ -586,6 +586,6 @@ export default function Page() {
         title={<>Know what is <em>actually</em> protected.</>}
         text="A focused walkthrough of your exposure, the risks that matter most, and the evidence behind every answer."
       />
-    </>
+    </div>
   )
 }

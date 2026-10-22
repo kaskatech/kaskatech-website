@@ -714,7 +714,7 @@ ul{list-style:none}
 
 /* ==========================================================================
    PARENT PALETTES (site-v8) — Kaska Technologies house-of-brands parent.
-   Applied to every route EXCEPT /kaska-em (which keeps black / gold / lime).
+   Applied to every route; all pages; brand colours appear only on the home-page door cards.
    Set on <html data-palette="..." data-mode="light|dark"> by the inline
    script in layout.tsx. Preview: ?palette=granite|stone|forest&mode=light|dark
    ========================================================================== */
@@ -744,7 +744,7 @@ html[data-palette] .s-white{background:var(--ps)}
 html[data-palette] .hdoor{background:var(--ps);border-color:var(--pl2);border-top:3px solid var(--door,var(--pa))}
 html[data-palette] .hdoor.main{background:var(--ps);border-color:var(--pl2);border-top-color:var(--door)}
 html[data-palette] .hdoor .dtag{color:var(--door,var(--pa));border-color:color-mix(in srgb,var(--door,var(--pa)) 55%,transparent)}
-html[data-palette] .hdoor .more{color:var(--door,var(--pa))}
+html[data-palette] .hdoor .more{color:var(--pa)}
 
 /* sub-brand door colours (each door carries its own brand) */
 .hdoor.d-em{--door:#C9A44C}
@@ -753,16 +753,12 @@ html[data-palette] .hdoor .more{color:var(--door,var(--pa))}
 .hdoor.d-ch{--door:#7C3AED}
 html[data-mode="dark"] .hdoor.d-vm{--door:#04CEE8}
 html[data-mode="dark"] .hdoor.d-ch{--door:#A78BFA}
-.hdoor.d-em .btn-go{background:#B7E33A;color:#0A0E02}
 
 .hdoor.d-ch .dtag{background:linear-gradient(90deg,#7C3AED,#EC4899);-webkit-background-clip:text;background-clip:text;color:transparent!important}
 html[data-mode="dark"] .hdoor.d-ch .dtag{background:linear-gradient(90deg,#A78BFA,#EC4899);-webkit-background-clip:text;background-clip:text}
 
-/* /email-security — Vantmail sub-brand accent inside the parent layout */
+/* /email-security, /kaska-em, /cybersechire use the parent palette only (founder, 2026-10-22). */
 .vm-brand{display:contents}
-html[data-palette] .vm-brand{--pa:#007692;--gold:#007692;--gold-hi:#007692;--gold-deep:#007692;--lime:#007692;--lime-deep:#007692;--gold-a:rgba(0,118,146,.12)}
-html[data-palette][data-mode="dark"] .vm-brand{--pa:#04CEE8;--gold:#04CEE8;--gold-hi:#04CEE8;--gold-deep:#04CEE8;--lime:#04CEE8;--lime-deep:#04CEE8;--gold-a:rgba(4,206,232,.12)}
-
 /* parent palette: re-map hardcoded warm/dark-canvas text greys to palette tokens */
 html[data-palette] .lede{color:var(--pm)}
 html[data-palette] .s-warm .lede,html[data-palette] .s-white .lede{color:var(--pm)}
@@ -841,3 +837,20 @@ html[data-palette] .behind{box-shadow:0 24px 48px -24px rgba(18,23,29,.2)}
 html[data-palette] .nd-menu{box-shadow:0 20px 40px rgba(18,23,29,.14)}
 html[data-palette] .edrawer{box-shadow:-20px 0 40px rgba(18,23,29,.14)}
 html[data-palette] .form-card .act.full{color:#fff} html[data-palette] .form-card .act.full:hover{background:var(--pa);filter:brightness(1.1)} html[data-palette][data-mode="dark"] .form-card .act.full{color:var(--pg)}
+
+.em-brand{display:contents}
+
+/* /kaska-em on the parent palette: re-map the hardcoded dark-canvas SVG / inline colours */
+html[data-palette] .em-brand .chip.ok{color:#fff}
+html[data-palette] .em-brand .pair div{grid-template-columns:minmax(64px,auto) minmax(0,1fr)}
+html[data-palette] .em-brand [style*="#D6B465"],html[data-palette] .em-brand [style*="rgb(214, 180, 101)"]{color:var(--gold)!important}
+html[data-palette] .em-brand [style*="#9C9B94"],html[data-palette] .em-brand [style*="rgb(156, 155, 148)"],html[data-palette] .em-brand [style*="#6B6A64"],html[data-palette] .em-brand [style*="rgb(107, 106, 100)"]{color:var(--pm)!important}
+html[data-palette] .em-brand svg text[fill="#EDEBE4"],html[data-palette] .em-brand svg text[fill="#DDDBD3"]{fill:var(--pi)}
+html[data-palette] .em-brand svg text[fill="#A7A69E"],html[data-palette] .em-brand svg text[fill="#6B6A64"]{fill:var(--pm)}
+html[data-palette] .em-brand svg [fill="#C9A44C"],html[data-palette] .em-brand svg [fill="#B7E33A"]{fill:var(--pa)}
+html[data-palette] .em-brand svg [stroke="#C9A44C"]{stroke:var(--pa)}
+html[data-palette] .em-brand svg [stroke="#3A3C43"],html[data-palette] .em-brand svg [stroke="#2A2D34"]{stroke:var(--pl2)}
+html[data-palette] .em-brand svg rect[fill="#12151B"]{fill:var(--ps)}
+html[data-palette] .em-brand svg [fill="#6E6D66"]{fill:var(--pm)}
+html[data-palette] .em-brand svg [fill="#3A3A36"],html[data-palette] .em-brand svg [fill="#4A4A45"]{fill:var(--pl2)}
+html[data-palette][data-mode="dark"] .em-brand .chip.ok{color:var(--pg)}

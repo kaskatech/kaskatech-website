@@ -59,6 +59,7 @@ export default function Page() {
               <h3>CyberSecHire</h3>
               <p>Hire vetted cybersecurity professionals and experts.</p>
               <div className="ctas">
+                <Link className="btn btn-go" href="/cybersechire">Explore CyberSecHire<Arrow /></Link>
                 <a className="btn btn-q" href="https://cybersechire.com" target="_blank" rel="noopener noreferrer">Visit cybersechire.com ↗</a>
               </div>
             </div>

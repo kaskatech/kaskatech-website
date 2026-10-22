@@ -16,7 +16,7 @@ export default function Footer() {
             <Link href="/kaska-em">Exposure Management</Link>
             <Link href="/email-security">Vantmail</Link>
             <a href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">vantmail.ai ↗</a>
-            <a href="https://cybersechire.com" target="_blank" rel="noopener noreferrer">CyberSecHire ↗</a>
+            <Link href="/cybersechire">CyberSecHire</Link>
             <Link href="/features">Platform capabilities</Link>
             <Link href="/integrations">Integrations</Link>
           </div>
