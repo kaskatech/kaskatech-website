@@ -684,13 +684,14 @@ ul{list-style:none}
 
 /* ── home doorway: hero, three doors ── */
 .home-hero{padding:88px 0 72px}
-.hdoors{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px;margin-top:48px}
+.hdoors{display:grid;grid-template-columns:1.35fr 1fr 1fr 1fr;gap:16px;margin-top:48px}
 .hdoor{display:flex;flex-direction:column;border:1px solid var(--ln2);border-radius:10px;padding:28px;background:rgba(255,255,255,.02)}
 .hdoor.main{border-color:var(--gold-deep);background:linear-gradient(160deg,rgba(201,164,76,.08) 0%,rgba(255,255,255,.02) 60%)}
 .hdoor h3{font-family:var(--display);font-size:26px;line-height:1.15;font-weight:600;margin:16px 0 8px}
 .hdoor p{color:var(--mute-d);font-size:15px;line-height:1.6;margin:0 0 22px}
 .hdoor .ctas{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 .dtag{display:inline-block;align-self:flex-start;font:500 11px/1.5 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold-deep);border-radius:999px;padding:3px 10px}
+@media (max-width:1180px){.hdoors{grid-template-columns:1fr 1fr}}
 @media (max-width:960px){.hdoors{grid-template-columns:1fr}.home-hero{padding:56px 0 44px}}
 
 /* Also from Kaska strip (home) */
@@ -710,3 +711,43 @@ ul{list-style:none}
 .vcmp ul{margin:0;padding-left:18px}
 .vcmp li{margin:0 0 8px;line-height:1.6;font-size:15px}
 @media (max-width:860px){.cols2{grid-template-columns:1fr}}
+
+/* ==========================================================================
+   PARENT PALETTES (site-v8) — Kaska Technologies house-of-brands parent.
+   Applied to every route EXCEPT /kaska-em (which keeps black / gold / lime).
+   Set on <html data-palette="..." data-mode="light|dark"> by the inline
+   script in layout.tsx. Preview: ?palette=granite|stone|forest&mode=light|dark
+   ========================================================================== */
+html[data-palette="granite"]{--pg:#F4F6F8;--ps:#FFFFFF;--pi:#12171D;--pm:#5A6470;--pa:#1F5FAF;--pa2:#B4532A;--pl:#DCE1E7;--pl2:#C5CCD5}
+html[data-palette="granite"][data-mode="dark"]{--pg:#0F1318;--ps:#171C23;--pi:#E8ECF1;--pm:#98A2AE;--pa:#5B9BE6;--pa2:#E08A5E;--pl:#232A33;--pl2:#323B46}
+html[data-palette="stone"]{--pg:#F3F1EC;--ps:#FFFFFF;--pi:#1D1B19;--pm:#66615A;--pa:#8E2F3C;--pa2:#3F5E5A;--pl:#E0DCD3;--pl2:#CCC6BA}
+html[data-palette="stone"][data-mode="dark"]{--pg:#161412;--ps:#1F1C1A;--pi:#EEEAE4;--pm:#A39C92;--pa:#D06A76;--pa2:#7FA8A2;--pl:#2C2825;--pl2:#3B3632}
+html[data-palette="forest"]{--pg:#F2F4F2;--ps:#FFFFFF;--pi:#152019;--pm:#59665E;--pa:#1E6B4F;--pa2:#9A6B2F;--pl:#DAE0DB;--pl2:#C3CCC5}
+html[data-palette="forest"][data-mode="dark"]{--pg:#0F1512;--ps:#18201B;--pi:#E6EDE8;--pm:#96A49B;--pa:#5FB38E;--pa2:#D3A062;--pl:#222C26;--pl2:#313D35}
+html[data-palette]{
+  --black:var(--pg);--deep:var(--pg);--s1:var(--ps);--s2:var(--ps);--s3:var(--ps);
+  --ln:var(--pl);--ln2:var(--pl2);--ink-d:var(--pi);--mute-d:var(--pm);--faint-d:var(--pm);
+  --warm:var(--pg);--white:var(--ps);--ln-l:var(--pl);--ink:var(--pi);--mute:var(--pm);
+  --gold:var(--pa);--gold-hi:var(--pa);--gold-deep:var(--pa);--gold-a:color-mix(in srgb,var(--pa) 14%,transparent);
+  --lime:var(--pa);--lime-deep:var(--pa);color-scheme:light;
+}
+html[data-palette][data-mode="dark"]{color-scheme:dark}
+html[data-palette] .nav{background:color-mix(in srgb,var(--pg) 92%,transparent)}
+html[data-palette] .navlinks > a,html[data-palette] .nd-btn,html[data-palette] .navbar .talk{color:var(--pi)}
+html[data-palette] .btn-go{color:#fff} html[data-palette] .btn-go:hover{background:var(--pa);filter:brightness(1.1)}
+html[data-palette][data-mode="dark"] .btn-go{color:var(--pg)}
+html[data-palette] .lede,html[data-palette] .body,html[data-palette] .cols3 p{color:var(--pm)}
+html[data-palette] .s-white{background:var(--ps)}
+html[data-palette] .hdoor{background:var(--ps);border-color:var(--pl2);border-top:3px solid var(--door,var(--pa))}
+html[data-palette] .hdoor.main{background:var(--ps);border-color:var(--pl2);border-top-color:var(--door)}
+html[data-palette] .hdoor .dtag{color:var(--door,var(--pa))}
+
+/* sub-brand door colours (each door carries its own brand) */
+.hdoor.d-em{--door:#C9A44C}
+.hdoor.d-vm{--door:#7C3AED}
+.hdoor.d-ms{--door:var(--gold)}
+.hdoor.d-ch{--door:#0F766E}
+html[data-mode="dark"] .hdoor.d-vm{--door:#A78BFA}
+html[data-mode="dark"] .hdoor.d-ch{--door:#2DD4BF}
+.hdoor.d-em .btn-go{background:#B7E33A;color:#0A0E02}
+

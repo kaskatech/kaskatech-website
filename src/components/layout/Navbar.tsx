@@ -88,7 +88,7 @@ export default function Navbar() {
                   </button>
                   <div className="nd-menu">
                     {g.items.map((i) => (
-                      <Link key={i.href} href={i.href} onClick={() => setMenu(null)}>
+                      <Link key={i.href} href={i.href} onClick={() => setMenu(null)} {...(i.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                         <span className="ni-t">{i.label}</span>
                         {i.desc && <span className="ni-d">{i.desc}</span>}
                       </Link>
@@ -128,7 +128,7 @@ export default function Navbar() {
               <>
                 <div className="dg-h">{g.label}</div>
                 {g.items.map((i) => (
-                  <Link key={i.href} href={i.href} className={isActive(i.href) && !i.href.includes('#') ? 'active' : undefined}>
+                  <Link key={i.href} href={i.href} className={isActive(i.href) && !i.href.includes('#') ? 'active' : undefined} {...(i.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
                     {i.label}
                   </Link>
                 ))}

@@ -5,13 +5,13 @@ import { Arrow, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Kaska — Stop the attack before it starts. Recover fast if it does.',
   description:
-    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Vantmail email security; and Managed Security Services.',
+    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Vantmail email security; Managed Security Services; and CyberSecHire, cybersecurity talent and expert services.',
 }
 
 export default function Page() {
   return (
     <>
-      {/* HERO + THREE DOORS */}
+      {/* HERO + FOUR DOORS */}
       <section className="s-dark home-hero">
         <div className="wrap">
           <span className="kicker">Kaska Technologies</span>
@@ -24,7 +24,7 @@ export default function Page() {
           </p>
 
           <div className="hdoors">
-            <div className="hdoor main">
+            <div className="hdoor main d-em">
               <span className="dtag">Exposure Management</span>
               <h3>Kaska EM</h3>
               <p>
@@ -37,7 +37,7 @@ export default function Page() {
                 <Link className="btn btn-q" href={demo('em')}>Request a briefing</Link>
               </div>
             </div>
-            <div className="hdoor">
+            <div className="hdoor d-vm">
               <span className="dtag">Email Security</span>
               <h3>Vantmail</h3>
               <p>API-first email security for Microsoft 365, Google Workspace and Zoho Mail. No MX change.</p>
@@ -46,7 +46,7 @@ export default function Page() {
                 <a className="more" href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">Visit vantmail.ai ↗</a>
               </div>
             </div>
-            <div className="hdoor">
+            <div className="hdoor d-ms">
               <span className="dtag">Security Services</span>
               <h3>Managed Security Services</h3>
               <p>SOC / MDR, VAPT, GRC and compliance, delivered by Kaska with MSSP and OEM partners.</p>
@@ -54,9 +54,18 @@ export default function Page() {
                 <Link className="btn btn-q" href="/managed-services">Managed services<Arrow /></Link>
               </div>
             </div>
+            <div className="hdoor d-ch">
+              <span className="dtag">Cybersecurity Talent</span>
+              <h3>CyberSecHire</h3>
+              <p>Hire vetted cybersecurity professionals and experts.</p>
+              <div className="ctas">
+                <a className="btn btn-q" href="https://cybersechire.com" target="_blank" rel="noopener noreferrer">Visit cybersechire.com ↗</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* WHY KASKA */}
       <section className="s-white sec">
