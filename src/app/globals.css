@@ -747,10 +747,10 @@ html[data-palette] .hdoor .dtag{color:var(--door,var(--pa))}
 
 /* sub-brand door colours (each door carries its own brand) */
 .hdoor.d-em{--door:#C9A44C}
-.hdoor.d-vm{--door:#7C3AED}
+.hdoor.d-vm{--door:#0891B2}
 .hdoor.d-ms{--door:var(--gold)}
-.hdoor.d-ch{--door:#0F766E}
-html[data-mode="dark"] .hdoor.d-vm{--door:#A78BFA}
-html[data-mode="dark"] .hdoor.d-ch{--door:#2DD4BF}
+.hdoor.d-ch{--door:#7C3AED}
+html[data-mode="dark"] .hdoor.d-vm{--door:#22D3EE}
+html[data-mode="dark"] .hdoor.d-ch{--door:#A78BFA}
 .hdoor.d-em .btn-go{background:#B7E33A;color:#0A0E02}
 
