@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { NAV, REGISTER } from './siteNav'
+import { NAV, PARENT, REGISTER } from './siteNav'
 
 const Chevron = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -54,7 +54,8 @@ export default function Navbar() {
   }, [pathname])
 
   const isActive = (href: string) => {
-    const path = href.split('#')[0]
+    if (href.includes('#')) return false
+    const path = href
     return path === '/' ? pathname === '/' : pathname.startsWith(path)
   }
 
@@ -62,10 +63,10 @@ export default function Navbar() {
     <>
       <nav className="nav" aria-label="Main">
         <div className="wrap" ref={barRef}>
-          <Link className="brand" href="/" aria-label="Kaska home">
+          <Link className="brand" href="/" aria-label="Kaska EM home">
             <KaskaMark />
-            <span className="nm">Kaska</span>
-            <span className="tg">Technologies<br />Products &amp; Services</span>
+            <span className="nm">Kaska EM</span>
+            <span className="tg">Kaska Exposure<br />Management</span>
           </Link>
 
           <div className="navlinks">
@@ -104,7 +105,8 @@ export default function Navbar() {
           </div>
 
           <div className="navbar">
-            <Link className="btn btn-q" href={REGISTER}>Talk to us</Link>
+            <a className="parent-link" href={PARENT}>Kaska Technologies ↗</a>
+            <Link className="btn btn-go" href={REGISTER}>Request a briefing</Link>
             <button className="hamb" aria-label="Open menu" aria-expanded={open} aria-controls="siteDrawer" onClick={() => setOpen(true)}>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
                 <path d="M4 7h16M4 12h16M4 17h16" />
@@ -140,8 +142,8 @@ export default function Navbar() {
             )}
           </div>
         ))}
-        <Link className="btn btn-go" href={REGISTER}>Talk to us</Link>
-        <div className="dn-tag">Kaska Technologies &amp; Services Pvt Ltd</div>
+        <Link className="btn btn-go" href={REGISTER}>Request a briefing</Link>
+        <div className="dn-tag"><a href={PARENT}>Kaska Technologies ↗</a></div>
       </aside>
     </>
   )

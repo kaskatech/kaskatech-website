@@ -3,7 +3,8 @@ import Link from 'next/link'
 import { Arrow, Close, PageHero, StackDiagram, demo } from '@/components/k/ui'
 
 export const metadata: Metadata = {
-  title: 'Integrations — Kaska',
+  title: 'Integrations',
+  alternates: { canonical: '/integrations' },
   description:
     'Kaska Exposure Management Platform™ is vendor-agnostic. It is designed to connect to the security tools you already run, from SIEM and EDR to identity, cloud, email, OT and backup, and to keep only the signal it needs.',
 }
@@ -39,7 +40,7 @@ export default function Page() {
       >
         <div className="ctas mt-m">
           <Link className="btn btn-go" href={demo('kaska-em')}>Ask about your stack<Arrow /></Link>
-          <Link className="btn btn-q" href="/kaska-em">About Kaska EM</Link>
+          <Link className="btn btn-q" href="/">About Kaska EM</Link>
         </div>
       </PageHero>
 

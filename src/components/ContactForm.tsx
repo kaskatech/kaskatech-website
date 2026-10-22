@@ -41,8 +41,8 @@ export default function ContactForm() {
 
   useEffect(() => {
     const key = new URLSearchParams(window.location.search).get('interest')
-    const match = INTERESTS.find((i) => i.key === key)
-    if (match) setInterest(match.label)
+    const match = INTERESTS.find((i) => i.key === key) ?? INTERESTS[0]
+    setInterest(match.label)
   }, [])
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {

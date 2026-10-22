@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { REGISTER } from './siteNav'
+import { PARENT, REGISTER } from './siteNav'
 import { KaskaMark } from './Navbar'
 
 export default function Footer() {
@@ -8,33 +8,31 @@ export default function Footer() {
       <div className="wrap">
         <div className="g">
           <div className="c">
-            <Link className="brand" href="/" aria-label="Kaska home"><KaskaMark /><span className="nm">Kaska</span></Link>
-            <span style={{ marginTop: 12, maxWidth: '32ch' }}>Cybersecurity products and services. Built in India.</span>
+            <Link className="brand" href="/" aria-label="Kaska EM home"><KaskaMark /><span className="nm">Kaska EM</span></Link>
+            <span style={{ marginTop: 12, maxWidth: '36ch' }}>
+              Kaska Exposure Management is a product of{' '}
+              <a href={PARENT} style={{ textDecoration: 'underline' }}>Kaska Technologies &amp; Services Pvt Ltd</a>.
+            </span>
           </div>
           <div className="c">
-            <h4>Products</h4>
-            <Link href="/kaska-em">Exposure Management</Link>
-            <Link href="/features" className="ni-sub">Platform capabilities</Link>
-            <Link href="/integrations" className="ni-sub">Integrations</Link>
-            <Link href="/email-security">Vantmail</Link>
-            <a href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">vantmail.ai ↗</a>
+            <h4>Kaska EM</h4>
+            <Link href="/">Platform</Link>
+            <Link href="/features">Capabilities</Link>
+            <Link href="/integrations">Integrations</Link>
+            <a href={`${PARENT}/resources`}>Resources ↗</a>
+            <Link href={REGISTER}>Request a briefing</Link>
           </div>
           <div className="c">
-            <h4>Services</h4>
-            <Link href="/managed-services">Managed Security Services</Link>
-            <Link href="/hire-professionals">Hire Professionals</Link>
-            <Link href="/industries">Industries</Link>
+            <h4>Kaska Technologies</h4>
+            <a href={`${PARENT}/company`}>About Kaska ↗</a>
+            <a href={`${PARENT}/partners`}>Partners ↗</a>
+            <a href={`${PARENT}/managed-services`}>Managed Services ↗</a>
+            <a href={`${PARENT}/hire-professionals`}>Hire Professionals ↗</a>
+            <a href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">Vantmail ↗</a>
           </div>
           <div className="c">
-            <h4>Company</h4>
-            <Link href="/company">About Kaska</Link>
-            <Link href="/partners">Partners</Link>
+            <h4>Legal</h4>
             <Link href="/contact">Contact</Link>
-            <Link href={REGISTER}>Talk to us</Link>
-          </div>
-          <div className="c">
-            <h4>Resources</h4>
-            <Link href="/resources">Datasheets &amp; resources</Link>
             <Link href="/privacy">Privacy</Link>
             <Link href="/terms">Terms</Link>
           </div>

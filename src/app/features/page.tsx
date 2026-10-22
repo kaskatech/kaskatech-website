@@ -8,7 +8,8 @@ import { Arrow, Close, PageHero, StackDiagram, demo } from '@/components/k/ui'
 import { ARCH, STACK_IN, STACK_OUT } from '@/components/k/content'
 
 export const metadata: Metadata = {
-  title: 'Platform capabilities — Kaska',
+  title: 'Platform capabilities',
+  alternates: { canonical: '/features' },
   description:
     'The capabilities and architecture of Kaska Exposure Management Platform™: asset-centric intelligence, dual-path acquisition, exposure and risk, control validation, compliance and evidence, Kaska Agents, governed response and resilience — before, during and after a breach.',
 }
@@ -69,7 +70,7 @@ export default function Page() {
       >
         <div className="ctas mt-m">
           <Link className="btn btn-go" href={demo('kaska-em')}>Request a briefing<Arrow /></Link>
-          <Link className="btn btn-q" href="/kaska-em">About Kaska EM</Link>
+          <Link className="btn btn-q" href="/">About Kaska EM</Link>
         </div>
       </PageHero>
 

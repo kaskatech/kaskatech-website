@@ -868,3 +868,8 @@ html[data-palette] :is(.s-dark,.s-deep,.s-warm).sec:has(+ :is(.s-dark,.s-deep,.s
 .ni-sub{padding-left:18px!important;position:relative}
 .ni-sub::before{content:'';position:absolute;left:6px;top:50%;width:6px;height:1px;background:currentColor;opacity:.5}
 .nd-menu .ni-sub .ni-t{font-size:.92em;opacity:.85}
+
+/* em.kaskatech.com — small link back to the parent company in the nav bar */
+.navbar .parent-link{font:500 12px/1 var(--mono);letter-spacing:.04em;color:var(--mute-d);margin-right:14px;white-space:nowrap}
+.navbar .parent-link:hover{color:var(--gold)}
+@media (max-width:1100px){.navbar .parent-link{display:none}}

@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy — Kaska',
+  title: 'Privacy Policy',
+  alternates: { canonical: '/privacy' },
   description:
     'How Kaska Technologies & Services Pvt Ltd collects, uses, and protects personal data — aligned with India’s Digital Personal Data Protection Act, 2023.',
 }

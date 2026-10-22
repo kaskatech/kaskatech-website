@@ -25,32 +25,27 @@ const plexMono = IBM_Plex_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
+  metadataBase: new URL('https://em.kaskatech.com'),
+  title: { default: 'Kaska Exposure Management (Kaska EM)', template: '%s · Kaska EM' },
   description:
     'Kaska Exposure Management Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
+  alternates: { canonical: '/' },
   openGraph: {
-    title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
+    title: 'Kaska Exposure Management (Kaska EM)',
     description:
       'Kaska Exposure Management Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
     type: 'website',
-    url: 'https://kaskatech.com',
+    url: 'https://em.kaskatech.com',
+    siteName: 'Kaska Exposure Management',
   },
 }
 
-// Parent-brand palette for every route. Brand colours appear only on the home door cards.
-// Default = granite (light). Preview override: ?palette=granite|stone|forest&mode=light|dark
-const PALETTE_SCRIPT = `(function(){try{var d=document.documentElement,p=location.pathname;
-function set(){var x=location.pathname.split('.html')[0];var q=new URLSearchParams(location.search),pl=q.get('palette'),m=q.get('mode');
-if(!/^(granite|stone|forest|midnight)$/.test(pl||''))pl='granite';if(!/^(light|dark)$/.test(m||''))m='light';
-d.setAttribute('data-palette',pl);d.setAttribute('data-mode',m)}
-set();var ps=history.pushState;history.pushState=function(){ps.apply(this,arguments);set()};addEventListener('popstate',set)}catch(e){}})()`
+// em.kaskatech.com uses the original Kaska EM visual language (black, gold, lime).
+// The kaskatech.com parent-brand palette script is deliberately not applied here.
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${interTight.variable} ${inter.variable} ${plexMono.variable}`} suppressHydrationWarning>
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: PALETTE_SCRIPT }} />
-      </head>
       <body>
         <a className="skip" href="#main">Skip to content</a>
         <Navbar />

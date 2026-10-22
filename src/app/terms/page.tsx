@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Use — Kaska',
+  title: 'Terms of Use',
+  alternates: { canonical: '/terms' },
   description:
     'The terms that govern use of the kaskatech.com website and any early-access evaluation of the Kaska platform.',
 }
