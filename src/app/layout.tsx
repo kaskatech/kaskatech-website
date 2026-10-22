@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 const PALETTE_SCRIPT = `(function(){try{var d=document.documentElement,p=location.pathname;
 function set(){var x=location.pathname.split('.html')[0];if(x.indexOf('/kaska-em')===0&&(x.length===9||x.charAt(9)==='/')){d.removeAttribute('data-palette');d.removeAttribute('data-mode');return}
 var q=new URLSearchParams(location.search),pl=q.get('palette'),m=q.get('mode');
-if(!/^(granite|stone|forest)$/.test(pl||''))pl='granite';if(!/^(light|dark)$/.test(m||''))m='light';
+if(!/^(granite|stone|forest|midnight)$/.test(pl||''))pl='granite';if(!/^(light|dark)$/.test(m||''))m='light';
 d.setAttribute('data-palette',pl);d.setAttribute('data-mode',m)}
 set();var ps=history.pushState;history.pushState=function(){ps.apply(this,arguments);set()};addEventListener('popstate',set)}catch(e){}})()`
 
