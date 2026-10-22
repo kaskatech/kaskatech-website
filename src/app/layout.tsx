@@ -5,7 +5,6 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import ImageGuard from '@/components/ImageGuard'
 
-// Fonts are self-hosted (src/fonts) so the build never depends on fetching Google Fonts.
 const interTight = localFont({
   src: [
     { path: '../fonts/inter-tight-latin-400-normal.woff2', weight: '400', style: 'normal' },
@@ -33,12 +32,6 @@ const plexMono = localFont({
   variable: '--font-plex-mono',
   display: 'swap',
 })
-import './globals.css'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
-import ImageGuard from '@/components/ImageGuard'
-
-
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://em.kaskatech.com'),
