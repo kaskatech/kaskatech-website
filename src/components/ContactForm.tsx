@@ -25,10 +25,7 @@ const NOTE_DEFAULT = 'We reply within two business days. Your details are never 
 // ?interest=<key> on /contact pre-selects the enquiry type (used by product-page CTAs).
 const INTERESTS: { key: string; label: string }[] = [
   { key: 'kaska-em', label: 'Kaska EM — briefing' },
-  { key: 'email-security', label: 'Vantmail — email security' },
   { key: 'assessment', label: 'Kaska Risk Assessment' },
-  { key: 'solutions', label: 'Managed Security Services' },
-  { key: 'hire', label: 'Hire professionals' },
   { key: 'partner', label: 'Partnership' },
   { key: 'briefing', label: 'Not sure yet — a briefing' },
 ]
@@ -151,11 +148,11 @@ export default function ContactForm() {
           <textarea
             id="msg"
             name="message"
-            placeholder="A product demo, a datasheet, or managed services for your environment — tell us what you're looking for."
+            placeholder="A briefing, an exposure assessment or a datasheet — tell us about your environment and what you're looking for."
           ></textarea>
         </div>
         <button className="act full" type="submit" disabled={submitting}>
-          Request a Demo
+          Request a briefing
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <path d="M5 12h14M13 6l6 6-6 6" />
           </svg>
