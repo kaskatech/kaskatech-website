@@ -5,7 +5,7 @@ import { Arrow, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Kaska — Stop the attack before it starts. Recover fast if it does.',
   description:
-    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Vantmail email security; Managed Security Services; and CyberSecHire, cybersecurity talent and expert services.',
+    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Vantmail email security; Managed Security Services; and vetted cybersecurity professionals and experts for hire.',
 }
 
 export default function Page() {
@@ -54,13 +54,12 @@ export default function Page() {
                 <Link className="btn btn-q" href="/managed-services">Managed services<Arrow /></Link>
               </div>
             </div>
-            <div className="hdoor d-ch">
-              <span className="dtag">Cybersecurity Talent</span>
-              <h3>CyberSecHire</h3>
+            <div className="hdoor d-ms">
+              <span className="dtag">Professional services</span>
+              <h3>Hire Professionals</h3>
               <p>Hire vetted cybersecurity professionals and experts.</p>
               <div className="ctas">
-                <Link className="btn btn-go" href="/cybersechire">Explore CyberSecHire<Arrow /></Link>
-                <a className="btn btn-q" href="https://cybersechire.com" target="_blank" rel="noopener noreferrer">Visit cybersechire.com ↗</a>
+                <Link className="btn btn-q" href="/hire-professionals">Hire professionals<Arrow /></Link>
               </div>
             </div>
           </div>

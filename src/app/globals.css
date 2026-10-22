@@ -750,14 +750,10 @@ html[data-palette] .hdoor .more{color:var(--pa)}
 .hdoor.d-em{--door:#C9A44C}
 .hdoor.d-vm{--door:#007692}
 .hdoor.d-ms{--door:var(--pa,#1F5FAF)}
-.hdoor.d-ch{--door:#7C3AED}
 html[data-mode="dark"] .hdoor.d-vm{--door:#04CEE8}
-html[data-mode="dark"] .hdoor.d-ch{--door:#A78BFA}
 
-.hdoor.d-ch .dtag{background:linear-gradient(90deg,#7C3AED,#EC4899);-webkit-background-clip:text;background-clip:text;color:transparent!important}
-html[data-mode="dark"] .hdoor.d-ch .dtag{background:linear-gradient(90deg,#A78BFA,#EC4899);-webkit-background-clip:text;background-clip:text}
 
-/* /email-security, /kaska-em, /cybersechire use the parent palette only (founder, 2026-10-22). */
+/* /email-security, /kaska-em, /hire-professionals use the parent palette only (founder, 2026-10-22). */
 .vm-brand{display:contents}
 /* parent palette: re-map hardcoded warm/dark-canvas text greys to palette tokens */
 html[data-palette] .lede{color:var(--pm)}

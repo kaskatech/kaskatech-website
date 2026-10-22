@@ -9,9 +9,13 @@ export type NavGroup = { label: string; href?: string; items?: NavItem[] }
 export const PRODUCTS: NavItem[] = [
   { href: '/kaska-em', label: 'Exposure Management', desc: 'An Autonomous Cyber Risk & Resilience Platform' },
   { href: '/email-security', label: 'Vantmail', desc: 'API-first email security' },
-  { href: '/cybersechire', label: 'CyberSecHire', desc: 'Cybersecurity talent and expert services' },
   { href: '/features', label: 'Platform capabilities', desc: 'Kaska EM, from asset intelligence to resilience reporting' },
   { href: '/integrations', label: 'Integrations', desc: 'Above the security stack you already run' },
+]
+
+export const SERVICES: NavItem[] = [
+  { href: '/managed-services', label: 'Managed Security Services', desc: 'SOC / MDR, VAPT, GRC and compliance' },
+  { href: '/hire-professionals', label: 'Hire Professionals', desc: 'Vetted cybersecurity professionals and experts' },
 ]
 
 export const INDUSTRIES: NavItem[] = [
@@ -24,7 +28,7 @@ export const INDUSTRIES: NavItem[] = [
 
 export const NAV: NavGroup[] = [
   { label: 'Products', items: PRODUCTS },
-  { label: 'Managed Services', href: '/managed-services' },
+  { label: 'Managed Services', items: SERVICES },
   { label: 'Industries', items: INDUSTRIES },
   { label: 'Resources', href: '/resources' },
   {

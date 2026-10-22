@@ -16,13 +16,13 @@ export default function Footer() {
             <Link href="/kaska-em">Exposure Management</Link>
             <Link href="/email-security">Vantmail</Link>
             <a href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">vantmail.ai ↗</a>
-            <Link href="/cybersechire">CyberSecHire</Link>
             <Link href="/features">Platform capabilities</Link>
             <Link href="/integrations">Integrations</Link>
           </div>
           <div className="c">
             <h4>Services</h4>
             <Link href="/managed-services">Managed Security Services</Link>
+            <Link href="/hire-professionals">Hire Professionals</Link>
             <Link href="/industries">Industries</Link>
           </div>
           <div className="c">
