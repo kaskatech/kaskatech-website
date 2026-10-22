@@ -54,7 +54,7 @@ export default function Page() {
         lede="Kaska provides specialist cybersecurity people for your projects, your teams and your leadership roles, on the engagement model that fits the work."
       >
         <div className="ctas mt-m">
-          <Link className="btn btn-go" href={demo('solutions')}>Talk to us about your requirement<Arrow /></Link>
+          <Link className="btn btn-go" href={demo('hire')}>Talk to us about your requirement<Arrow /></Link>
           <Link className="btn btn-q" href={demo('briefing')}>Request a briefing</Link>
         </div>
       </PageHero>
@@ -103,7 +103,7 @@ export default function Page() {
         kicker="Hire Professionals"
         title={<>Tell us what you need. <em>We’ll find the people.</em></>}
         text="Share the role or the work, and we’ll come back with how we would staff it."
-        primary={{ href: demo('solutions'), label: 'Talk to us about your requirement' }}
+        primary={{ href: demo('hire'), label: 'Talk to us about your requirement' }}
         secondary={{ href: demo('briefing'), label: 'Request a briefing' }}
       />
     </>

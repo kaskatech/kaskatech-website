@@ -28,6 +28,7 @@ const INTERESTS: { key: string; label: string }[] = [
   { key: 'email-security', label: 'Vantmail — email security' },
   { key: 'assessment', label: 'Kaska Risk Assessment' },
   { key: 'solutions', label: 'Managed Security Services' },
+  { key: 'hire', label: 'Hire professionals' },
   { key: 'partner', label: 'Partnership' },
   { key: 'briefing', label: 'Not sure yet — a briefing' },
 ]
