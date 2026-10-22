@@ -95,9 +95,9 @@ export function StackDiagram({
   inLabel?: string
   outLabel?: string
 }) {
-  const ink = tone === 'warm' ? '#101010' : '#EDEBE4'
-  const mute = tone === 'warm' ? '#595750' : '#A09F98'
-  const line = tone === 'warm' ? '#BDB9AC' : '#30333B'
+  const ink = `var(--sd-ink,${tone === 'warm' ? '#101010' : '#EDEBE4'})`
+  const mute = `var(--sd-mute,${tone === 'warm' ? '#595750' : '#A09F98'})`
+  const line = `var(--sd-line,${tone === 'warm' ? '#BDB9AC' : '#30333B'})`
   const pairs: string[] = []
   for (let i = 0; i < verbs.length; i += 2) pairs.push(verbs.slice(i, i + 2).join(' · ').toUpperCase())
   const W = 1240, kx = 520, kw = 220
@@ -109,28 +109,28 @@ export function StackDiagram({
   return (
     <div className="conv">
       <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`Kaska sits above your existing tools (${inputs.join(', ')}) and turns their signals into intelligence for ${outputs.join(', ')}.`}>
-        <text x="0" y="12" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" fill={mute}>{inLabel.toUpperCase()}</text>
-        <text x={W} y="12" textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" fill={mute}>{outLabel.toUpperCase()}</text>
+        <text x="0" y="12" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" style={{ fill: mute }}>{inLabel.toUpperCase()}</text>
+        <text x={W} y="12" textAnchor="end" fontFamily="IBM Plex Mono, monospace" fontSize="11" letterSpacing="2.5" style={{ fill: mute }}>{outLabel.toUpperCase()}</text>
         {inputs.map((t, i) => (
           <g key={t}>
-            <text x="0" y={iy(i) + 5} fontFamily="Inter Tight, Inter, sans-serif" fontSize="17" fill={ink}>{t}</text>
-            <path d={`M190 ${iy(i)} C 360 ${iy(i)}, 380 ${ky + 30 + i * 22}, ${kx} ${ky + 30 + i * 22}`} fill="none" stroke={line} strokeWidth="1.2" />
-            <circle cx="190" cy={iy(i)} r="3" fill={line} />
+            <text x="0" y={iy(i) + 5} fontFamily="Inter Tight, Inter, sans-serif" fontSize="17" style={{ fill: ink }}>{t}</text>
+            <path d={`M190 ${iy(i)} C 360 ${iy(i)}, 380 ${ky + 30 + i * 22}, ${kx} ${ky + 30 + i * 22}`} fill="none" style={{ stroke: line }} strokeWidth="1.2" />
+            <circle cx="190" cy={iy(i)} r="3" style={{ fill: line }} />
           </g>
         ))}
-        <rect x={kx} y={ky} width={kw} height={kh} fill="#08090C" />
-        <rect x={kx} y={ky} width="3" height={kh} fill="#C9A44C" />
-        <text x={kx + 28} y={ky + 44} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="2.5" fill="#C9A44C">KASKA</text>
-        <text x={kx + 28} y={ky + 84} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" fill="#EDEBE4">{title[0]}</text>
-        <text x={kx + 28} y={ky + 110} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" fill="#EDEBE4">{title[1]}</text>
+        <rect x={kx} y={ky} width={kw} height={kh} style={{ fill: 'var(--sd-box,#08090C)' }} />
+        <rect x={kx} y={ky} width="3" height={kh} style={{ fill: 'var(--sd-acc,#C9A44C)' }} />
+        <text x={kx + 28} y={ky + 44} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="2.5" style={{ fill: 'var(--sd-acc,#C9A44C)' }}>KASKA</text>
+        <text x={kx + 28} y={ky + 84} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" style={{ fill: 'var(--sd-boxink,#EDEBE4)' }}>{title[0]}</text>
+        <text x={kx + 28} y={ky + 110} fontFamily="Inter Tight, Inter, sans-serif" fontSize="21" style={{ fill: 'var(--sd-boxink,#EDEBE4)' }}>{title[1]}</text>
         {pairs.map((p, i) => (
-          <text key={p} x={kx + 28} y={ky + 158 + i * 20} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="1.5" fill="#A09F98">{p}</text>
+          <text key={p} x={kx + 28} y={ky + 158 + i * 20} fontFamily="IBM Plex Mono, monospace" fontSize="10.5" letterSpacing="1.5" style={{ fill: 'var(--sd-boxmute,#A09F98)' }}>{p}</text>
         ))}
         {outputs.map((t, i) => (
           <g key={t}>
-            <path d={`M${kx + kw} ${ky + 50 + i * 40} C ${kx + kw + 120} ${ky + 50 + i * 40}, ${W - 330} ${oy(i)}, ${W - 250} ${oy(i)}`} fill="none" stroke="#C9A44C" strokeWidth="1.4" />
-            <circle cx={W - 250} cy={oy(i)} r="4" fill={i === 1 ? '#B7E33A' : '#C9A44C'} />
-            <text x={W - 234} y={oy(i) + 6} fontFamily="Inter Tight, Inter, sans-serif" fontSize="18" fill={ink}>{t}</text>
+            <path d={`M${kx + kw} ${ky + 50 + i * 40} C ${kx + kw + 120} ${ky + 50 + i * 40}, ${W - 330} ${oy(i)}, ${W - 250} ${oy(i)}`} fill="none" style={{ stroke: 'var(--sd-acc,#C9A44C)' }} strokeWidth="1.4" />
+            <circle cx={W - 250} cy={oy(i)} r="4" style={{ fill: i === 1 ? 'var(--sd-acc2,#B7E33A)' : 'var(--sd-acc,#C9A44C)' }} />
+            <text x={W - 234} y={oy(i) + 6} fontFamily="Inter Tight, Inter, sans-serif" fontSize="18" style={{ fill: ink }}>{t}</text>
           </g>
         ))}
       </svg>

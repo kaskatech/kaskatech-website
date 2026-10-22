@@ -743,14 +743,101 @@ html[data-palette] .lede,html[data-palette] .body,html[data-palette] .cols3 p{co
 html[data-palette] .s-white{background:var(--ps)}
 html[data-palette] .hdoor{background:var(--ps);border-color:var(--pl2);border-top:3px solid var(--door,var(--pa))}
 html[data-palette] .hdoor.main{background:var(--ps);border-color:var(--pl2);border-top-color:var(--door)}
-html[data-palette] .hdoor .dtag{color:var(--door,var(--pa))}
+html[data-palette] .hdoor .dtag{color:var(--door,var(--pa));border-color:color-mix(in srgb,var(--door,var(--pa)) 55%,transparent)}
+html[data-palette] .hdoor .more{color:var(--door,var(--pa))}
 
 /* sub-brand door colours (each door carries its own brand) */
 .hdoor.d-em{--door:#C9A44C}
-.hdoor.d-vm{--door:#0891B2}
-.hdoor.d-ms{--door:var(--gold)}
+.hdoor.d-vm{--door:#007692}
+.hdoor.d-ms{--door:var(--pa,#1F5FAF)}
 .hdoor.d-ch{--door:#7C3AED}
-html[data-mode="dark"] .hdoor.d-vm{--door:#22D3EE}
+html[data-mode="dark"] .hdoor.d-vm{--door:#04CEE8}
 html[data-mode="dark"] .hdoor.d-ch{--door:#A78BFA}
 .hdoor.d-em .btn-go{background:#B7E33A;color:#0A0E02}
 
+.hdoor.d-ch .dtag{background:linear-gradient(90deg,#7C3AED,#EC4899);-webkit-background-clip:text;background-clip:text;color:transparent!important}
+html[data-mode="dark"] .hdoor.d-ch .dtag{background:linear-gradient(90deg,#A78BFA,#EC4899);-webkit-background-clip:text;background-clip:text}
+
+/* /email-security — Vantmail sub-brand accent inside the parent layout */
+.vm-brand{display:contents}
+html[data-palette] .vm-brand{--pa:#007692;--gold:#007692;--gold-hi:#007692;--gold-deep:#007692;--lime:#007692;--lime-deep:#007692;--gold-a:rgba(0,118,146,.12)}
+html[data-palette][data-mode="dark"] .vm-brand{--pa:#04CEE8;--gold:#04CEE8;--gold-hi:#04CEE8;--gold-deep:#04CEE8;--lime:#04CEE8;--lime-deep:#04CEE8;--gold-a:rgba(4,206,232,.12)}
+
+/* parent palette: re-map hardcoded warm/dark-canvas text greys to palette tokens */
+html[data-palette] .lede{color:var(--pm)}
+html[data-palette] .s-warm .lede,html[data-palette] .s-white .lede{color:var(--pm)}
+html[data-palette] .body{color:var(--pm)}
+html[data-palette] .s-warm .body,html[data-palette] .s-white .body{color:var(--pm)}
+html[data-palette] .strike{color:var(--pm)}
+html[data-palette] .s-warm .strike{color:var(--pm)}
+html[data-palette] .chip{color:var(--pi)}
+html[data-palette] .s-warm .chip,html[data-palette] .s-white .chip{color:var(--pm)}
+html[data-palette] .navlinks > a,html[data-palette] .nd-btn{color:var(--pi)}
+html[data-palette] .navbar .talk{color:var(--pi)}
+html[data-palette] .dg a{color:var(--pi)}
+html[data-palette] .hero-b .say{color:var(--pi)}
+html[data-palette] .g-read .r b{color:var(--pi)}
+html[data-palette] .ctl-list button{color:var(--pm)}
+html[data-palette] .ctl-list button b{color:var(--pi)}
+html[data-palette] .chk .v{color:var(--pi)}
+html[data-palette] .chk.vendor .v{color:var(--pm)}
+html[data-palette] .tick{color:var(--pm)}
+html[data-palette] .verdict .vs{color:var(--pm)}
+html[data-palette] .frag .conn p{color:var(--pm)}
+html[data-palette] .spine p{color:var(--pm)}
+html[data-palette] .cond span{color:var(--pm)}
+html[data-palette] .eco-bar span{color:var(--pi)}
+html[data-palette] .doors button b{color:var(--pm)}
+html[data-palette] .dpanel p.q{color:var(--pi)}
+html[data-palette] .chain div{color:var(--pi)}
+html[data-palette] .bl-foot div{color:var(--pm)}
+html[data-palette] .legend5 span{color:var(--pm)}
+html[data-palette] .rail button.done b{color:var(--pm)}
+html[data-palette] .j-cap p{color:var(--pi)}
+html[data-palette] .j-ctl button{color:var(--pi)}
+html[data-palette] .jt-r > div{color:var(--pi)}
+html[data-palette] .own{color:var(--pi)}
+html[data-palette] .jt-r.dim > div{color:var(--pm)}
+html[data-palette] .arch .lv{color:var(--pi)}
+html[data-palette] .capx p{color:var(--pm)}
+html[data-palette] .s-warm .capx p{color:var(--pm)}
+html[data-palette] .behind b{color:var(--pi)}
+html[data-palette] .side button{color:var(--pm)}
+html[data-palette] .side .dim{color:var(--pm)}
+html[data-palette] .pn .sb{color:var(--pm)}
+html[data-palette] .dl > div{color:var(--pi)}
+html[data-palette] .ft .tr{color:var(--pi)}
+html[data-palette] .edrawer .x{color:var(--pi)}
+html[data-palette] .cnotes span{color:var(--pm)}
+html[data-palette] .rep .row{color:var(--pi)}
+html[data-palette] .elist p{color:var(--pm)}
+html[data-palette] .s-dark .elist p{color:var(--pm)}
+html[data-palette] .cols3 p{color:var(--pm)}
+html[data-palette] .s-dark .cols3 p,html[data-palette] .s-deep .cols3 p{color:var(--pm)}
+html[data-palette] .cols4 p{color:var(--pm)}
+html[data-palette] .s-dark .cols4 p,html[data-palette] .s-deep .cols4 p{color:var(--pm)}
+html[data-palette] .fam .em li{color:var(--pi)}
+html[data-palette] .fam .es p{color:var(--pm)}
+html[data-palette] .fam .flow span{color:var(--pm)}
+html[data-palette] .es-spine p{color:var(--pm)}
+html[data-palette] .s-warm .es-spine p{color:var(--pm)}
+html[data-palette] .mail-h b{color:var(--pm)}
+html[data-palette] .field label{color:var(--pm)}
+html[data-palette] .hero.legal-hero .sub{color:var(--pm)}
+html[data-palette] .legal p{color:var(--pm)}
+html[data-palette] .legal li{color:var(--pm)}
+html[data-palette] .status-note{color:var(--pm)}
+html[data-palette] .s-dark .status-note{color:var(--pm)}
+html[data-palette] .close p{color:var(--pm)}
+/* StackDiagram (integrations / features) on the parent palette */
+html[data-palette] .conv{--sd-ink:var(--pi);--sd-mute:var(--pm);--sd-line:var(--pl2);--sd-box:#12171D;--sd-acc:var(--pa);--sd-acc2:var(--pa);--sd-boxink:#E8ECF1;--sd-boxmute:#98A2AE}
+html[data-palette][data-mode="dark"] .conv{--sd-box:#171C23}
+/* parent palette: gold tints and heavy dark-canvas shadows */
+html[data-palette] .node.d .dot::after,html[data-palette] .tn.d i::after,html[data-palette] .band-strip i.x{background:var(--gold-a)}
+html[data-palette] .arch .lyr.core{background:linear-gradient(90deg,var(--gold-a),transparent 70%)}
+html[data-palette] .pn.prov{border-color:color-mix(in srgb,var(--pa) 55%,transparent)}
+html[data-palette] .win{box-shadow:0 40px 80px -40px rgba(18,23,29,.22)}
+html[data-palette] .behind{box-shadow:0 24px 48px -24px rgba(18,23,29,.2)}
+html[data-palette] .nd-menu{box-shadow:0 20px 40px rgba(18,23,29,.14)}
+html[data-palette] .edrawer{box-shadow:-20px 0 40px rgba(18,23,29,.14)}
+html[data-palette] .form-card .act.full{color:#fff} html[data-palette] .form-card .act.full:hover{background:var(--pa);filter:brightness(1.1)} html[data-palette][data-mode="dark"] .form-card .act.full{color:var(--pg)}

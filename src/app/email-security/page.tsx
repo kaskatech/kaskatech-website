@@ -63,7 +63,7 @@ const PARTNERS: [string, string][] = [
 
 export default function Page() {
   return (
-    <>
+    <div className="vm-brand">
       <PageHero
         split
         kicker="Vantmail — email security by Kaska"
@@ -262,6 +262,6 @@ export default function Page() {
         primary={{ href: POV, label: 'Start a 14-day proof of value' }}
         secondary={{ href: SITE, label: 'Visit vantmail.ai' }}
       />
-    </>
+    </div>
   )
 }
