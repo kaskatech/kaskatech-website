@@ -854,3 +854,16 @@ html[data-palette] .em-brand svg rect[fill="#12151B"]{fill:var(--ps)}
 html[data-palette] .em-brand svg [fill="#6E6D66"]{fill:var(--pm)}
 html[data-palette] .em-brand svg [fill="#3A3A36"],html[data-palette] .em-brand svg [fill="#4A4A45"]{fill:var(--pl2)}
 html[data-palette][data-mode="dark"] .em-brand .chip.ok{color:var(--pg)}
+
+/* v8 fixes (/kaska-em): same-background sections stacked back to back doubled the
+   section padding into a large empty band; collapse it to a hairline-separated step. */
+html[data-palette] :is(.s-dark,.s-deep,.s-warm).sec + :is(.s-dark,.s-deep,.s-warm).sec{padding-top:clamp(56px,6vw,96px);border-top:1px solid var(--pl)}
+html[data-palette] .s-white.sec + .s-white.sec{padding-top:clamp(56px,6vw,96px);border-top:1px solid var(--pl)}
+/* Board report card: give it its own row so the console never covers it */
+html[data-palette] .prod{padding-top:0}
+html[data-palette] .behind{position:relative;width:min(40%,480px);height:auto;margin:0 0 20px auto;z-index:1}
+/* Breach loop: inactive stations read as secondary but legible on light (>=4.5:1) */
+html[data-palette] .bl-fig .stn.dim{opacity:1}
+html[data-palette] .bl-fig .stn.dim text{fill:var(--pm)}
+html[data-palette] .bl-fig .stn.dim rect{opacity:.55}
+html[data-palette] :is(.s-dark,.s-deep,.s-warm).sec:has(+ :is(.s-dark,.s-deep,.s-warm).sec),html[data-palette] .s-white.sec:has(+ .s-white.sec){padding-bottom:clamp(56px,6vw,96px)}
