@@ -863,3 +863,8 @@ html[data-palette] .bl-fig .stn.dim{opacity:1}
 html[data-palette] .bl-fig .stn.dim text{fill:var(--pm)}
 html[data-palette] .bl-fig .stn.dim rect{opacity:.55}
 html[data-palette] :is(.s-dark,.s-deep,.s-warm).sec:has(+ :is(.s-dark,.s-deep,.s-warm).sec),html[data-palette] .s-white.sec:has(+ .s-white.sec){padding-bottom:clamp(56px,6vw,96px)}
+
+/* nested items under Exposure Management (nav + footer) */
+.ni-sub{padding-left:18px!important;position:relative}
+.ni-sub::before{content:'';position:absolute;left:6px;top:50%;width:6px;height:1px;background:currentColor;opacity:.5}
+.nd-menu .ni-sub .ni-t{font-size:.92em;opacity:.85}

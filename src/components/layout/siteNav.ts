@@ -3,14 +3,14 @@
 // Demo funnel: route to the contact form until a self-serve path exists.
 export const REGISTER = '/contact'
 
-export type NavItem = { href: string; label: string; desc?: string; external?: boolean }
+export type NavItem = { href: string; label: string; desc?: string; external?: boolean; sub?: boolean }
 export type NavGroup = { label: string; href?: string; items?: NavItem[] }
 
 export const PRODUCTS: NavItem[] = [
   { href: '/kaska-em', label: 'Exposure Management', desc: 'An Autonomous Cyber Risk & Resilience Platform' },
+  { href: '/features', label: 'Platform capabilities', sub: true },
+  { href: '/integrations', label: 'Integrations', sub: true },
   { href: '/email-security', label: 'Vantmail', desc: 'API-first email security' },
-  { href: '/features', label: 'Platform capabilities', desc: 'Kaska EM, from asset intelligence to resilience reporting' },
-  { href: '/integrations', label: 'Integrations', desc: 'Above the security stack you already run' },
 ]
 
 export const SERVICES: NavItem[] = [
