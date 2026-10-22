@@ -89,7 +89,7 @@ export default function Navbar() {
                   <div className="nd-menu">
                     {g.items.map((i) => (
                       <Link key={i.href} href={i.href} onClick={() => setMenu(null)} className={i.sub ? 'ni-sub' : undefined} {...(i.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-                        <span className="ni-t">{i.label}</span>
+                        <span className="ni-t">{i.label}{i.external ? ' ↗' : ''}</span>
                         {i.desc && <span className="ni-d">{i.desc}</span>}
                       </Link>
                     ))}
@@ -129,7 +129,7 @@ export default function Navbar() {
                 <div className="dg-h">{g.label}</div>
                 {g.items.map((i) => (
                   <Link key={i.href} href={i.href} className={[isActive(i.href) && !i.href.includes('#') ? 'active' : '', i.sub ? 'ni-sub' : ''].filter(Boolean).join(' ') || undefined} {...(i.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-                    {i.label}
+                    {i.label}{i.external ? ' ↗' : ''}
                   </Link>
                 ))}
               </>

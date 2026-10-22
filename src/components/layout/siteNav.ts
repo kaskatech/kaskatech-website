@@ -8,8 +8,8 @@ export type NavGroup = { label: string; href?: string; items?: NavItem[] }
 
 export const PRODUCTS: NavItem[] = [
   { href: '/kaska-em', label: 'Exposure Management', desc: 'An Autonomous Cyber Risk & Resilience Platform' },
-  { href: '/features', label: 'Platform capabilities', sub: true },
-  { href: '/integrations', label: 'Integrations', sub: true },
+  { href: 'https://em.kaskatech.com/features', label: 'Platform capabilities', sub: true, external: true },
+  { href: 'https://em.kaskatech.com/integrations', label: 'Integrations', sub: true, external: true },
   { href: '/email-security', label: 'Vantmail', desc: 'API-first email security' },
 ]
 

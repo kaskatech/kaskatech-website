@@ -14,8 +14,8 @@ export default function Footer() {
           <div className="c">
             <h4>Products</h4>
             <Link href="/kaska-em">Exposure Management</Link>
-            <Link href="/features" className="ni-sub">Platform capabilities</Link>
-            <Link href="/integrations" className="ni-sub">Integrations</Link>
+            <a href="https://em.kaskatech.com/features" className="ni-sub" target="_blank" rel="noopener noreferrer">Platform capabilities ↗</a>
+            <a href="https://em.kaskatech.com/integrations" className="ni-sub" target="_blank" rel="noopener noreferrer">Integrations ↗</a>
             <Link href="/email-security">Vantmail</Link>
             <a href="https://vantmail.ai" target="_blank" rel="noopener noreferrer">vantmail.ai ↗</a>
           </div>

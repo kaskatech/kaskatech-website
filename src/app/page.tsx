@@ -35,6 +35,7 @@ export default function Page() {
               <div className="ctas">
                 <Link className="btn btn-go" href="/kaska-em">Explore Kaska EM<Arrow /></Link>
                 <Link className="btn btn-q" href={demo('em')}>Request a briefing</Link>
+                <a className="more" href="https://em.kaskatech.com" target="_blank" rel="noopener noreferrer">Visit em.kaskatech.com ↗</a>
               </div>
             </div>
             <div className="hdoor d-vm">
