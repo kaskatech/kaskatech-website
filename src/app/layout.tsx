@@ -37,11 +37,11 @@ const plexMono = localFont({
 export const metadata: Metadata = {
   title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
   description:
-    'Kaska Exposure Management Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
+    'Kaska Exposure Management & Cyber Risk Resilience Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
   openGraph: {
     title: 'Kaska — Autonomous Cyber Risk & Resilience Platform™',
     description:
-      'Kaska Exposure Management Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
+      'Kaska Exposure Management & Cyber Risk Resilience Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
     type: 'website',
     url: 'https://kaskatech.com',
   },

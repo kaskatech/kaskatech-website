@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 }
 
 type P = { href: string; label: string }
-const EM: P = { href: '/kaska-em', label: 'Kaska EM' }
+const EM: P = { href: '/kaska-em', label: 'Kaska EM & Cyber Resilience' }
 const ES: P = { href: '/email-security', label: 'Vantmail' }
 const TS: P = { href: '/managed-services', label: 'Managed Services' }
 
@@ -19,7 +19,7 @@ const SECTORS: { id: string; k: string; t: ReactNode; body: ReactNode[]; product
     id: 'enterprise', k: 'Enterprise', t: <>IT / ITES, pharma and <em>manufacturing</em>.</>,
     body: [
       'Mid-size and large enterprises run broad security stacks, yet still struggle to answer two questions: what is actually exposed, and which email in the inbox is the one that costs money.',
-      'Kaska EM brings exposure, control state and business context together into one view of cyber risk. Vantmail adds API-first, post-delivery protection against phishing, BEC and impersonation.',
+      'Kaska EM & Cyber Resilience brings exposure, control state and business context together into one view of cyber risk. Vantmail adds API-first, post-delivery protection against phishing, BEC and impersonation.',
     ],
     products: [EM, ES, TS], ctx: ['DPDP', 'ISO 27001', 'NIST CSF', 'CIS Controls v8'],
   },
@@ -27,7 +27,7 @@ const SECTORS: { id: string; k: string; t: ReactNode; body: ReactNode[]; product
     id: 'bfsi', k: 'BFSI', t: <>Banks, NBFCs and <em>insurers</em>.</>,
     body: [
       'Financial institutions face regulators and boards that expect evidence, not assurances, and payment workflows that make them a prime target for business email compromise and payment fraud.',
-      'Kaska EM maps control evidence to the frameworks BFSI teams report against and is designed to express cyber risk in business terms. Vantmail focuses on the BEC patterns that target finance teams.',
+      'Kaska EM & Cyber Resilience maps control evidence to the frameworks BFSI teams report against and is designed to express cyber risk in business terms. Vantmail focuses on the BEC patterns that target finance teams.',
     ],
     products: [EM, ES, TS], ctx: ['RBI', 'SEBI CSCRF', 'IRDAI', 'CERT-In', 'DPDP'],
   },
@@ -35,7 +35,7 @@ const SECTORS: { id: string; k: string; t: ReactNode; body: ReactNode[]; product
     id: 'government', k: 'Government / PSU', t: <>Government departments and <em>public-sector undertakings</em>.</>,
     body: [
       'Public-sector organisations operate under CERT-In reporting obligations and heightened scrutiny, often with strict hosting, data-residency and connectivity requirements.',
-      'Kaska EM supports control evidence mapped to Indian regulatory frameworks, and Kaska’s technology solutions help design and implement the underlying programme. Hosting, data-residency and connectivity requirements are scoped with you before any commitment.',
+      'Kaska EM & Cyber Resilience supports control evidence mapped to Indian regulatory frameworks, and Kaska’s technology solutions help design and implement the underlying programme. Hosting, data-residency and connectivity requirements are scoped with you before any commitment.',
     ],
     products: [EM, ES, TS], ctx: ['CERT-In', 'NCIIPC', 'MeitY', 'DPDP'],
   },
@@ -51,7 +51,7 @@ const SECTORS: { id: string; k: string; t: ReactNode; body: ReactNode[]; product
     id: 'critical-infrastructure', k: 'Critical Infrastructure', t: <>Power, energy and other <em>regulated critical</em> sectors.</>,
     body: [
       'Critical-infrastructure operators must secure IT and OT together, where an exposure on the corporate network can become an operational incident.',
-      'Kaska EM includes OT/ICS control domains mapped to IEC 62443 and the CEA cyber-security guidelines for the power sector. Kaska’s technology solutions cover OT asset visibility, secure remote access and IT/OT convergence.',
+      'Kaska EM & Cyber Resilience includes OT/ICS control domains mapped to IEC 62443 and the CEA cyber-security guidelines for the power sector. Kaska’s technology solutions cover OT asset visibility, secure remote access and IT/OT convergence.',
     ],
     products: [EM, TS], ctx: ['CEA', 'IEC 62443', 'NERC CIP', 'NCIIPC'],
   },

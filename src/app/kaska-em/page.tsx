@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Close, PageHero } from '@/components/k/ui'
+import { RegulatoryAssurance, SovereignDeployment } from '@/components/k/RegulatoryAssurance'
 
 export const metadata: Metadata = {
-  title: 'Kaska EM — exposure management by Kaska',
+  title: 'Kaska EM & Cyber Resilience — exposure management by Kaska',
   alternates: { canonical: '/kaska-em' },
   description:
-    'Kaska Exposure Management Platform™ sits above the security stack you already run: one evidenced picture of exposure, validated controls and breach paths. See Kaska EM in full at em.kaskatech.com.',
+    'Kaska Exposure Management & Cyber Risk Resilience Platform™ sits above the security stack you already run: one evidenced picture of exposure, validated controls and breach paths. See Kaska EM & Cyber Resilience in full at em.kaskatech.com.',
 }
 
 const SITE = 'https://em.kaskatech.com'
@@ -23,9 +24,9 @@ export default function Page() {
     <div>
       <PageHero
         split
-        kicker="Kaska EM · exposure management by Kaska"
+        kicker="Kaska EM & Cyber Resilience · exposure management by Kaska"
         title={<>Know your risk <em>before attackers do.</em></>}
-        lede="Kaska Exposure Management Platform™ sits above the security stack you already run: one evidenced picture of exposure, validated controls and breach paths, before, during and after a breach."
+        lede="Kaska Exposure Management & Cyber Risk Resilience Platform™ sits above the security stack you already run: one evidenced picture of exposure, validated controls and breach paths, before, during and after a breach."
       >
         <div className="ctas mt-m">
           <a className="btn btn-go" href={SITE} {...ext}>Visit em.kaskatech.com ↗</a>
@@ -41,9 +42,13 @@ export default function Page() {
         </div>
       </section>
 
+      <RegulatoryAssurance tone="s-white" />
+
+      <SovereignDeployment tone="s-deep" />
+
       <Close
-        kicker="Kaska EM"
-        title={<>See Kaska EM in full at <em>em.kaskatech.com</em>.</>}
+        kicker="Kaska EM & Cyber Resilience"
+        title={<>See Kaska EM & Cyber Resilience in full at <em>em.kaskatech.com</em>.</>}
         text="A product of Kaska Technologies and Services Private Limited."
         primary={{ href: SITE, label: 'Visit em.kaskatech.com' }}
         secondary={null}

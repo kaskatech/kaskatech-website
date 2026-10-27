@@ -5,7 +5,7 @@ import { Arrow, Close, PageHero, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Partners — Kaska',
   description:
-    'Partner with Kaska: systems integrators, solution partners, technology (OEM) partners and advisory firms working with Kaska Exposure Management Platform™ and Vantmail.',
+    'Partner with Kaska: systems integrators, solution partners, technology (OEM) partners and advisory firms working with Kaska Exposure Management & Cyber Risk Resilience Platform™ and Vantmail.',
 }
 
 export default function Page() {
@@ -43,7 +43,7 @@ export default function Page() {
           <div className="elist two mt-m">
             <div><b>Systems Integrators</b><p>Include Kaska products in transformation, compliance and public-sector programmes.</p></div>
             <div><b>Solution Partners</b><p>Bring Kaska&apos;s products to your enterprise and BFSI accounts.</p></div>
-            <div><b>Technology (OEM) Partners</b><p>Integrate your tools with Kaska EM so their signal feeds one view of risk.</p></div>
+            <div><b>Technology (OEM) Partners</b><p>Integrate your tools with Kaska EM & Cyber Resilience so their signal feeds one view of risk.</p></div>
             <div><b>Advisory Firms</b><p>Use Kaska&apos;s evidence in risk, audit and regulatory-readiness engagements.</p></div>
           </div>
           <p className="note mt-m">We&apos;re onboarding founding partners now. Named partners will be shown as each agreement is in place.</p>

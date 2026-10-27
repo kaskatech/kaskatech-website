@@ -5,7 +5,7 @@ import { Arrow, Close, PageHero, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Managed Security Services — Kaska',
   description:
-    'Kaska Managed Security Services, delivered with MSSP and OEM partners: SOC / MDR, VAPT and red teaming, GRC and compliance (CERT-In, DPDP, RBI, ISO 27001), identity, data and application security, and a fixed-scope exposure assessment using Kaska EM.',
+    'Kaska Managed Security Services, delivered with MSSP and OEM partners: SOC / MDR, VAPT and red teaming, GRC and compliance (CERT-In, DPDP, RBI, ISO 27001), identity, data and application security, and a fixed-scope exposure assessment using Kaska EM & Cyber Resilience.',
 }
 
 const SERVICES: [string, string][] = [
@@ -19,13 +19,13 @@ const SERVICES: [string, string][] = [
 
 const ASSESSMENT: [string, string, string][] = [
   ['01', 'Scope', 'We agree the business units, assets and security tools in scope, and the regulators that apply to you.'],
-  ['02', 'Connect', 'Kaska EM reads configuration and posture from your existing security tools. No agents to roll out for the assessment.'],
+  ['02', 'Connect', 'Kaska EM & Cyber Resilience reads configuration and posture from your existing security tools. No agents to roll out for the assessment.'],
   ['03', 'Validate', 'Each control is checked against how it is actually configured, so you see which controls are not protecting the assets they are meant to.'],
   ['04', 'Report', 'Findings are mapped to CERT-In, DPDP, RBI and ISO 27001, prioritised, and summarised in a board-ready report.'],
 ]
 
 const MSSP: [string, string][] = [
-  ['White-label console', 'Run Kaska EM for your customers under your own brand.'],
+  ['White-label console', 'Run Kaska EM & Cyber Resilience for your customers under your own brand.'],
   ['Multi-tenant', 'Manage every customer from one console, with each customer’s data kept separate.'],
   ['Revenue share', 'A partner commercial model, agreed per partnership.'],
   ['Partner-delivered', 'You own the customer relationship and the service; Kaska supports the platform.'],
@@ -64,7 +64,7 @@ export default function Page() {
               <h2 className="h2 mt-s">Which of your controls are <em>not actually protecting you</em>?</h2>
             </div>
             <p className="lede">
-              A fixed-scope engagement using Kaska EM. It shows where security controls you have paid for are
+              A fixed-scope engagement using Kaska EM & Cyber Resilience. It shows where security controls you have paid for are
               misconfigured or not covering what matters, mapped to Indian regulators, with a board report at the end.
             </p>
           </div>
@@ -73,7 +73,7 @@ export default function Page() {
           </div>
           <div className="ctas mt-m">
             <Link className="btn btn-go" href={demo('exposure-assessment')}>Request a briefing<Arrow /></Link>
-            <Link className="btn btn-q" href="/kaska-em">About Kaska EM</Link>
+            <Link className="btn btn-q" href="/kaska-em">About Kaska EM & Cyber Resilience</Link>
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function Page() {
           <div className="split">
             <div>
               <span className="kicker">For MSSPs</span>
-              <h2 className="h2 mt-s">Offer Kaska EM <em>as your service</em>.</h2>
+              <h2 className="h2 mt-s">Offer Kaska EM & Cyber Resilience <em>as your service</em>.</h2>
             </div>
             <p className="lede">For MSSPs and system integrators who want to add exposure management to their portfolio.</p>
           </div>

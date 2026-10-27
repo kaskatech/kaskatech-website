@@ -5,7 +5,7 @@ import { Arrow, demo } from '@/components/k/ui'
 export const metadata: Metadata = {
   title: 'Kaska — Stop the attack before it starts. Recover fast if it does.',
   description:
-    'Kaska Technologies: Kaska EM, the exposure management and cyber resilience platform; Vantmail email security; Managed Security Services; and vetted cybersecurity professionals and experts for hire.',
+    'Kaska Technologies: Kaska Exposure Management & Cyber Risk Resilience platform (Kaska EM & Cyber Resilience); Vantmail email security; Managed Security Services; and vetted cybersecurity professionals and experts for hire.',
 }
 
 export default function Page() {
@@ -26,14 +26,14 @@ export default function Page() {
           <div className="hdoors">
             <div className="hdoor main d-em">
               <span className="dtag">Exposure Management</span>
-              <h3>Kaska EM</h3>
+              <h3>Kaska EM & Cyber Resilience</h3>
               <p>
-                Kaska Exposure Management Platform™, above the security stack you already run. One evidenced
+                Kaska Exposure Management & Cyber Risk Resilience Platform™, above the security stack you already run. One evidenced
                 picture of exposure, validated controls and breach paths, with loss ranges, before, during and
                 after a breach.
               </p>
               <div className="ctas">
-                <Link className="btn btn-go" href="/kaska-em">Explore Kaska EM<Arrow /></Link>
+                <Link className="btn btn-go" href="/kaska-em">Explore Kaska EM & Cyber Resilience<Arrow /></Link>
                 <Link className="btn btn-q" href={demo('em')}>Request a briefing</Link>
                 <a className="more" href="https://em.kaskatech.com" target="_blank" rel="noopener noreferrer">Visit em.kaskatech.com ↗</a>
               </div>
