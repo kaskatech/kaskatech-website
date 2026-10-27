@@ -8,14 +8,14 @@ export default function Footer() {
       <div className="wrap">
         <div className="g">
           <div className="c">
-            <Link className="brand" href="/" aria-label="Kaska EM home"><KaskaMark /><span className="nm">Kaska EM</span></Link>
+            <Link className="brand" href="/" aria-label="Kaska EM & Cyber Resilience home"><KaskaMark /><span className="nm">Kaska EM & Cyber Resilience</span></Link>
             <span style={{ marginTop: 12, maxWidth: '36ch' }}>
-              Kaska Exposure Management is a product of{' '}
+              Kaska Exposure Management & Cyber Risk Resilience is a product of{' '}
               <a href={PARENT} style={{ textDecoration: 'underline' }}>Kaska Technologies &amp; Services Pvt Ltd</a>.
             </span>
           </div>
           <div className="c">
-            <h4>Kaska EM</h4>
+            <h4>Kaska EM & Cyber Resilience</h4>
             <Link href="/">Platform</Link>
             <Link href="/features">Capabilities</Link>
             <Link href="/integrations">Integrations</Link>

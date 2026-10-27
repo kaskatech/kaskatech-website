@@ -22,8 +22,8 @@ const NOTES: Record<ViewKey, [string, string][]> = {
 }
 type Trail = ['l' | 'd' | 'p' | 'n', string, string, string][]
 const FINDINGS: { t: string; v: string; trail: Trail }[] = [
-  { t: 'Workforce MFA coverage below policy', v: '50%', trail: [['l', 'User and MFA records', 'Identity directory', 'Live'], ['d', 'Coverage calculation', 'Kaska EM', 'Derived'], ['p', 'Risk estimate', 'Risk model, before calibration', 'Provisional'], ['n', 'Legacy authentication', 'No connected source', 'Not assessed']] },
-  { t: 'Privileged-account ratio above target', v: '25%', trail: [['l', 'Role assignments', 'Identity directory', 'Live'], ['d', 'Ratio calculation', 'Kaska EM', 'Derived'], ['p', 'Risk estimate', 'Risk model, before calibration', 'Provisional']] },
+  { t: 'Workforce MFA coverage below policy', v: '50%', trail: [['l', 'User and MFA records', 'Identity directory', 'Live'], ['d', 'Coverage calculation', 'Kaska EM & Cyber Resilience', 'Derived'], ['p', 'Risk estimate', 'Risk model, before calibration', 'Provisional'], ['n', 'Legacy authentication', 'No connected source', 'Not assessed']] },
+  { t: 'Privileged-account ratio above target', v: '25%', trail: [['l', 'Role assignments', 'Identity directory', 'Live'], ['d', 'Ratio calculation', 'Kaska EM & Cyber Resilience', 'Derived'], ['p', 'Risk estimate', 'Risk model, before calibration', 'Provisional']] },
   { t: 'Endpoint prevention policy', v: '—', trail: [['n', 'Prevention policy', 'No connected source', 'Not assessed'], ['n', 'Critical server coverage', 'No connected source', 'Not assessed']] },
 ]
 const CL = { l: 'live', d: 'der', p: 'prov', n: 'na' } as const
@@ -39,10 +39,10 @@ export default function ProductConsole({ initialView = 'val' }: { initialView?: 
     <div className="prod">
       <div className="behind" aria-hidden="true"><span className="h">Board report · this quarter</span><b>Identity is the priority this quarter.</b></div>
       <div className="console win">
-        <div className="wbar"><i></i><i></i><i></i><span>Kaska EM · sample organisation</span></div>
+        <div className="wbar"><i></i><i></i><i></i><span>Kaska EM & Cyber Resilience · sample organisation</span></div>
         <div className="cb">
-          <div className="side" role="tablist" aria-label="Kaska EM views">
-            <span className="gh">Kaska EM</span>
+          <div className="side" role="tablist" aria-label="Kaska EM & Cyber Resilience views">
+            <span className="gh">Kaska EM & Cyber Resilience</span>
             {NAV.map(([k, t]) => (
               <button key={k} role="tab" aria-selected={v === k} onClick={() => choose(k)}>{t}</button>
             ))}
@@ -104,9 +104,9 @@ export default function ProductConsole({ initialView = 'val' }: { initialView?: 
                 <div className="ft" style={{ marginTop: 0 }}>
                   <div className="tr th"><span>Evidence item</span><span className="m">Source</span><span>Type</span></div>
                   <div className="tr"><span>User and MFA registration records</span><span className="m">Identity directory</span><span className="chip live">Live</span></div>
-                  <div className="tr"><span>MFA coverage calculation</span><span className="m">Kaska EM</span><span className="chip der">Derived</span></div>
+                  <div className="tr"><span>MFA coverage calculation</span><span className="m">Kaska EM & Cyber Resilience</span><span className="chip der">Derived</span></div>
                   <div className="tr"><span>Risk estimate</span><span className="m">Risk model</span><span className="chip prov">Provisional</span></div>
-                  <div className="tr"><span>Onboarding walkthrough data</span><span className="m">Kaska EM</span><span className="chip smp">Sample</span></div>
+                  <div className="tr"><span>Onboarding walkthrough data</span><span className="m">Kaska EM & Cyber Resilience</span><span className="chip smp">Sample</span></div>
                   <div className="tr"><span>Endpoint prevention policy</span><span className="m">No connected source</span><span className="chip na">Not assessed</span></div>
                 </div>
               </>)}

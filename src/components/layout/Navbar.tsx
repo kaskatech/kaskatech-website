@@ -63,9 +63,9 @@ export default function Navbar() {
     <>
       <nav className="nav" aria-label="Main">
         <div className="wrap" ref={barRef}>
-          <Link className="brand" href="/" aria-label="Kaska EM home">
+          <Link className="brand" href="/" aria-label="Kaska EM & Cyber Resilience home">
             <KaskaMark />
-            <span className="nm">Kaska EM</span>
+            <span className="nm">Kaska EM & Cyber Resilience</span>
             <span className="tg">Kaska Exposure<br />Management</span>
           </Link>
 

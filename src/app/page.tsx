@@ -6,17 +6,18 @@ import ConfiguredInspector from '@/components/k/ConfiguredInspector'
 import BreachLoop from '@/components/k/BreachLoop'
 import JourneyTable from '@/components/k/JourneyTable'
 import ProductConsole from '@/components/k/ProductConsole'
+import { RegulatoryAssurance, SovereignDeployment } from '@/components/k/RegulatoryAssurance'
 import { Arrow, Close, StackDiagram, demo } from '@/components/k/ui'
 import {
-  CAPABILITIES, CONDITIONS, ECOSYSTEM, FRAMEWORKS, NEXT_STEPS, SECTORS, SOLUTIONS,
+  CAPABILITIES, CONDITIONS, ECOSYSTEM, NEXT_STEPS, SECTORS, SOLUTIONS,
   STACK_IN, STACK_OUT, STACK_VERBS,
 } from '@/components/k/content'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Kaska Exposure Management (Kaska EM)' },
+  title: { absolute: 'Kaska Exposure Management & Cyber Risk Resilience (Kaska EM & Cyber Resilience)' },
   alternates: { canonical: '/' },
   description:
-    'Kaska is the intelligence layer above your security stack. Kaska Exposure Management Platform™ connects what your tools already know into one picture of exposure, risk and resilience, so you can prioritise, act before a breach and show whether risk has reduced.',
+    'Kaska is the intelligence layer above your security stack. Kaska Exposure Management & Cyber Risk Resilience Platform™ connects what your tools already know into one picture of exposure, risk and resilience, so you can prioritise, act before a breach and show whether risk has reduced.',
 }
 
 const TOOLS: [string, string][] = [
@@ -59,7 +60,7 @@ export default function Page() {
                 <Link className="btn btn-q" href="#intelligence-layer">See how it works</Link>
               </div>
               <div className="hero-id">
-                <b>Kaska Exposure Management Platform™</b>
+                <b>Kaska Exposure Management & Cyber Risk Resilience Platform™</b>
                 <span>Above the security stack you already run.</span>
                 <i>AI at the Core. Resilience at the Edge.</i>
               </div>
@@ -215,7 +216,7 @@ export default function Page() {
           <div className="cols3 mt-m">
             <div><b>Executive</b><p>Where you stand against appetite, in plain language, and what is changing.</p></div>
             <div><b>CISO</b><p>Control gaps, top fixes and owners, with the evidence behind each.</p></div>
-            <div><b>Operations</b><p>The work queue: findings, cases and approvals waiting on a person.</p></div>
+            <div><b>Risk Operations Queue &amp; Treatment Workflows</b><p>Sits above the SOC to orchestrate continuous risk changes, control gap treatments, SLA-governed remediation playbooks, and auditable evidence verification, freeing security teams from raw alert fatigue.</p></div>
           </div>
         </div>
       </section>
@@ -344,7 +345,7 @@ export default function Page() {
               </div>
               <div className="nodes">
                 <div className="node l"><span className="dot" /><div><b>User and MFA records</b><span className="sm">Identity directory</span></div><span className="chip live">Live</span></div>
-                <div className="node d"><span className="dot" /><div><b>Coverage calculation</b><span className="sm">Kaska EM</span></div><span className="chip der">Derived</span></div>
+                <div className="node d"><span className="dot" /><div><b>Coverage calculation</b><span className="sm">Kaska EM & Cyber Resilience</span></div><span className="chip der">Derived</span></div>
                 <div className="node p"><span className="dot" /><div><b>Risk estimate</b><span className="sm">Risk model, before calibration</span></div><span className="chip prov">Provisional</span></div>
                 <div className="node s"><span className="dot" /><div><b>Walkthrough example</b><span className="sm">This page</span></div><span className="chip smp">Sample</span></div>
                 <div className="node n"><span className="dot" /><div><b>Legacy authentication</b><span className="sm">No connected source</span></div><span className="chip na">Not assessed</span></div>
@@ -375,23 +376,8 @@ export default function Page() {
         </div>
       </section>
 
-      {/* 10 · REGULATOR-READY, NOT CERTIFIED */}
-      <section className="s-warm sec" id="compliance">
-        <div className="wrap">
-          <div className="split">
-            <div>
-              <span className="kicker">Compliance</span>
-              <h2 className="h2 mt-s">Regulator-ready, <em>not certified</em>.</h2>
-            </div>
-            <p className="lede">
-              17 frameworks, each requirement rated Met, Partly met, Not met or Not assessed, with its evidence
-              date and owner. DPDP is assessed system by system, with attestation.
-            </p>
-          </div>
-          <p className="h3 mt-m">{FRAMEWORKS.map((f) => f.replace(/ /g, ' ')).join(' · ')}</p>
-          <p className="note mt-s">Kaska maps your evidence to these frameworks. This is not a certification or regulatory approval; PCI-DSS and HIPAA are mapped, not certified.</p>
-        </div>
-      </section>
+      {/* 10 · CONTINUOUS REGULATORY ASSURANCE */}
+      <RegulatoryAssurance />
 
       {/* 11 · EXTERNAL SURFACE */}
       <section className="s-white sec" id="external-surface">
@@ -558,6 +544,9 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      {/* 17b · ARCHITECTURE & TRUST */}
+      <SovereignDeployment tone="s-deep" />
 
       {/* 18 · COMPANY */}
       <section className="s-warm sec">

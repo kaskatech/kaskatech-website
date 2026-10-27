@@ -4,21 +4,21 @@ import { Close, PageHero } from '@/components/k/ui'
 
 export const metadata: Metadata = {
   title: 'Resources — Kaska',
-  description: 'Datasheets and product resources for Kaska Exposure Management Platform™ and Kaska Email Security.',
+  description: 'Datasheets and product resources for Kaska Exposure Management & Cyber Risk Resilience Platform™ and Kaska Email Security.',
 }
 
 // Datasheets are shared on request while the current editions are revised to the present
 // product and deployment positioning. Link the PDFs here once approved.
 const DATASHEETS = [
-  { meta: 'Kaska EM', t: 'Kaska Exposure Management Platform™ — Product Datasheet', d: 'Capabilities, operating model and integration approach.', interest: 'em' },
-  { meta: 'Kaska EM', t: 'Kaska Exposure Management Platform™ — Technical Whitepaper', d: 'How the asset model, control validation and risk quantification fit together.', interest: 'em' },
+  { meta: 'Kaska EM & Cyber Resilience', t: 'Kaska Exposure Management & Cyber Risk Resilience Platform™ — Product Datasheet', d: 'Capabilities, operating model and integration approach.', interest: 'em' },
+  { meta: 'Kaska EM & Cyber Resilience', t: 'Kaska Exposure Management & Cyber Risk Resilience Platform™ — Technical Whitepaper', d: 'How the asset model, control validation and risk quantification fit together.', interest: 'em' },
   { meta: 'Email Security', t: 'Kaska Email Security — Product Datasheet', d: 'API-first detection, investigation and response for Microsoft 365 and Google Workspace.', interest: 'email-security' },
 ]
 
 const ON_SITE = [
-  { k: 'Kaska EM', t: 'Platform capabilities and architecture', href: '/features' },
-  { k: 'Kaska EM', t: 'Integrations: how Kaska connects', href: '/integrations' },
-  { k: 'Kaska EM', t: 'Breach Intelligence: before, during, after', href: '/exposure-management#breach-intelligence' },
+  { k: 'Kaska EM & Cyber Resilience', t: 'Platform capabilities and architecture', href: '/features' },
+  { k: 'Kaska EM & Cyber Resilience', t: 'Integrations: how Kaska connects', href: '/integrations' },
+  { k: 'Kaska EM & Cyber Resilience', t: 'Breach Intelligence: before, during, after', href: '/exposure-management#breach-intelligence' },
   { k: 'Email Security', t: 'Kaska Email Security overview', href: '/email-security' },
   { k: 'Trust', t: 'Privacy Policy', href: '/privacy' },
 ]

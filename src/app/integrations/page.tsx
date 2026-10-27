@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Integrations',
   alternates: { canonical: '/integrations' },
   description:
-    'Kaska Exposure Management Platform™ is vendor-agnostic. It is designed to connect to the security tools you already run, from SIEM and EDR to identity, cloud, email, OT and backup, and to keep only the signal it needs.',
+    'Kaska Exposure Management & Cyber Risk Resilience Platform™ is vendor-agnostic. It is designed to connect to the security tools you already run, from SIEM and EDR to identity, cloud, email, OT and backup, and to keep only the signal it needs.',
 }
 
 // OEMs listed are those the connector framework is built for. A listing is not a live-proven
@@ -34,13 +34,13 @@ export default function Page() {
     <>
       <PageHero
         split
-        kicker="Kaska EM · Integrations"
+        kicker="Kaska EM & Cyber Resilience · Integrations"
         title={<>Above the stack you <em>already run</em>.</>}
         lede="Kaska doesn't scan, block or replace. It is designed to read the tools you already own through a common connector framework, keep only the signal it needs, and connect it all around the asset."
       >
         <div className="ctas mt-m">
           <Link className="btn btn-go" href={demo('kaska-em')}>Ask about your stack<Arrow /></Link>
-          <Link className="btn btn-q" href="/">About Kaska EM</Link>
+          <Link className="btn btn-q" href="/">About Kaska EM & Cyber Resilience</Link>
         </div>
       </PageHero>
 

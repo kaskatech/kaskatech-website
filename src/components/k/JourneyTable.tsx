@@ -105,7 +105,7 @@ export default function JourneyTable() {
         </div>
       </div>
       <div className="win">
-        <div className="wbar"><i></i><i></i><i></i><span>Kaska EM · sample organisation</span><em>{STEPS[step]}</em></div>
+        <div className="wbar"><i></i><i></i><i></i><span>Kaska EM & Cyber Resilience · sample organisation</span><em>{STEPS[step]}</em></div>
         <div className="jt">
           <div className="jt-h">{HEAD.map((h, i) => <div key={h} className={cls(i)}>{h}</div>)}</div>
           <div>

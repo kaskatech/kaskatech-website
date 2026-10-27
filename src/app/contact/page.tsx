@@ -4,7 +4,7 @@ import ContactForm from '@/components/ContactForm'
 export const metadata: Metadata = {
   title: 'Contact',
   alternates: { canonical: '/contact' },
-  description: 'Request a briefing on Kaska Exposure Management Platform™.',
+  description: 'Request a briefing on Kaska Exposure Management & Cyber Risk Resilience Platform™.',
 }
 
 export default function Page() {
@@ -13,9 +13,9 @@ export default function Page() {
       <header className="s-dark">
         <div className="wrap phero">
           <span className="kicker">Contact</span>
-          <h1 className="h1">Talk to <em>Kaska EM</em>.</h1>
+          <h1 className="h1">Talk to <em>Kaska EM & Cyber Resilience</em>.</h1>
           <p className="lede">
-            Request a briefing on Kaska Exposure Management, or ask for a datasheet.
+            Request a briefing on Kaska Exposure Management & Cyber Risk Resilience, or ask for a datasheet.
           </p>
         </div>
       </header>

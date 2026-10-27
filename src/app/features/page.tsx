@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Platform capabilities',
   alternates: { canonical: '/features' },
   description:
-    'The capabilities and architecture of Kaska Exposure Management Platform™: asset-centric intelligence, dual-path acquisition, exposure and risk, control validation, compliance and evidence, Kaska Agents, governed response and resilience — before, during and after a breach.',
+    'The capabilities and architecture of Kaska Exposure Management & Cyber Risk Resilience Platform™: asset-centric intelligence, dual-path acquisition, exposure and risk, control validation, compliance and evidence, Kaska Agents, governed response and resilience — before, during and after a breach.',
 }
 
 /* Each capability section answers the same five questions, so a technical reader
@@ -64,13 +64,13 @@ export default function Page() {
     <>
       <PageHero
         split
-        kicker="Kaska Exposure Management Platform™"
+        kicker="Kaska Exposure Management & Cyber Risk Resilience Platform™"
         title={<>Unified cyber risk intelligence <em>around the assets that matter</em>.</>}
         lede="Kaska sits above the security stack you already own and turns distributed security intelligence into one asset-centric risk and resilience view — before, during and after a breach."
       >
         <div className="ctas mt-m">
           <Link className="btn btn-go" href={demo('kaska-em')}>Request a briefing<Arrow /></Link>
-          <Link className="btn btn-q" href="/">About Kaska EM</Link>
+          <Link className="btn btn-q" href="/">About Kaska EM & Cyber Resilience</Link>
         </div>
       </PageHero>
 
@@ -100,7 +100,7 @@ export default function Page() {
             <p className="lede">
               Above the five layers sits the Command Center. The Risk Command Center reads one risk model
               through three views: Executive (the risk position against your appetite), CISO (control gaps,
-              top fixes and owners) and Operations (the work queue). Incident Command shows a responder the
+              top fixes and owners) and Risk Operations (the Risk Operations Queue and treatment workflows). Incident Command shows a responder the
               affected assets, the control that failed and the actions available. Intelligence Search finds
               the evidence behind any figure across 7 record types, with its provenance attached. One model,
               read from where you stand — not separate products that have to be reconciled.
@@ -191,7 +191,7 @@ export default function Page() {
         n="08" kicker="Vulnerability and xBOM Intelligence" tone="s-deep"
         title={<>Know what you run, <em>and what in it is exploitable</em>.</>}
         lede="Software supply-chain risk, expressed as exposure on a specific system rather than a line in a report."
-        capability="Software composition analysis correlated to vulnerability intelligence: CycloneDX and SPDX ingestion, component inventory, version-range correlation, licence-risk findings, and a CERT-In Technical Guidelines v2.0 scorecard alongside RBI, MeitY, EO 14028 and EU CRA framing."
+        capability="A five-dimensional enterprise bill of materials on one asset model: software (SBOM, CycloneDX 1.4–1.6 and SPDX 2.3), hardware and firmware (HBOM), AI and machine-learning models and datasets (AIBOM), cryptographic assets (CBOM) and quantum-vulnerability posture (QBOM), with provenance on every component and risk attributed to the asset that runs it. Quantum-vulnerable algorithms are mapped to their NIST post-quantum replacements (FIPS 203, 204 and 205) to plan migration. Components are correlated to vulnerability intelligence by version range, with licence-risk findings and a CERT-In Technical Guidelines v2.0 scorecard alongside RBI, MeitY, EO 14028 and EU CRA framing."
         how="Components bind to the assets that run them. A vulnerability is then weighted by whether it is known to be exploited, how likely exploitation is, and how critical the asset carrying it happens to be."
         intel="Customer-supplied bills of materials, CVE, KEV and EPSS vulnerability intelligence, and the asset graph."
         why="You cannot defend software you cannot enumerate, and most organisations cannot enumerate it."
@@ -491,7 +491,7 @@ export default function Page() {
         </div>
       </section>
 
-      <Close title={<>See the capabilities on <em>your</em> questions.</>} text="Tell us what you need to prove, to leadership or to a regulator. We'll show you how Kaska EM approaches it." />
+      <Close title={<>See the capabilities on <em>your</em> questions.</>} text="Tell us what you need to prove, to leadership or to a regulator. We'll show you how Kaska EM & Cyber Resilience approaches it." />
     </>
   )
 }

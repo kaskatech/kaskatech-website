@@ -35,17 +35,17 @@ const plexMono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://em.kaskatech.com'),
-  title: { default: 'Kaska Exposure Management (Kaska EM)', template: '%s · Kaska EM' },
+  title: { default: 'Kaska Exposure Management & Cyber Risk Resilience (Kaska EM & Cyber Resilience)', template: '%s · Kaska EM & Cyber Resilience' },
   description:
-    'Kaska Exposure Management Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
+    'Kaska Exposure Management & Cyber Risk Resilience Platform™ connects assets, exposures, controls, risk, cases and evidence into one intelligence layer above your existing security stack.',
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Kaska Exposure Management (Kaska EM)',
+    title: 'Kaska Exposure Management & Cyber Risk Resilience (Kaska EM & Cyber Resilience)',
     description:
-      'Kaska Exposure Management Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
+      'Kaska Exposure Management & Cyber Risk Resilience Platform™ connects exposure, control validation, risk, detection & response, cases and evidence — before, during and after a breach.',
     type: 'website',
     url: 'https://em.kaskatech.com',
-    siteName: 'Kaska Exposure Management',
+    siteName: 'Kaska Exposure Management & Cyber Risk Resilience',
   },
 }
 
