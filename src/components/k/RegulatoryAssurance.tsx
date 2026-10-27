@@ -7,7 +7,7 @@ const INDIA: [string, string][] = [
   ['IRDAI Guidelines', 'Information and cyber security guidelines for insurers'],
   ['CERT-In Directions', '6-hour incident reporting, NTP time synchronisation and 180-day log retention'],
   ['DPDP Act 2023', 'Reasonable security safeguards and breach notification for data fiduciaries'],
-  ['MeitY Guidelines', 'Information security practices for government entities: incident reporting, crisis management, audits and supply chain'],
+  ['MeitY Guidelines', 'Secure application design, development and implementation, GIGW compliance, system hardening and cryptography'],
   ['CEA Regulations', 'Cyber security in the power sector, including IT/OT segregation and resilience'],
   ['NCIIPC Guidelines', 'Protection of Critical Information Infrastructure (CII)'],
   ['RBI FREE-AI', 'Responsible, ethical and explainable AI in financial systems'],
@@ -15,9 +15,9 @@ const INDIA: [string, string][] = [
 
 const GLOBAL: [string, string][] = [
   ['ISO/IEC 27001:2022', 'Information Security Management Systems (Annex A)'],
-  ['NIST CSF', 'Identify, Protect, Detect, Respond and Recover'],
+  ['NIST CSF 2.0', 'Govern, Identify, Protect, Detect, Respond and Recover'],
   ['PCI DSS v4.0', 'Cardholder data protection'],
-  ['AICPA SOC 2', 'Trust Services Criteria for security, availability and confidentiality'],
+  ['AICPA SOC 2 (Trust Services Criteria)', 'Security, availability and confidentiality'],
   ['CIS Controls v8', '18 critical security controls across Implementation Groups 1–3'],
   ['FISMA / NIST SP 800-53', 'Federal information security controls'],
   ['HIPAA Security Rule', 'Safeguards for electronic protected health information (ePHI)'],
@@ -27,8 +27,8 @@ const GLOBAL: [string, string][] = [
 const CARDS: [string, string][] = [
   ['Test once, prove to many', 'Automated connectors evaluate endpoint, identity, cloud, network and backup controls. One passing technical check, such as admin MFA or backup immutability, satisfies equivalent clauses across RBI, SEBI, ISO 27001 and SOC 2 at the same time.'],
   ['True evidence states', 'Evidence is labelled Live, Derived, Provisional or Not assessed. Gaps come with clear technical remediation steps and an owner, not a checklist percentage.'],
-  ['Auditor-grade evidence packs', 'Regulator-specific dossiers and gap reports, generated on demand for CERT-In, RBI inspections or independent audit teams.'],
-  ['Cryptographic chain of custody', 'Every control run, gap closure and risk acceptance is recorded in a tamper-evident, SHA-256 chained evidence ledger.'],
+  ['Auditor-grade evidence packs', 'Regulator-specific dossiers and gap reports (JSON / CSV), generated on demand for CERT-In, RBI inspections or independent audit teams.'],
+  ['Cryptographic chain of custody', 'Every control run, gap closure and risk acceptance is recorded in a tamper-evident, append-only SHA-256 chained evidence ledger.'],
 ]
 
 function Group({ title, items }: { title: string; items: [string, string][] }) {
@@ -54,7 +54,7 @@ export function RegulatoryAssurance({ tone = 's-warm', id = 'compliance' }: { to
           <p className="lede">
             Validate technical controls once through continuous telemetry, and automatically map compliance posture
             across 17 regulatory and industry standards simultaneously. Unassessed clauses remain strictly Not
-            assessed, never assumed compliant. Backed by a tamper-evident, SHA-256 chained evidence ledger for
+            assessed, never assumed compliant. Backed by a tamper-evident, append-only SHA-256 chained evidence ledger for
             zero-friction audits.
           </p>
         </div>
